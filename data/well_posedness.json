@@ -1,0 +1,342 @@
+{
+ "cases": [
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "ellipse",
+   "mph": 5,
+   "m_eff": 1626.0358931570806,
+   "g": -269.01333333310413,
+   "margin": 1895.0492264901848,
+   "max_slope": -1626.0358931567298,
+   "a_max": 3.6625122062307724,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "ellipse",
+   "mph": 30,
+   "m_eff": 1626.0358931570806,
+   "g": -269.01333333310413,
+   "margin": 1895.0492264901848,
+   "max_slope": -1626.0358931567298,
+   "a_max": 3.153829955365385,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "ellipse",
+   "mph": 60,
+   "m_eff": 1626.0358931570806,
+   "g": -269.01333333310413,
+   "margin": 1895.0492264901848,
+   "max_slope": -1626.0358931567298,
+   "a_max": 1.3352909085216353,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "ellipse",
+   "mph": 100,
+   "m_eff": 1626.0358931570806,
+   "g": -269.01333333310413,
+   "margin": 1895.0492264901848,
+   "max_slope": -1626.0358931564438,
+   "a_max": -0.7121551512115367,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "pac2002",
+   "mph": 5,
+   "m_eff": 1626.0358931570806,
+   "g": -157.23373202886754,
+   "margin": 1783.2696251859481,
+   "max_slope": -1626.0358931567298,
+   "a_max": 3.6625122062307724,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "pac2002",
+   "mph": 30,
+   "m_eff": 1626.0358931570806,
+   "g": -157.23373202886754,
+   "margin": 1783.2696251859481,
+   "max_slope": -1626.0358931567298,
+   "a_max": 3.153829955365385,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "pac2002",
+   "mph": 60,
+   "m_eff": 1626.0358931570806,
+   "g": -157.23373202886754,
+   "margin": 1783.2696251859481,
+   "max_slope": -1626.0358931567298,
+   "a_max": 1.3352909085216353,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "pac2002",
+   "mph": 100,
+   "m_eff": 1626.0358931570806,
+   "g": -157.23373202886754,
+   "margin": 1783.2696251859481,
+   "max_slope": -1626.0358931564438,
+   "a_max": -0.7121551512115367,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "ellipse",
+   "mph": 5,
+   "m_eff": 1625.0650016653985,
+   "g": -231.47378277134672,
+   "margin": 1856.5387844367453,
+   "max_slope": -1625.0650016642337,
+   "a_max": 3.5669416015227284,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "ellipse",
+   "mph": 30,
+   "m_eff": 1625.0650016653985,
+   "g": -231.47378277134672,
+   "margin": 1856.5387844367453,
+   "max_slope": -1625.0650016648456,
+   "a_max": 3.519382380169091,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "ellipse",
+   "mph": 60,
+   "m_eff": 1397.3668457223316,
+   "g": -231.47378277134672,
+   "margin": 1628.8406284936784,
+   "max_slope": -1397.3668457216625,
+   "a_max": 1.6289033313620465,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "ellipse",
+   "mph": 100,
+   "m_eff": 1378.6128495061605,
+   "g": -231.47378277134672,
+   "margin": 1610.0866322775073,
+   "max_slope": -1378.612849505452,
+   "a_max": 0.760947541658183,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "pac2002",
+   "mph": 5,
+   "m_eff": 1625.0650016653985,
+   "g": -135.47824692639017,
+   "margin": 1760.5432485917886,
+   "max_slope": -1625.0650016642337,
+   "a_max": 3.5312721855075004,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "pac2002",
+   "mph": 30,
+   "m_eff": 1625.0650016653985,
+   "g": -135.47824692639017,
+   "margin": 1760.5432485917886,
+   "max_slope": -1625.0650016648456,
+   "a_max": 3.483712964153863,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "pac2002",
+   "mph": 60,
+   "m_eff": 1397.3668457223316,
+   "g": -135.47824692639017,
+   "margin": 1532.8450926487217,
+   "max_slope": -1397.3668457216625,
+   "a_max": 1.6289033313620465,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "pac2002",
+   "mph": 100,
+   "m_eff": 1378.6128495061605,
+   "g": -135.47824692639017,
+   "margin": 1514.0910964325508,
+   "max_slope": -1378.612849505452,
+   "a_max": 0.760947541658183,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "ellipse",
+   "mph": 5,
+   "m_eff": 1784.4499355864043,
+   "g": 361.2835570475268,
+   "margin": 1423.1663785388776,
+   "max_slope": -1423.1663785386775,
+   "a_max": 7.590594227579995,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "ellipse",
+   "mph": 30,
+   "m_eff": 1784.4499355864043,
+   "g": 361.2835570475268,
+   "margin": 1423.1663785388776,
+   "max_slope": -1423.1663785386775,
+   "a_max": 7.503010448030995,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "ellipse",
+   "mph": 60,
+   "m_eff": 1784.4499355864043,
+   "g": 361.2835570475268,
+   "margin": 1423.1663785388776,
+   "max_slope": -1423.1663785386775,
+   "a_max": 7.327842888932995,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "ellipse",
+   "mph": 100,
+   "m_eff": 1681.4706589879108,
+   "g": 361.2835570475268,
+   "margin": 1320.187101940384,
+   "max_slope": -1320.18710194041,
+   "a_max": 4.875497061560996,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "pac2002",
+   "mph": 5,
+   "m_eff": 1784.4499355864043,
+   "g": 410.101494574201,
+   "margin": 1374.3484410122032,
+   "max_slope": -1374.3484410120227,
+   "a_max": 7.211064516200995,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "pac2002",
+   "mph": 30,
+   "m_eff": 1784.4499355864043,
+   "g": 410.101494574201,
+   "margin": 1374.3484410122032,
+   "max_slope": -1374.3484410120227,
+   "a_max": 7.123480736651995,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "pac2002",
+   "mph": 60,
+   "m_eff": 1784.4499355864043,
+   "g": 410.101494574201,
+   "margin": 1374.3484410122032,
+   "max_slope": -1374.3484410120227,
+   "a_max": 6.948313177553995,
+   "strictly_dec": true,
+   "interval": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "pac2002",
+   "mph": 100,
+   "m_eff": 1681.4706589879108,
+   "g": 410.101494574201,
+   "margin": 1271.3691644137098,
+   "max_slope": -1271.3691644132568,
+   "a_max": 4.875497061560996,
+   "strictly_dec": true,
+   "interval": true
+  }
+ ],
+ "lipschitz": [
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "ellipse",
+   "mph": 10,
+   "measured": 0.0,
+   "bound": 0.0,
+   "traction_binds": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "law": "pac2002",
+   "mph": 10,
+   "measured": 0.0,
+   "bound": 0.0,
+   "traction_binds": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "ellipse",
+   "mph": 10,
+   "measured": 3.7368440801109704,
+   "bound": 3.736890671195761,
+   "traction_binds": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "law": "pac2002",
+   "mph": 10,
+   "measured": 3.7818147006194716,
+   "bound": 3.9059803940850073,
+   "traction_binds": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "ellipse",
+   "mph": 10,
+   "measured": 7.141765068679821,
+   "bound": 7.141583768576992,
+   "traction_binds": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "law": "pac2002",
+   "mph": 10,
+   "measured": 6.414312581980317,
+   "bound": 7.027744470368868,
+   "traction_binds": true
+  }
+ ]
+}

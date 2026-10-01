@@ -1,0 +1,51 @@
+\begin{table}[htbp]
+\centering\small
+\caption{The two real routes after conversion: length (km), traffic signals, stop signs, accumulated climb of the smoothed elevation profile (m), share of route vertices with a posted-limit tag, and the tightest radius of the smoothed path (m).}\label{tab:app-routes}
+\begin{tabular}{lcccccc}
+\toprule
+Route & Length & Signals & Stop signs & Climb & Tagged & Tightest radius\\
+\midrule
+Suburban & $21.0$ & $27$ & $1$ & $116$ & $89\%$ & $21$\\
+Canyon & $26.9$ & $6$ & $2$ & $1120$ & $54\%$ & $24$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{One probe on the real routes. The prior price is $T^\star$ at the $5\%$ quantile $0.825$ of the fleet prior less $T^\star(\mu)$. The gain is the reduction in $T^\star$ when one probe at $0.825$ of the friction raises the planning fraction to $0.950$, and the cost is $c(u_p)$ at the median posted limit of the route. All times are in seconds. The last column is the share of the prior price that the probe recovers.}\label{tab:app-routeprobe}
+\begin{tabular}{llccccc}
+\toprule
+Route & Vehicle & Prior price & Gain & Cost & Net & Recovered\\
+\midrule
+Suburban, green & Leaf & $1.03$ & $0.85$ & $0.30$ & $0.55$ & $53\%$\\
+Suburban, green & Civic & $1.68$ & $1.29$ & $0.27$ & $1.02$ & $60\%$\\
+Suburban, green & ZR1 & $0.96$ & $0.73$ & $0.63$ & $0.10$ & $11\%$\\
+Suburban, red & Leaf & $9.27$ & $7.84$ & $0.30$ & $7.54$ & $81\%$\\
+Suburban, red & Civic & $18.73$ & $14.13$ & $0.27$ & $13.86$ & $74\%$\\
+Suburban, red & ZR1 & $12.50$ & $9.40$ & $0.63$ & $8.77$ & $70\%$\\
+Canyon, green & Leaf & $0.75$ & $0.63$ & $0.26$ & $0.37$ & $49\%$\\
+Canyon, green & Civic & $1.46$ & $1.11$ & $0.24$ & $0.87$ & $60\%$\\
+Canyon, green & ZR1 & $0.98$ & $0.73$ & $0.56$ & $0.17$ & $17\%$\\
+Canyon, red & Leaf & $2.29$ & $1.96$ & $0.26$ & $1.69$ & $74\%$\\
+Canyon, red & Civic & $4.62$ & $3.48$ & $0.24$ & $3.24$ & $70\%$\\
+Canyon, red & ZR1 & $3.00$ & $2.26$ & $0.56$ & $1.70$ & $56\%$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Check of Theorem~\ref{thm:transit} on the real routes: the minimum trip time $T^\star$ (s) of the Civic at selected multipliers on the nominal friction, from a sweep of $11$ multipliers between $0.4$ and $1.4$ that is non-increasing in every case.}\label{tab:app-routemono}
+\begin{tabular}{lcccccc}
+\toprule
+Route & $\times0.4$ & $\times0.6$ & $\times0.8$ & $\times1.0$ & $\times1.2$ & $\times1.4$\\
+\midrule
+Suburban, green & $1246.8$ & $1236.2$ & $1232.3$ & $1230.3$ & $1229.1$ & $1228.7$\\
+Suburban, red & $1457.5$ & $1380.1$ & $1342.8$ & $1320.8$ & $1306.5$ & $1303.1$\\
+Canyon, green & $1512.0$ & $1498.6$ & $1495.3$ & $1493.6$ & $1492.5$ & $1492.2$\\
+Canyon, red & $1549.3$ & $1524.4$ & $1515.2$ & $1509.8$ & $1506.2$ & $1505.4$\\
+\bottomrule
+\end{tabular}
+\end{table}

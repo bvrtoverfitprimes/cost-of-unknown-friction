@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite it as below."
+title: "Supplementary material for The Cost of Unknown Friction in Minimum-Time Vehicle Transit"
+authors:
+  - family-names: "Roy Choudhury"
+    given-names: "Himaghna"
+date-released: 2026-10-01
+repository-code: "https://github.com/bvrtoverfitprimes/cost-of-unknown-friction"
+license: MIT

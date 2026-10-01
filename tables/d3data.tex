@@ -1,0 +1,56 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Mass recovered from the D3 trajectories. In each run, $F-R$ is regressed on the acceleration and the fitted mass is compared with the published test weight. The columns give the mean and the largest absolute error over the runs of each vehicle.}\label{tab:app-d3mass}
+\begin{tabular}{llrrrr}
+\toprule
+Vehicle & Type & Runs & Samples & Mean & Largest\\
+\midrule
+2012 Nissan Leaf & BEV & $15$ & $120{,}277$ & $-0.10\%$ & $0.34\%$\\
+2010 Toyota Prius & HEV & $5$ & $52{,}921$ & $+0.29\%$ & $0.72\%$\\
+2012 Ford Focus & ICE & $5$ & $52{,}688$ & $-0.03\%$ & $0.28\%$\\
+2013 Ford Focus Electric & BEV & $20$ & $214{,}969$ & $+0.01\%$ & $0.41\%$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Information about the road-load coefficients by drive cycle. The table gives the smallest eigenvalue of the scaled normal matrix for $(m,A,B,C)$, averaged over the runs of each cycle, and its ratio to that of the urban cycle (UDDS).}\label{tab:app-d3cycle}
+\begin{tabular}{lrcc}
+\toprule
+Cycle & Runs & Smallest eigenvalue & Relative to UDDS\\
+\midrule
+UDDS & $21$ & $9.49\times10^{-3}$ & $1.000$\\
+SC03 Prep, Ph 1 & $1$ & $6.71\times10^{-3}$ & $0.708$\\
+US06 & $8$ & $3.37\times10^{-3}$ & $0.355$\\
+Steady state & $7$ & $2.77\times10^{-3}$ & $0.291$\\
+Highway & $6$ & $9.62\times10^{-4}$ & $0.101$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Paired steady-state runs of the 2013 Ford Focus Electric on a level roll and at a simulated grade of $6\%$. The offset is the mean of the measured force less the predicted road load, in newtons. The difference of the offsets is $1051.79$\,N, against $mg\sin(\arctan0.06)=1051.80$\,N.}\label{tab:app-grade}
+\begin{tabular}{lcr}
+\toprule
+Test & Grade & Offset (N)\\
+\midrule
+61408008 & $0\%$ & $+229.0$\\
+61408009 & $6\%$ & $-822.8$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Pack resistance of the 2012 Nissan Leaf measured in D3 runs at two cell temperatures, from the regression of terminal voltage on current. An Arrhenius law through the two points gives a ratio of $1.66$ between the resistances at $0^\circ$C and $25^\circ$C.}\label{tab:app-battery}
+\begin{tabular}{cc}
+\toprule
+Cell temperature ($^\circ$C) & Resistance (m$\Omega$)\\
+\midrule
+$-6.4$ & $183.5$\\
+$21.2$ & $102.8$\\
+\bottomrule
+\end{tabular}
+\end{table}

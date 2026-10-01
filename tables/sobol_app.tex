@@ -1,0 +1,87 @@
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4.2pt}
+\caption{First-order Sobol indices $S_i$ with the PAC2002 tyre law, in the layout of Table~\ref{tab:sobol}. Negative estimates are shown as zero. The largest bootstrap standard error of any first-order index is $0.090$.}\label{tab:app-sobol-first}
+\begin{tabular}{lccccccccc}
+\toprule
+& \multicolumn{3}{c}{Leaf} & \multicolumn{3}{c}{Civic} & \multicolumn{3}{c}{ZR1}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Input & $10$ & $60$ & Pool & $10$ & $60$ & Pool & $10$ & $60$ & Pool\\
+\midrule
+Friction & $0.21$ & $0.00$ & $0.00$ & $0.23$ & $0.00$ & $0.00$ & $0.35$ & $0.09$ & $0.13$\\
+Wetness & $0.22$ & $0.72$ & $0.03$ & $0.30$ & $0.59$ & $0.05$ & $0.48$ & $0.80$ & $0.55$\\
+Wet-to-dry ratio & $0.02$ & $0.00$ & $0.00$ & $0.01$ & $0.00$ & $0.00$ & $0.02$ & $0.00$ & $0.00$\\
+Temperature & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.01$ & $0.00$ & $0.00$ & $0.00$ & $0.00$\\
+Altitude & $0.00$ & $0.01$ & $0.00$ & $0.22$ & $0.09$ & $0.02$ & $0.00$ & $0.03$ & $0.02$\\
+$C_{rr}$ & $0.01$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$\\
+$C_DA$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$\\
+Headwind & $0.02$ & $0.05$ & $0.00$ & $0.00$ & $0.05$ & $0.00$ & $0.00$ & $0.00$ & $0.00$\\
+Payload & $0.16$ & $0.02$ & $0.01$ & $0.02$ & $0.03$ & $0.00$ & $0.00$ & $0.01$ & $0.00$\\
+Grade & $0.31$ & $0.22$ & $0.02$ & $0.13$ & $0.14$ & $0.02$ & $0.01$ & $0.00$ & $0.02$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4.2pt}
+\caption{Total Sobol indices $ST_i$ with the friction ellipse, in the layout of Table~\ref{tab:sobol}. No entry differs from the PAC2002 value by more than $0.06$.}\label{tab:app-sobol-ellipse}
+\begin{tabular}{lccccccccc}
+\toprule
+& \multicolumn{3}{c}{Leaf} & \multicolumn{3}{c}{Civic} & \multicolumn{3}{c}{ZR1}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Input & $10$ & $60$ & Pool & $10$ & $60$ & Pool & $10$ & $60$ & Pool\\
+\midrule
+Friction & $0.31$ & $0.00$ & $0.01$ & $0.27$ & $0.00$ & $0.02$ & $0.43$ & $0.09$ & $0.16$\\
+Wetness & $0.33$ & $0.71$ & $0.05$ & $0.33$ & $0.64$ & $0.07$ & $0.52$ & $0.88$ & $0.71$\\
+Wet-to-dry ratio & $0.05$ & $0.00$ & $0.00$ & $0.04$ & $0.00$ & $0.00$ & $0.05$ & $0.01$ & $0.02$\\
+Temperature & $0.00$ & $0.00$ & $0.00$ & $0.03$ & $0.01$ & $0.00$ & $0.01$ & $0.01$ & $0.01$\\
+Altitude & $0.00$ & $0.01$ & $0.00$ & $0.40$ & $0.14$ & $0.04$ & $0.15$ & $0.07$ & $0.08$\\
+$C_{rr}$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$\\
+$C_DA$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & $0.00$\\
+Headwind & $0.01$ & $0.06$ & $0.00$ & $0.00$ & $0.04$ & $0.00$ & $0.00$ & $0.00$ & $0.00$\\
+Payload & $0.24$ & $0.03$ & $0.01$ & $0.08$ & $0.03$ & $0.01$ & $0.03$ & $0.01$ & $0.01$\\
+Grade & $0.32$ & $0.20$ & $0.02$ & $0.13$ & $0.17$ & $0.02$ & $0.02$ & $0.01$ & $0.01$\\
+\midrule
+Speed &  &  & $0.91$ &  &  & $0.89$ &  &  & $0.23$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Design of the Sobol computation. The inputs are independent and uniform on the stated ranges. Each index uses $N=8192$ rows per sample matrix, and the whole computation used $1{,}818{,}624$ evaluations of the envelope. Standard errors are from $200$ bootstrap resamples of the rows, and the largest for any total index is $0.019$.}\label{tab:app-sobol-design}
+\begin{tabular}{lc}
+\toprule
+Input & Range\\
+\midrule
+Friction multiplier & $[0.81,1.24]$\\
+Wetness $w$, dry for $w<0.5$, film $(w-0.5)\times6$\,mm otherwise & $[0,1]$\\
+Wet-to-dry peak friction ratio & $[0.71,0.87]$\\
+Ambient temperature ($^\circ$C) & $[-10,40]$\\
+Altitude (m) & $[0,3000]$\\
+$C_{rr}$ multiplier & $[0.8,1.3]$\\
+$C_DA$ multiplier & $[0.9,1.1]$\\
+Headwind (m/s) & $[-5,15]$\\
+Payload (kg) & $[0,300]$\\
+Uphill grade (\%) & $[0,6]$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Share of the first $200$ samples of each Sobol design in which traction binds.}\label{tab:app-sobol-regime}
+\begin{tabular}{llcc}
+\toprule
+Vehicle & Tyre law & $10$\,mph & $60$\,mph\\
+\midrule
+Leaf & ellipse & $0.31$ & $0.09$\\
+Leaf & PAC2002 & $0.28$ & $0.10$\\
+Civic & ellipse & $0.54$ & $0.08$\\
+Civic & PAC2002 & $0.52$ & $0.06$\\
+ZR1 & ellipse & $0.66$ & $0.54$\\
+ZR1 & PAC2002 & $0.76$ & $0.61$\\
+\bottomrule
+\end{tabular}
+\end{table}

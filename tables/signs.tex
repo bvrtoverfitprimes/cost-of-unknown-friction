@@ -1,0 +1,46 @@
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Check of Theorem~\ref{thm:signtable}\ref{sg:mono} and~\ref{sg:grade}. Each parameter was swept over the stated range of multipliers in $11$ steps, and grade in $9$ steps, for the three vehicles, both tyre laws, and speeds of $10$, $40$, and $80$\,mph. The second column gives the predicted direction of $\amax$ as the parameter increases, and a pair is two consecutive points of a sweep. The last column is the smallest change of $\amax$ (m/s$^2$) in the predicted direction over all pairs, which is non-negative when no pair violates the prediction. It is zero, to rounding error below $10^{-12}$, for friction and for power, because the envelope does not respond to friction where power binds or to power where traction binds (Proposition~\ref{prop:regimes}). The largest value of $\mu_r\varphi_r'h/L$ encountered in the grade sweeps was $0.227$.}\label{tab:app-mono}
+\begin{tabular}{llcrrr}
+\toprule
+Parameter & Predicted & Range & Pairs & Violations & Smallest step\\
+\midrule
+Friction $\mu$ & up & $0.5$--$1.5$ & $180$ & $0$ & $0$\\
+Rolling resistance $C_{rr}$ & down & $0.5$--$2.0$ & $180$ & $0$ & $7.86\times10^{-3}$\\
+Drag area $C_DA$ & down & $0.5$--$2.0$ & $180$ & $0$ & $6.24\times10^{-4}$\\
+Power $P$ & up & $0.5$--$1.5$ & $180$ & $0$ & $0$\\
+Uphill grade & down & $0^\circ$--$8^\circ$ & $144$ & $0$ & $1.43\times10^{-1}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\caption{Check of Theorem~\ref{thm:signtable}\ref{sg:mass} and~\ref{sg:rho}. For each case the table gives the binding constraint, the terms $J\amax$, $F_{\mathrm{aero}}$, and $\Lambda$ (N) of the mass formula, the predicted sign and the finite-difference value of $\partial\amax/\partial\ln m$, and the predicted sign and finite-difference value of $\partial\amax/\partial\ln\rho$, both in m/s$^2$ from relative changes of $10^{-4}$. Where power binds, the mass prediction is negative by part~\ref{sg:mass}.}\label{tab:app-signs}
+\begin{tabular}{lllllrrrcrcr}
+\toprule
+Vehicle & Law & mph & Binding & $J\amax$ & $F_{\mathrm{aero}}$ & $\Lambda$ & & $\partial_{\ln m}\amax$ & & $\partial_{\ln\rho}\amax$\\
+\midrule
+Leaf & ellipse & $10$ & power & $271$ & $10$ & n/a & $-$ & $-3.584$ & $-$ & $-0.0060$\\
+Leaf & ellipse & $40$ & power & $170$ & $157$ & n/a & $-$ & $-2.275$ & $-$ & $-0.0966$\\
+Leaf & ellipse & $80$ & power & $56$ & $628$ & n/a & $-$ & $-0.817$ & $-$ & $-0.3862$\\
+Leaf & PAC2002 & $10$ & power & $271$ & $10$ & n/a & $-$ & $-3.584$ & $-$ & $-0.0060$\\
+Leaf & PAC2002 & $40$ & power & $170$ & $157$ & n/a & $-$ & $-2.275$ & $-$ & $-0.0966$\\
+Leaf & PAC2002 & $80$ & power & $56$ & $628$ & n/a & $-$ & $-0.817$ & $-$ & $-0.3862$\\
+Civic & ellipse & $10$ & traction & $1080$ & $8$ & $0$ & $+$ & $0.586$ & $-$ & $-0.0042$\\
+Civic & ellipse & $40$ & power & $342$ & $124$ & n/a & $-$ & $-2.495$ & $+$ & $2.7308$\\
+Civic & ellipse & $80$ & power & $107$ & $494$ & n/a & $-$ & $-1.450$ & $+$ & $1.5265$\\
+Civic & PAC2002 & $10$ & traction & $1070$ & $8$ & $866$ & $+$ & $0.117$ & $-$ & $-0.0042$\\
+Civic & PAC2002 & $40$ & power & $342$ & $124$ & n/a & $-$ & $-2.495$ & $+$ & $2.7308$\\
+Civic & PAC2002 & $80$ & power & $107$ & $494$ & n/a & $-$ & $-1.450$ & $+$ & $1.5265$\\
+ZR1 & ellipse & $10$ & traction & $1437$ & $7$ & $0$ & $+$ & $1.015$ & $-$ & $-0.0052$\\
+ZR1 & ellipse & $40$ & traction & $1414$ & $119$ & $0$ & $+$ & $1.077$ & $-$ & $-0.0835$\\
+ZR1 & ellipse & $80$ & power & $765$ & $475$ & n/a & $-$ & $-6.268$ & $+$ & $6.7155$\\
+ZR1 & PAC2002 & $10$ & traction & $1365$ & $7$ & $2468$ & $-$ & $-0.729$ & $-$ & $-0.0049$\\
+ZR1 & PAC2002 & $40$ & traction & $1343$ & $119$ & $2468$ & $-$ & $-0.670$ & $-$ & $-0.0791$\\
+ZR1 & PAC2002 & $80$ & power & $765$ & $475$ & n/a & $-$ & $-6.268$ & $+$ & $6.7155$\\
+\bottomrule
+\end{tabular}
+\end{table}

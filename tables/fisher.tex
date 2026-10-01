@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Check of Theorem~\ref{thm:jointid}. Every design contains $60$ balance samples at speeds drawn uniformly from $5$ to $30$\,m/s and accelerations from $-1.5$ to $2.0$\,m/s$^2$. The limit events are five samples at $3.0$\,m/s$^2$ and $8$\,m/s, plus, for the two-acceleration design, five at $1.5$\,m/s$^2$ and $20$\,m/s. The braking events are five at $-7$ and five at $-5$\,m/s$^2$. Each limit event contributes a balance row and a limit row. The singular values are those of the Jacobian with each parameter scaled to its nominal value.}\label{tab:app-fisher}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}cc>{\raggedright\arraybackslash}p{5.6cm}}
+\toprule
+Design & Rows & Rank & Singular values\\
+\midrule
+Ordinary driving & $60$ & $4$ & $1.5\times10^{4}$, $2.3\times10^{3}$, $8.1\times10^{2}$, $2.3\times10^{1}$, $5.3\times10^{-7}$, $0$\\
+Limit events at one acceleration & $70$ & $5$ & $2.5\times10^{4}$, $1.0\times10^{4}$, $2.4\times10^{3}$, $8.5\times10^{2}$, $2.3\times10^{1}$, $6.3\times10^{-7}$\\
+Limit events at two accelerations & $80$ & $6$ & $3.3\times10^{4}$, $1.2\times10^{4}$, $2.4\times10^{3}$, $8.5\times10^{2}$, $2.4\times10^{1}$, $1.9\times10^{0}$\\
+Braking-limit events & $80$ & $5$ & $5.7\times10^{4}$, $1.9\times10^{4}$, $3.2\times10^{3}$, $8.2\times10^{2}$, $2.3\times10^{1}$, $7.7\times10^{-7}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Cram\'er--Rao standard errors for the design with limit events at two accelerations, with force noise of $50$\,N on each of its $80$ rows. The nominal values are those of a Civic-like car, with grade in radians and wind in m/s.}\label{tab:app-crb}
+\begin{tabular}{lrrr}
+\toprule
+Parameter & Nominal & Relative error & Absolute error\\
+\midrule
+$\mu$ & $0.85$ & $8.9\%$ & $0.0754$\\
+$m$ & $1400$ & $0.4\%$ & $4.9$\\
+$C_{rr}$ & $0.01$ & $2338.7\%$ & $0.234$\\
+$C_DA$ & $0.7$ & $30.3\%$ & $0.212$\\
+$\gamma$ & $0.02$ & $1169.5\%$ & $0.234$\\
+$w$ & $3$ & $203.7\%$ & $6.11$\\
+\bottomrule
+\end{tabular}
+\end{table}

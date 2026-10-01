@@ -1,0 +1,758 @@
+{
+ "sigma": 0.11718785875013751,
+ "z": 1.6448536269514722,
+ "s_p": 0.03218397169197759,
+ "curves": [
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "highway",
+   "p080": 0.03279272232715638,
+   "kappa": 0.08556847502277289,
+   "h0": 0.025581502127528178,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "rural",
+   "p080": 0.2120690907551812,
+   "kappa": 0.2797474000401927,
+   "h0": 0.15580392108142826,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "mountain",
+   "p080": 0.5591708086046844,
+   "kappa": 2.157570044711885,
+   "h0": 0.47007070256962946,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "urban",
+   "p080": 0.9239616322536315,
+   "kappa": 2.039247397632011,
+   "h0": 0.7048127193967603,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "highway",
+   "p080": 0.05924304315022594,
+   "kappa": 0.2466495959732744,
+   "h0": 0.05034434980443547,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "rural",
+   "p080": 0.3639233484532316,
+   "kappa": 0.8125873784729238,
+   "h0": 0.3003309208688224,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "mountain",
+   "p080": 0.6459236485070258,
+   "kappa": 2.64349029178654,
+   "h0": 0.5500918888809826,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "urban",
+   "p080": 1.6620075865266304,
+   "kappa": 6.686214555193996,
+   "h0": 1.4119432202511577,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "highway",
+   "p080": 0.046618455163128784,
+   "kappa": 0.18926372563084592,
+   "h0": 0.039616765699665255,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "rural",
+   "p080": 0.15219473418352542,
+   "kappa": 0.6190917893636324,
+   "h0": 0.12937434240204945,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "mountain",
+   "p080": 0.1136877028705124,
+   "kappa": 0.33468030474159194,
+   "h0": 0.07096012405109639,
+   "free_above": 1.0
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "urban",
+   "p080": 1.0920684626116677,
+   "kappa": 4.402356071345995,
+   "h0": 0.9261361421081086,
+   "free_above": 1.0
+  }
+ ],
+ "optimum": [
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "highway",
+   "ell": 1000.0,
+   "c_p": 0.1724579571667617,
+   "D_num": null,
+   "D_law": 7894.244094979183,
+   "J": 0.025581502127528178,
+   "h0": 0.025581502127528178,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "highway",
+   "ell": 5000.0,
+   "c_p": 0.1724579571667617,
+   "D_num": null,
+   "D_law": 13498.967519608952,
+   "J": 0.025581502127528178,
+   "h0": 0.025581502127528178,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "highway",
+   "ell": 25000.0,
+   "c_p": 0.1724579571667617,
+   "D_num": 26052.830259674865,
+   "D_law": 23082.909763501306,
+   "J": 0.022929244302755447,
+   "h0": 0.025581502127528178,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "rural",
+   "ell": 1000.0,
+   "c_p": 0.2107819476482643,
+   "D_num": null,
+   "D_law": 4096.77856238281,
+   "J": 0.15580392108142826,
+   "h0": 0.15580392108142826,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "rural",
+   "ell": 5000.0,
+   "c_p": 0.2107819476482643,
+   "D_num": 4161.785369066899,
+   "D_law": 7005.392800535343,
+   "J": 0.12371725900807176,
+   "h0": 0.15580392108142826,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "rural",
+   "ell": 25000.0,
+   "c_p": 0.2107819476482643,
+   "D_num": 8130.9060214697565,
+   "D_law": 11979.053185937542,
+   "J": 0.05998858700325934,
+   "h0": 0.15580392108142826,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "mountain",
+   "ell": 1000.0,
+   "c_p": 0.2710053612620541,
+   "D_num": null,
+   "D_law": 1240.9079681102148,
+   "J": 0.47007070256962946,
+   "h0": 0.47007070256962946,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "mountain",
+   "ell": 5000.0,
+   "c_p": 0.2710053612620541,
+   "D_num": 2857.170430793813,
+   "D_law": 2121.922777507921,
+   "J": 0.381304612448187,
+   "h0": 0.47007070256962946,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "mountain",
+   "ell": 25000.0,
+   "c_p": 0.2710053612620541,
+   "D_num": 4531.819551140887,
+   "D_law": 3628.436910243954,
+   "J": 0.2560301593511557,
+   "h0": 0.47007070256962946,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "urban",
+   "ell": 1000.0,
+   "c_p": 0.37940750576687576,
+   "D_num": null,
+   "D_law": 1612.4574200081024,
+   "J": 0.7048127193967603,
+   "h0": 0.7048127193967603,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "urban",
+   "ell": 5000.0,
+   "c_p": 0.37940750576687576,
+   "D_num": 2362.3882318721703,
+   "D_law": 2757.263403254219,
+   "J": 0.43613764502191565,
+   "h0": 0.7048127193967603,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "urban",
+   "ell": 25000.0,
+   "c_p": 0.37940750576687576,
+   "D_num": 5711.096236638404,
+   "D_law": 4714.854098216645,
+   "J": 0.2635505028207077,
+   "h0": 0.7048127193967603,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "highway",
+   "ell": 1000.0,
+   "c_p": 0.15538170208295043,
+   "D_num": null,
+   "D_law": 3635.8885701522563,
+   "J": 0.05034434980443547,
+   "h0": 0.05034434980443547,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "highway",
+   "ell": 5000.0,
+   "c_p": 0.15538170208295043,
+   "D_num": null,
+   "D_law": 6217.281999757087,
+   "J": 0.05034434980443547,
+   "h0": 0.05034434980443547,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "highway",
+   "ell": 25000.0,
+   "c_p": 0.15538170208295043,
+   "D_num": 15655.66902851206,
+   "D_law": 10631.402673290611,
+   "J": 0.042608767706871574,
+   "h0": 0.05034434980443547,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "rural",
+   "ell": 1000.0,
+   "c_p": 0.18991096921249498,
+   "D_num": null,
+   "D_law": 1877.2303744409187,
+   "J": 0.3003309208688224,
+   "h0": 0.3003309208688224,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "rural",
+   "ell": 5000.0,
+   "c_p": 0.18991096921249498,
+   "D_num": 2717.5219642246648,
+   "D_law": 3210.01878666486,
+   "J": 0.23348914391478381,
+   "h0": 0.3003309208688224,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "rural",
+   "ell": 25000.0,
+   "c_p": 0.18991096921249498,
+   "D_num": 4175.880324254554,
+   "D_law": 5489.054913577226,
+   "J": 0.13944234831985058,
+   "h0": 0.3003309208688224,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "mountain",
+   "ell": 1000.0,
+   "c_p": 0.24417124613035066,
+   "D_num": null,
+   "D_law": 1010.9789676999114,
+   "J": 0.5500918888809826,
+   "h0": 0.5500918888809826,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "mountain",
+   "ell": 5000.0,
+   "c_p": 0.24417124613035066,
+   "D_num": 2344.4999184674393,
+   "D_law": 1728.749717362886,
+   "J": 0.43079310548441907,
+   "h0": 0.5500918888809826,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "mountain",
+   "ell": 25000.0,
+   "c_p": 0.24417124613035066,
+   "D_num": 3683.8843335472834,
+   "D_law": 2956.120434514673,
+   "J": 0.292634271688342,
+   "h0": 0.5500918888809826,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "urban",
+   "ell": 1000.0,
+   "c_p": 0.34183974458249095,
+   "D_num": 1481.9911662770094,
+   "D_law": 681.5416770123865,
+   "J": 1.374224324939261,
+   "h0": 1.4119432202511577,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "urban",
+   "ell": 5000.0,
+   "c_p": 0.34183974458249095,
+   "D_num": 1458.7841402111637,
+   "D_law": 1165.4198743488791,
+   "J": 0.9516048261333887,
+   "h0": 1.4119432202511577,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "urban",
+   "ell": 25000.0,
+   "c_p": 0.34183974458249095,
+   "D_num": 2511.9296655924777,
+   "D_law": 1992.839952915562,
+   "J": 0.6565226483949105,
+   "h0": 1.4119432202511577,
+   "worth": true,
+   "checked": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "highway",
+   "ell": 1000.0,
+   "c_p": 0.36582502772748654,
+   "D_num": null,
+   "D_law": 7677.177944991498,
+   "J": 0.039616765699665255,
+   "h0": 0.039616765699665255,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "highway",
+   "ell": 5000.0,
+   "c_p": 0.36582502772748654,
+   "D_num": null,
+   "D_law": 13127.789624292298,
+   "J": 0.039616765699665255,
+   "h0": 0.039616765699665255,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "highway",
+   "ell": 25000.0,
+   "c_p": 0.36582502772748654,
+   "D_num": null,
+   "D_law": 22448.20449057174,
+   "J": 0.039616765699665255,
+   "h0": 0.039616765699665255,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "rural",
+   "ell": 1000.0,
+   "c_p": 0.44711947833359467,
+   "D_num": null,
+   "D_law": 3982.691047768112,
+   "J": 0.12937434240204945,
+   "h0": 0.12937434240204945,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "rural",
+   "ell": 5000.0,
+   "c_p": 0.44711947833359467,
+   "D_num": null,
+   "D_law": 6810.305894728084,
+   "J": 0.12937434240204945,
+   "h0": 0.12937434240204945,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "rural",
+   "ell": 25000.0,
+   "c_p": 0.44711947833359467,
+   "D_num": 17535.095586616088,
+   "D_law": 11645.459269495546,
+   "J": 0.11222538569838054,
+   "h0": 0.12937434240204945,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "mountain",
+   "ell": 1000.0,
+   "c_p": 0.5748679007146217,
+   "D_num": null,
+   "D_law": 7096.151133285991,
+   "J": 0.07096012405109639,
+   "h0": 0.07096012405109639,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "mountain",
+   "ell": 5000.0,
+   "c_p": 0.5748679007146217,
+   "D_num": null,
+   "D_law": 12134.24775190163,
+   "J": 0.07096012405109639,
+   "h0": 0.07096012405109639,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "mountain",
+   "ell": 25000.0,
+   "c_p": 0.5748679007146217,
+   "D_num": null,
+   "D_law": 20749.271786767567,
+   "J": 0.07096012405109639,
+   "h0": 0.07096012405109639,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "urban",
+   "ell": 1000.0,
+   "c_p": 0.8048150610004704,
+   "D_num": null,
+   "D_law": 1593.6937640261178,
+   "J": 0.9261361421081086,
+   "h0": 0.9261361421081086,
+   "worth": false,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "urban",
+   "ell": 5000.0,
+   "c_p": 0.8048150610004704,
+   "D_num": 4462.767709238302,
+   "D_law": 2725.1780028533094,
+   "J": 0.842614651781226,
+   "h0": 0.9261361421081086,
+   "worth": true,
+   "checked": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "urban",
+   "ell": 25000.0,
+   "c_p": 0.8048150610004704,
+   "D_num": 5743.391376836868,
+   "D_law": 4659.988835291598,
+   "J": 0.5707402245786622,
+   "h0": 0.9261361421081086,
+   "worth": true,
+   "checked": false
+  }
+ ],
+ "threshold": [
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "highway",
+   "ell": 1000.0,
+   "l_min": 16815.264247793995,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "highway",
+   "ell": 5000.0,
+   "l_min": 16815.264247793995,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "rural",
+   "ell": 5000.0,
+   "l_min": 972.3024564520908,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "rural",
+   "ell": 25000.0,
+   "l_min": 972.3024564520908,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "mountain",
+   "ell": 1000.0,
+   "l_min": 2707.6288874345937,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "mountain",
+   "ell": 25000.0,
+   "l_min": 2707.6288874345937,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "urban",
+   "ell": 5000.0,
+   "l_min": 1004.6055073265487,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Nissan Leaf (BEV, single-speed)",
+   "route": "urban",
+   "ell": 25000.0,
+   "l_min": 1004.6055073265487,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "highway",
+   "ell": 1000.0,
+   "l_min": 16515.03445608089,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "highway",
+   "ell": 5000.0,
+   "l_min": 16515.03445608089,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "rural",
+   "ell": 5000.0,
+   "l_min": 1031.9556984981648,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "rural",
+   "ell": 25000.0,
+   "l_min": 1031.9556984981648,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "mountain",
+   "ell": 1000.0,
+   "l_min": 2285.152757983528,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "mountain",
+   "ell": 5000.0,
+   "l_min": 2285.152757983528,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "mountain",
+   "ell": 25000.0,
+   "l_min": 2285.152757983528,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "urban",
+   "ell": 5000.0,
+   "l_min": 1210.3263188605217,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Honda Civic 1.8 (FWD, 5MT)",
+   "route": "urban",
+   "ell": 25000.0,
+   "l_min": 1210.3263188605217,
+   "worth": true,
+   "predicted": true
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "highway",
+   "ell": 1000.0,
+   "l_min": 46983.150428789726,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "highway",
+   "ell": 5000.0,
+   "l_min": 46983.150428789726,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "rural",
+   "ell": 1000.0,
+   "l_min": 17642.50358202781,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "rural",
+   "ell": 5000.0,
+   "l_min": 17642.50358202781,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "mountain",
+   "ell": 1000.0,
+   "l_min": 40175.035993011654,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "mountain",
+   "ell": 5000.0,
+   "l_min": 40175.035993011654,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "urban",
+   "ell": 1000.0,
+   "l_min": 4377.366714240898,
+   "worth": false,
+   "predicted": false
+  },
+  {
+   "vehicle": "2013 Corvette ZR1 (RWD, 638 hp)",
+   "route": "urban",
+   "ell": 25000.0,
+   "l_min": 4377.366714240898,
+   "worth": true,
+   "predicted": true
+  }
+ ],
+ "scaling": [
+  {
+   "ell0": 2000.0,
+   "ell": 16000.0,
+   "D0": 403.7800718989187,
+   "D": 758.7173569967816,
+   "slope": 0.3033309441399411
+  },
+  {
+   "ell0": 2000.0,
+   "ell": 128000.0,
+   "D0": 403.7800718989187,
+   "D": 1524.1008922442431,
+   "slope": 0.3193861323929404
+  }
+ ],
+ "agree": 25,
+ "total": 25,
+ "n_checked": 1
+}

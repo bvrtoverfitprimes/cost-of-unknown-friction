@@ -1,0 +1,50 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Lower bound on friction identified from each Argonne D3 drive cycle, taking the larger of the driven-axle traction utilisation and the all-wheel braking utilisation, and in brackets its fraction of the friction $0.96$ pinned by the FMVSS~135 stops. The Focus Electric has no highway run.}\label{tab:d3cycles}
+\begin{tabular}{lccc}
+\toprule
+Vehicle & UDDS (urban) & Highway & US06 (aggressive)\\
+\midrule
+2010 Toyota Prius & $0.32$ ($0.33$) & $0.32$ ($0.33$) & $0.72$ ($0.75$)\\
+2012 Ford Focus & $0.36$ ($0.38$) & $0.35$ ($0.36$) & $0.69$ ($0.72$)\\
+2012 Nissan Leaf & $0.36$ ($0.38$) & $0.29$ ($0.31$) & $0.60$ ($0.62$)\\
+2013 Ford Focus Electric & $0.63$ ($0.66$) & n/a & $0.62$ ($0.65$)\\
+\midrule
+Median fraction & $0.38$ & $0.33$ & $0.68$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Check of Theorem~\ref{thm:chance} on the rural route with the friction ellipse. For each vehicle and safety level $\delta$, the plan is the minimum-time profile at the friction multiplier $q(\delta)$ of the $116$ measured values, with trip time $T^\star$ (s). The plan was executed against all $116$ values. The table gives the number of values below $q(\delta)$, the number at which the plan was not executable, and the infeasible share, which is at most $\delta$ in every case.}\label{tab:app-chance}
+\begin{tabular}{lcccccc}
+\toprule
+Vehicle & $\delta$ & $q(\delta)$ & $T^\star$ & Below & Infeasible & Share\\
+\midrule
+Leaf & $0.05$ & $0.810$ & $273.16$ & $5$ & $5$ & $0.043$\\
+Leaf & $0.25$ & $0.946$ & $272.11$ & $29$ & $29$ & $0.250$\\
+Civic & $0.05$ & $0.810$ & $273.83$ & $5$ & $5$ & $0.043$\\
+Civic & $0.25$ & $0.946$ & $272.06$ & $29$ & $29$ & $0.250$\\
+ZR1 & $0.05$ & $0.810$ & $269.43$ & $5$ & $5$ & $0.043$\\
+ZR1 & $0.25$ & $0.946$ & $268.78$ & $29$ & $29$ & $0.250$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Check of Proposition~\ref{prop:excess} on the urban route. For each vehicle and planning fraction $r$, the price (s) predicted by the transition-excess law, summed over the stop--go cycles, against the price computed by the three-pass solver, with their relative difference and the share of the predicted price due to braking.}\label{tab:app-excess}
+\begin{tabular}{lcccccc}
+\toprule
+Vehicle & $r$ & Cycles & Law & Solver & Difference & Braking\\
+\midrule
+Leaf & $0.38$ & $13$ & $46.17$ & $46.15$ & $+0.0\%$ & $35\%$\\
+Leaf & $0.68$ & $13$ & $11.10$ & $11.10$ & $+0.0\%$ & $42\%$\\
+Civic & $0.38$ & $13$ & $55.40$ & $55.37$ & $+0.1\%$ & $31\%$\\
+Civic & $0.68$ & $13$ & $15.69$ & $15.68$ & $+0.1\%$ & $32\%$\\
+ZR1 & $0.38$ & $13$ & $36.49$ & $36.44$ & $+0.1\%$ & $30\%$\\
+ZR1 & $0.68$ & $13$ & $10.32$ & $10.29$ & $+0.3\%$ & $30\%$\\
+\bottomrule
+\end{tabular}
+\end{table}

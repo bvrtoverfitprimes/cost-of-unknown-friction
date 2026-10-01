@@ -1,0 +1,65 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Checks of Theorems~\ref{thm:transientbound} and~\ref{thm:transientvar} on random piecewise-linear envelopes. The non-increasing envelopes have seven levels on random knots, lags drawn uniformly from $[0.02,0.4]$\,s, and target speeds from $[5,40]$\,m/s. The general envelopes have eight random levels and one lag drawn from $[0.05,0.4]$\,s. The last two columns give the median and the largest ratio of the penalty to the stated bound. The last row compares the general envelopes with the bound $\tau$ that holds for non-increasing envelopes.}\label{tab:app-transient}
+\begin{tabular}{lccccc}
+\toprule
+Envelope & Lags & Cases & Bound & Median ratio & Largest ratio\\
+\midrule
+Non-increasing & $1$ & $18$ & $\sum_j\tau_j$ & $0.881$ & $0.987$\\
+Non-increasing & $2$ & $17$ & $\sum_j\tau_j$ & $0.832$ & $0.986$\\
+Non-increasing & $3$ & $25$ & $\sum_j\tau_j$ & $0.869$ & $0.971$\\
+General & $1$ & $40$ & $\tau(1+\operatorname{Var}^+)$ & $0.644$ & $0.903$\\
+General & $1$ & $40$ & $\tau$ & $2.314$ & $4.033$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Penalty of a single lag $\tau=0.2$\,s on a doubling staircase envelope, in units of $\tau$, with each level held for about $5\tau$. The prediction is the limit of Proposition~\ref{prop:transientfail}, and the bound is that of Theorem~\ref{thm:transientvar}.}\label{tab:app-staircase}
+\begin{tabular}{cccc}
+\toprule
+Levels & Penalty & Prediction & Bound\\
+\midrule
+$1$ & $1.00$ & $1.00$ & $1.00$\\
+$2$ & $1.50$ & $1.50$ & $1.69$\\
+$4$ & $2.49$ & $2.50$ & $3.08$\\
+$6$ & $3.49$ & $3.50$ & $4.47$\\
+$8$ & $4.49$ & $4.50$ & $5.85$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{The $0$--$60$\,mph penalty of the three vehicles under constant lags (s), with the time $T_{\mathrm{phys}}$ along the envelope and the penalty as a share of $\sum_j\tau_j$. The positive variation of $\ln\amax$ from rest to $60$\,mph, computed on $4001$ speeds, is $0$ for every vehicle.}\label{tab:app-transient-veh}
+\begin{tabular}{lcccc}
+\toprule
+Vehicle & Lags (s) & $T_{\mathrm{phys}}$ (s) & Penalty (s) & Share\\
+\midrule
+Leaf & $0.10$ & $10.572$ & $0.100$ & $99.8\%$\\
+Leaf & $0.15, 0.05$ & $10.572$ & $0.199$ & $99.6\%$\\
+Leaf & $0.30, 0.10, 0.05$ & $10.572$ & $0.448$ & $99.5\%$\\
+Civic & $0.10$ & $8.964$ & $0.100$ & $99.8\%$\\
+Civic & $0.15, 0.05$ & $8.964$ & $0.199$ & $99.7\%$\\
+Civic & $0.30, 0.10, 0.05$ & $8.964$ & $0.448$ & $99.5\%$\\
+ZR1 & $0.10$ & $3.578$ & $0.100$ & $99.6\%$\\
+ZR1 & $0.15, 0.05$ & $3.578$ & $0.199$ & $99.4\%$\\
+ZR1 & $0.30, 0.10, 0.05$ & $3.578$ & $0.446$ & $99.1\%$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{The $0$--$60$\,mph penalty (s) with tyre relaxation length $0.5$\,m and a powertrain lag of $0.10$\,s, against the floor speed $v_0$ of the relaxation model.}\label{tab:app-relax}
+\begin{tabular}{lcccc}
+\toprule
+Vehicle & $v_0=2$\,m/s & $v_0=1$\,m/s & $v_0=0.5$\,m/s & $v_0=0.25$\,m/s\\
+\midrule
+Leaf & $0.346$ & $0.540$ & $0.773$ & $1.021$\\
+Civic & $0.347$ & $0.542$ & $0.778$ & $1.029$\\
+ZR1 & $0.335$ & $0.486$ & $0.654$ & $0.829$\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,51 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Check of Theorem~\ref{thm:wellposed}. For each vehicle, tyre law, and speed, the effective mass $\meff$ and the load-transfer gain $g$ (both in kg), the margin $\meff-g$, the largest slope of the force margin $\Phi$ on a grid of $4001$ accelerations (in N per m/s$^2$, negative when $\Phi$ is strictly decreasing), and the envelope $\amax$ (m/s$^2$). A negative envelope means that the vehicle cannot sustain that speed.}\label{tab:app-wellposed}
+\begin{tabular}{llrrrrrr}
+\toprule
+Vehicle & Tyre law & mph & $\meff$ & $g$ & $\meff-g$ & $\max\Phi'$ & $\amax$\\
+\midrule
+Leaf & ellipse & $5$ & $1626$ & $-269.0$ & $1895.0$ & $-1626$ & $3.663$\\
+Leaf & ellipse & $30$ & $1626$ & $-269.0$ & $1895.0$ & $-1626$ & $3.154$\\
+Leaf & ellipse & $60$ & $1626$ & $-269.0$ & $1895.0$ & $-1626$ & $1.335$\\
+Leaf & ellipse & $100$ & $1626$ & $-269.0$ & $1895.0$ & $-1626$ & $-0.712$\\
+Leaf & PAC2002 & $5$ & $1626$ & $-157.2$ & $1783.3$ & $-1626$ & $3.663$\\
+Leaf & PAC2002 & $30$ & $1626$ & $-157.2$ & $1783.3$ & $-1626$ & $3.154$\\
+Leaf & PAC2002 & $60$ & $1626$ & $-157.2$ & $1783.3$ & $-1626$ & $1.335$\\
+Leaf & PAC2002 & $100$ & $1626$ & $-157.2$ & $1783.3$ & $-1626$ & $-0.712$\\
+Civic & ellipse & $5$ & $1625$ & $-231.5$ & $1856.5$ & $-1625$ & $3.567$\\
+Civic & ellipse & $30$ & $1625$ & $-231.5$ & $1856.5$ & $-1625$ & $3.519$\\
+Civic & ellipse & $60$ & $1397$ & $-231.5$ & $1628.8$ & $-1397$ & $1.629$\\
+Civic & ellipse & $100$ & $1379$ & $-231.5$ & $1610.1$ & $-1379$ & $0.761$\\
+Civic & PAC2002 & $5$ & $1625$ & $-135.5$ & $1760.5$ & $-1625$ & $3.531$\\
+Civic & PAC2002 & $30$ & $1625$ & $-135.5$ & $1760.5$ & $-1625$ & $3.484$\\
+Civic & PAC2002 & $60$ & $1397$ & $-135.5$ & $1532.8$ & $-1397$ & $1.629$\\
+Civic & PAC2002 & $100$ & $1379$ & $-135.5$ & $1514.1$ & $-1379$ & $0.761$\\
+ZR1 & ellipse & $5$ & $1784$ & $361.3$ & $1423.2$ & $-1423$ & $7.591$\\
+ZR1 & ellipse & $30$ & $1784$ & $361.3$ & $1423.2$ & $-1423$ & $7.503$\\
+ZR1 & ellipse & $60$ & $1784$ & $361.3$ & $1423.2$ & $-1423$ & $7.328$\\
+ZR1 & ellipse & $100$ & $1681$ & $361.3$ & $1320.2$ & $-1320$ & $4.875$\\
+ZR1 & PAC2002 & $5$ & $1784$ & $410.1$ & $1374.3$ & $-1374$ & $7.211$\\
+ZR1 & PAC2002 & $30$ & $1784$ & $410.1$ & $1374.3$ & $-1374$ & $7.123$\\
+ZR1 & PAC2002 & $60$ & $1784$ & $410.1$ & $1374.3$ & $-1374$ & $6.948$\\
+ZR1 & PAC2002 & $100$ & $1681$ & $410.1$ & $1271.4$ & $-1271$ & $4.875$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Check of the bound of Theorem~\ref{thm:wellposed}\ref{wp:lip} at $10$\,mph. The measured value is $|\partial\amax/\partial\mu|$ from a relative change of $10^{-4}$ in friction, and the bound is $|\partial_\mu\Phi|/(\meff-g)$, both in m/s$^2$.}\label{tab:app-lipschitz}
+\begin{tabular}{lllrr}
+\toprule
+Vehicle & Tyre law & Binding & Measured & Bound\\
+\midrule
+Leaf & ellipse & power & $0.0000$ & $0.0000$\\
+Leaf & PAC2002 & power & $0.0000$ & $0.0000$\\
+Civic & ellipse & traction & $3.7368$ & $3.7369$\\
+Civic & PAC2002 & traction & $3.7818$ & $3.9060$\\
+ZR1 & ellipse & traction & $7.1418$ & $7.1416$\\
+ZR1 & PAC2002 & traction & $6.4143$ & $7.0277$\\
+\bottomrule
+\end{tabular}
+\end{table}
