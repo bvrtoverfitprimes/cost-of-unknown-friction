@@ -1,7 +1,7 @@
 # The Cost of Unknown Friction in Minimum-Time Vehicle Transit: supplementary material
 
-This repository holds the supplementary material for the paper *The Cost of Unknown Friction in
-Minimum-Time Vehicle Transit* by Himaghna Roy Choudhury. It contains the tables behind every
+This repository holds the supplementary material for the paper The Cost of Unknown Friction in
+Minimum-Time Vehicle Transit. It contains the tables behind every
 numerical statement of the paper, the computed values from which those tables are generated, the code
 that generates them, and the proofs of the results on the transient deficit.
 
