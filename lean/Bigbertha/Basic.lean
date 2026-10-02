@@ -354,6 +354,57 @@ theorem debt_rate_general (adot a r τ : Real) (ha : 0 < a) (hr0 : 0 ≤ r) (hr 
   · rw [max_eq_right h]
     nlinarith [mul_nonpos_of_nonpos_of_nonneg h h2]
 
+theorem power_transfer_eq_iff (V R I : Real) (hR : 0 < R) :
+    (V - I * R) * I = V ^ 2 / (4 * R) ↔ I = V / (2 * R) := by
+  have key : V ^ 2 / (4 * R) - (V - I * R) * I = R * (I - V / (2 * R)) ^ 2 := by
+    field_simp
+    ring
+  constructor
+  · intro h
+    have h0 : R * (I - V / (2 * R)) ^ 2 = 0 := by linarith
+    rcases mul_eq_zero.mp h0 with h1 | h1
+    · exact absurd h1 (ne_of_gt hR)
+    · have := pow_eq_zero_iff (n := 2) (by norm_num) |>.mp h1
+      linarith
+  · intro h
+    have h0 : R * (I - V / (2 * R)) ^ 2 = 0 := by rw [h, sub_self]; ring
+    linarith
+
+theorem box_vertex_bounds_n {n : Nat} (f : (Fin n → Real) → Real) (hf : Monotone f)
+    (lo hi x : Fin n → Real) (hx : lo ≤ x ∧ x ≤ hi) : f lo ≤ f x ∧ f x ≤ f hi :=
+  ⟨hf hx.1, hf hx.2⟩
+
+theorem envelope_one_point (Φ : Real → Real) (c lo hi a₀ am : Real) (hc : 0 < c)
+    (hΦ : ∀ a b, a < b → Φ b - Φ a ≤ -c * (b - a))
+    (hmax : IsGreatest {a | lo ≤ a ∧ a ≤ hi ∧ 0 ≤ Φ a} am)
+    (ha₀ : lo ≤ a₀ ∧ a₀ < hi) :
+    (Φ a₀ = 0 → am = a₀) ∧ (Φ a₀ < 0 → am < a₀) ∧ (Continuous Φ → 0 < Φ a₀ → a₀ < am) := by
+  obtain ⟨⟨_, _, ham⟩, hub⟩ := hmax
+  refine ⟨fun h0 => ?_, fun hneg => ?_, fun hcont hpos => ?_⟩
+  · have hle : a₀ ≤ am := hub ⟨ha₀.1, ha₀.2.le, h0.ge⟩
+    rcases eq_or_lt_of_le hle with h | h
+    · exact h.symm
+    · have := hΦ a₀ am h
+      nlinarith
+  · by_contra hge
+    push_neg at hge
+    rcases eq_or_lt_of_le hge with h | h
+    · rw [h] at hneg; linarith
+    · have := hΦ a₀ am h
+      nlinarith
+  · have hev : ∀ᶠ x in nhds a₀, 0 < Φ x := hcont.continuousAt.eventually (lt_mem_nhds hpos)
+    obtain ⟨ε, hε, hball⟩ := Metric.eventually_nhds_iff.mp hev
+    set x := min (a₀ + ε / 2) hi with hxdef
+    have hx1 : a₀ < x := lt_min (by linarith) ha₀.2
+    have hx2 : x ≤ hi := min_le_right _ _
+    have hdist : dist x a₀ < ε := by
+      rw [Real.dist_eq, abs_of_pos (by linarith)]
+      have : x ≤ a₀ + ε / 2 := min_le_left _ _
+      linarith
+    have hxpos : 0 < Φ x := hball hdist
+    have hxle : x ≤ am := hub ⟨by linarith [ha₀.1], hx2, hxpos.le⟩
+    linarith
+
 end BigBertha
 
 #print axioms BigBertha.traction_limited_blind_to_powertrain
@@ -398,3 +449,6 @@ end BigBertha
 #print axioms BigBertha.spacing_optimum
 #print axioms BigBertha.debt_rate_nonincreasing
 #print axioms BigBertha.debt_rate_general
+#print axioms BigBertha.power_transfer_eq_iff
+#print axioms BigBertha.box_vertex_bounds_n
+#print axioms BigBertha.envelope_one_point
