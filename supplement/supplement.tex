@@ -68,7 +68,7 @@ so that every reported check can be inspected and reproduced.
 
 Table~\ref{tab:app-epa} summarises the inversion of the EPA road-load coefficients. Tables
 \ref{tab:app-d3mass}--\ref{tab:app-battery} give the D3 results of Section~\mainref{sec:data}{3}, and
-Table~\ref{tab:app-060} the $0$--$60$\,mph comparison. Table~\ref{tab:fmvss} lists all $116$
+Table~\ref{tab:app-060} the $0$--$60$\,mph comparison. Table~\ref{tab:fmvss} lists all $114$
 determinations of friction from the FMVSS~135 reports.
 
 \begin{table}[htbp]
@@ -160,24 +160,24 @@ ZR1 & $3.58$ & $3.30$ & $3.30$ & $-0.2\%$ & $100\%$\\
 \toprule
 Quantity & Value\\
 \midrule
-Determinations of friction & $116$\\
-Brake application delay $t$, median (interquartile range) & $0.192$\,s ($0.085$ to $0.303$)\\
-Effective friction $\mu_{\mathrm{eff}}$, median (interquartile range) & $0.961$ ($0.909$ to $1.026$)\\
-Hold-out error of the high-speed stop, mean absolute & $2.83\%$\\
-Hold-out error, mean (standard deviation) & $+0.22\%$ ($3.57\%$)\\
-Hold-out errors within $10\%$ & $99\%$ of $116$\\
-Vehicles tested at both loadings & $50$\\
-Laden friction lower than lightly loaded & $37$ of $50$\\
-Relative change of friction when laden, median & $-6.95\%$\\
-Two-sided sign test & $p=9.4\times10^{-4}$\\
-Correlation of $\mu_{\mathrm{eff}}$ with PFC & $r=-0.035$\\
+Determinations of friction & $114$\\
+Brake application delay $t$, median (interquartile range) & $0.192$\,s ($0.086$ to $0.304$)\\
+Effective friction $\mu_{\mathrm{eff}}$, median (interquartile range) & $0.967$ ($0.909$ to $1.027$)\\
+Hold-out error of the high-speed stop, mean absolute & $2.82\%$\\
+Hold-out error, mean (standard deviation) & $+0.27\%$ ($3.56\%$)\\
+Hold-out errors within $10\%$ & $99\%$ of $114$\\
+Vehicles tested at both loadings & $49$\\
+Laden friction lower than lightly loaded & $36$ of $49$\\
+Relative change of friction when laden, median & $-7.17\%$\\
+Two-sided sign test & $p=1.4\times10^{-3}$\\
+Correlation of $\mu_{\mathrm{eff}}$ with PFC & $r=-0.031$\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 {\footnotesize\setlength{\tabcolsep}{3pt}
 \begin{longtable}{lp{2.9cm}lccccc}
-\caption{The $116$ determinations of effective friction from the FMVSS~135 compliance reports. For each vehicle and loading, the stopping distances at two speeds determine the deceleration $a$ (m/s$^2$) and the brake application delay $t$ (s), and $\mu_{\mathrm{eff}}=a/g$. PFC is the peak friction coefficient of the test surface measured with the reference tyre, and the last column is the hold-out error (\%) of the predicted high-speed stop. Loading LLVW is lightly loaded and GVWR fully loaded.}\label{tab:fmvss}\\
+\caption{The $114$ determinations of effective friction from the FMVSS~135 compliance reports. For each vehicle and loading, the stopping distances at two speeds determine the deceleration $a$ (m/s$^2$) and the brake application delay $t$ (s), and $\mu_{\mathrm{eff}}=a/g$. PFC is the peak friction coefficient of the test surface measured with the reference tyre, and the last column is the hold-out error (\%) of the predicted high-speed stop. Loading LLVW is lightly loaded and GVWR fully loaded.}\label{tab:fmvss}\\
 \toprule
 Report & Vehicle & Load & $a$ & $t$ & $\mu_{\mathrm{eff}}$ & PFC & Error\\
 \midrule
@@ -260,8 +260,6 @@ TRTR-647204-2020-001 & 2021 KIA Telluride & GVWR & $9.00$ & $+0.006$ & $0.918$ &
 TRTR-647204-2020-001 & 2021 KIA Telluride & LLVW & $10.30$ & $+0.123$ & $1.050$ & $0.95$ & $-1.9$\\
 TRTR-641781-2011-001 & 2011 Mazda 2 & GVWR & $12.60$ & $+0.762$ & $1.285$ & $0.97$ & $+6.9$\\
 TRTR-641781-2011-001 & 2011 Mazda 2 & LLVW & $10.66$ & $+0.461$ & $1.087$ & $0.97$ & $+3.4$\\
-TRTR-639212-2006 & 2008 Mazda CX-7 & GVWR & $8.73$ & $+0.212$ & $0.890$ & $1.01$ & $+0.5$\\
-TRTR-639212-2006 & 2008 Mazda CX-7 & LLVW & $8.94$ & $-0.060$ & $0.911$ & $1.01$ & $-5.8$\\
 TRTR-639212-2006-001 & 2008 Mazda CX-7 & GVWR & $8.73$ & $+0.212$ & $0.890$ & $1.01$ & $+0.5$\\
 TRTR-639212-2006-001 & 2008 Mazda CX-7 & LLVW & $8.94$ & $-0.060$ & $0.911$ & $1.01$ & $-5.8$\\
 TRTR-643633-2014-001 & 2014 MERCEDES-BENZ CLA 250 & GVWR & $10.05$ & $+0.332$ & $1.025$ & $0.94$ & $+3.4$\\
@@ -539,17 +537,17 @@ Theorem~\mainref{thm:propagation}{8.1}.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\mainref{thm:propagation}{8.1}\mainref{pr:quant}{{(ii)}} at $10$\,mph. The friction distribution is the $116$ values of Table~\ref{tab:fmvss} divided by their median, with relative standard deviation $0.120$ and $5$th and $95$th percentiles $0.811$ and $1.241$. The table gives the exact quantiles $\amax(q_\mu(p))$ (m/s$^2$) at $p=0.05$, $0.25$, $0.5$, $0.75$, and $0.95$, and the largest difference from the Monte Carlo quantiles of the $116$ envelope values.}\label{tab:app-quant}
+\caption{Check of Theorem~\mainref{thm:propagation}{8.1}\mainref{pr:quant}{{(ii)}} at $10$\,mph. The friction distribution is the $114$ values of Table~\ref{tab:fmvss} divided by their median, with relative standard deviation $0.120$ and $5$th and $95$th percentiles $0.806$ and $1.236$. The table gives the exact quantiles $\amax(q_\mu(p))$ (m/s$^2$) at $p=0.05$, $0.25$, $0.5$, $0.75$, and $0.95$, and the largest difference from the Monte Carlo quantiles of the $114$ envelope values.}\label{tab:app-quant}
 \begin{tabular}{llp{6.2cm}c}
 \toprule
 Vehicle & Law & Exact quantiles & Largest difference\\
 \midrule
-Leaf & ellipse & 3.4091, 3.6670, 3.6670, 3.6670, 3.6670 & $4.4\times10^{-16}$\\
-Leaf & PAC2002 & 3.3976, 3.6670, 3.6670, 3.6670, 3.6670 & $4.4\times10^{-16}$\\
-Civic & ellipse & 2.9447, 3.3897, 3.5628, 3.7775, 4.1616 & $0$\\
-Civic & PAC2002 & 2.9076, 3.3560, 3.5308, 3.7482, 4.1616 & $0$\\
-ZR1 & ellipse & 5.8346, 7.0669, 7.5814, 8.2501, 9.7709 & $0$\\
-ZR1 & PAC2002 & 5.6058, 6.7347, 7.1997, 7.7986, 9.5453 & $0$\\
+Leaf & ellipse & 3.3899, 3.6670, 3.6670, 3.6670, 3.6670 & $4.4\times10^{-16}$\\
+Leaf & PAC2002 & 3.3781, 3.6670, 3.6670, 3.6670, 3.6670 & $4.4\times10^{-16}$\\
+Civic & ellipse & 2.9279, 3.3723, 3.5458, 3.7627, 4.1616 & $0$\\
+Civic & PAC2002 & 2.8907, 3.3385, 3.5136, 3.7332, 4.1616 & $0$\\
+ZR1 & ellipse & 5.7904, 7.0162, 7.5298, 8.2029, 9.7709 & $0$\\
+ZR1 & PAC2002 & 5.5650, 6.6886, 7.1533, 7.7565, 9.4710 & $0$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -579,17 +577,17 @@ ZR1 & PAC2002 & $60$ & $512$ & $5.6255$ & $5.6602$ & $8.2991$ & $8.3474$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\mainref{thm:propagation}{8.1}\mainref{pr:first}{{(iii)}} at $10$\,mph: the first-order standard deviation of $\amax$, the Monte Carlo standard deviation over the $116$ friction values (both m/s$^2$), and the local amplification $\meff/(\meff-T')$ where traction binds.}\label{tab:app-first}
+\caption{Check of Theorem~\mainref{thm:propagation}{8.1}\mainref{pr:first}{{(iii)}} at $10$\,mph: the first-order standard deviation of $\amax$, the Monte Carlo standard deviation over the $114$ friction values (both m/s$^2$), and the local amplification $\meff/(\meff-T')$ where traction binds.}\label{tab:app-first}
 \begin{tabular}{llccc}
 \toprule
 Vehicle & Law & First order & Monte Carlo & Amplification\\
 \midrule
-Leaf & ellipse & $0.0000$ & $0.0827$ & n/a\\
-Leaf & PAC2002 & $0.0000$ & $0.0860$ & n/a\\
-Civic & ellipse & $0.3816$ & $0.3330$ & $0.875$\\
-Civic & PAC2002 & $0.3858$ & $0.3397$ & $0.893$\\
-ZR1 & ellipse & $1.1583$ & $1.0415$ & $1.254$\\
-ZR1 & PAC2002 & $1.0421$ & $1.0002$ & $1.187$\\
+Leaf & ellipse & $0.0000$ & $0.0887$ & n/a\\
+Leaf & PAC2002 & $0.0000$ & $0.0922$ & n/a\\
+Civic & ellipse & $0.3813$ & $0.3361$ & $0.875$\\
+Civic & PAC2002 & $0.3855$ & $0.3426$ & $0.893$\\
+ZR1 & ellipse & $1.1573$ & $1.0470$ & $1.254$\\
+ZR1 & PAC2002 & $1.0412$ & $1.0019$ & $1.187$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -619,14 +617,14 @@ ZR1 & PAC2002 & $273.44$ & $270.25$ & $268.68$ & $267.87$ & $267.76$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{Trip-time quantiles (s) on the rural route with the ellipse law, computed as $T^\star(q^{+}_\mu(1-p))$ from three solves at $p=0.05$, $0.5$, and $0.95$, and the largest difference from the Monte Carlo quantiles of the $116$ solves at the measured friction values.}\label{tab:app-transitq}
+\caption{Trip-time quantiles (s) on the rural route with the ellipse law, computed as $T^\star(q^{+}_\mu(1-p))$ from three solves at $p=0.05$, $0.5$, and $0.95$, and the largest difference from the Monte Carlo quantiles of the $114$ solves at the measured friction values.}\label{tab:app-transitq}
 \begin{tabular}{lcccc}
 \toprule
 Vehicle & $p=0.05$ & $p=0.5$ & $p=0.95$ & Largest difference\\
 \midrule
-Leaf & $271.679$ & $272.017$ & $273.156$ & $0$\\
-Civic & $270.992$ & $271.790$ & $273.825$ & $0$\\
-ZR1 & $267.902$ & $268.574$ & $269.434$ & $0$\\
+Leaf & $271.687$ & $272.008$ & $273.225$ & $0$\\
+Civic & $271.001$ & $271.766$ & $273.903$ & $0$\\
+ZR1 & $267.907$ & $268.555$ & $269.463$ & $0$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -640,15 +638,15 @@ Table~\ref{tab:app-excess} those behind the check of Proposition~\mainref{prop:e
 
 \begin{table}[htbp]
 \centering\small
-\caption{Lower bound on friction identified from each Argonne D3 drive cycle, taking the larger of the driven-axle traction utilisation and the all-wheel braking utilisation, and in brackets its fraction of the friction $0.96$ pinned by the FMVSS~135 stops. The Focus Electric has no highway run.}\label{tab:d3cycles}
+\caption{Lower bound on friction identified from each Argonne D3 drive cycle, taking the larger of the driven-axle traction utilisation and the all-wheel braking utilisation, and in brackets its fraction of the median friction $0.97$ pinned by the FMVSS~135 stops. The Focus Electric has no highway run.}\label{tab:d3cycles}
 \begin{tabular}{lccc}
 \toprule
 Vehicle & UDDS (urban) & Highway & US06 (aggressive)\\
 \midrule
 2010 Toyota Prius & $0.32$ ($0.33$) & $0.32$ ($0.33$) & $0.72$ ($0.75$)\\
-2012 Ford Focus & $0.36$ ($0.38$) & $0.35$ ($0.36$) & $0.69$ ($0.72$)\\
-2012 Nissan Leaf & $0.36$ ($0.38$) & $0.29$ ($0.31$) & $0.60$ ($0.62$)\\
-2013 Ford Focus Electric & $0.63$ ($0.66$) & n/a & $0.62$ ($0.65$)\\
+2012 Ford Focus & $0.36$ ($0.38$) & $0.35$ ($0.36$) & $0.69$ ($0.71$)\\
+2012 Nissan Leaf & $0.36$ ($0.38$) & $0.29$ ($0.30$) & $0.60$ ($0.62$)\\
+2013 Ford Focus Electric & $0.63$ ($0.65$) & n/a & $0.62$ ($0.64$)\\
 \midrule
 Median fraction & $0.38$ & $0.33$ & $0.68$\\
 \bottomrule
@@ -657,17 +655,17 @@ Median fraction & $0.38$ & $0.33$ & $0.68$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\mainref{thm:chance}{10.3} on the rural route with the friction ellipse. For each vehicle and safety level $\delta$, the plan is the minimum-time profile at the friction multiplier $q(\delta)$ of the $116$ measured values, with trip time $T^\star$ (s). The plan was executed against all $116$ values. The table gives the number of values below $q(\delta)$, the number at which the plan was not executable, and the infeasible share, which is at most $\delta$ in every case.}\label{tab:app-chance}
+\caption{Check of Theorem~\mainref{thm:chance}{10.3} on the rural route with the friction ellipse. For each vehicle and safety level $\delta$, the plan is the minimum-time profile at the friction multiplier $q(\delta)$ of the $114$ measured values, with trip time $T^\star$ (s). The plan was executed against all $114$ values. The table gives the number of values below $q(\delta)$, the number at which the plan was not executable, and the infeasible share, which is at most $\delta$ in every case.}\label{tab:app-chance}
 \begin{tabular}{lcccccc}
 \toprule
 Vehicle & $\delta$ & $q(\delta)$ & $T^\star$ & Below & Infeasible & Share\\
 \midrule
-Leaf & $0.05$ & $0.810$ & $273.16$ & $5$ & $5$ & $0.043$\\
-Leaf & $0.25$ & $0.946$ & $272.11$ & $29$ & $29$ & $0.250$\\
-Civic & $0.05$ & $0.810$ & $273.83$ & $5$ & $5$ & $0.043$\\
-Civic & $0.25$ & $0.946$ & $272.06$ & $29$ & $29$ & $0.250$\\
-ZR1 & $0.05$ & $0.810$ & $269.43$ & $5$ & $5$ & $0.043$\\
-ZR1 & $0.25$ & $0.946$ & $268.78$ & $29$ & $29$ & $0.250$\\
+Leaf & $0.05$ & $0.805$ & $273.23$ & $5$ & $5$ & $0.044$\\
+Leaf & $0.25$ & $0.940$ & $272.12$ & $28$ & $28$ & $0.246$\\
+Civic & $0.05$ & $0.805$ & $273.90$ & $5$ & $5$ & $0.044$\\
+Civic & $0.25$ & $0.940$ & $272.09$ & $28$ & $28$ & $0.246$\\
+ZR1 & $0.05$ & $0.805$ & $269.46$ & $5$ & $5$ & $0.044$\\
+ZR1 & $0.25$ & $0.940$ & $268.81$ & $28$ & $28$ & $0.246$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -679,11 +677,11 @@ ZR1 & $0.25$ & $0.946$ & $268.78$ & $29$ & $29$ & $0.250$\\
 \toprule
 Vehicle & $r$ & Cycles & Law & Solver & Difference & Braking\\
 \midrule
-Leaf & $0.38$ & $13$ & $46.17$ & $46.15$ & $+0.0\%$ & $35\%$\\
-Leaf & $0.68$ & $13$ & $11.10$ & $11.10$ & $+0.0\%$ & $42\%$\\
-Civic & $0.38$ & $13$ & $55.40$ & $55.37$ & $+0.1\%$ & $31\%$\\
-Civic & $0.68$ & $13$ & $15.69$ & $15.68$ & $+0.1\%$ & $32\%$\\
-ZR1 & $0.38$ & $13$ & $36.49$ & $36.44$ & $+0.1\%$ & $30\%$\\
+Leaf & $0.38$ & $13$ & $45.79$ & $45.77$ & $+0.0\%$ & $35\%$\\
+Leaf & $0.68$ & $13$ & $11.11$ & $11.11$ & $+0.0\%$ & $42\%$\\
+Civic & $0.38$ & $13$ & $54.97$ & $54.94$ & $+0.1\%$ & $31\%$\\
+Civic & $0.68$ & $13$ & $15.70$ & $15.69$ & $+0.1\%$ & $32\%$\\
+ZR1 & $0.38$ & $13$ & $36.21$ & $36.15$ & $+0.1\%$ & $30\%$\\
 ZR1 & $0.68$ & $13$ & $10.32$ & $10.29$ & $+0.3\%$ & $30\%$\\
 \bottomrule
 \end{tabular}
@@ -697,13 +695,13 @@ Table~\ref{tab:app-kstar} the net gain of every number of probes behind Table~\m
 
 \begin{table}[htbp]
 \centering\small
-\caption{The sequence of slip-risk-limited probes of Proposition~\mainref{prop:ratchet}{11.1}, with prior standard deviation $s_0=0.117$ of $\ln\mu$. For each probe the table gives its utilisation as a fraction of the friction and the standard deviation of $\ln\mu$ before and after it.}\label{tab:app-ratchet}
+\caption{The sequence of slip-risk-limited probes of Proposition~\mainref{prop:ratchet}{11.1}, with prior standard deviation $s_0=0.118$ of $\ln\mu$. For each probe the table gives its utilisation as a fraction of the friction and the standard deviation of $\ln\mu$ before and after it.}\label{tab:app-ratchet}
 \begin{tabular}{cccc}
 \toprule
 Probe & Utilisation & Before & After\\
 \midrule
-$1$ & $0.825$ & $0.1172$ & $0.0310$\\
-$2$ & $0.950$ & $0.0310$ & $0.0126$\\
+$1$ & $0.824$ & $0.1179$ & $0.0312$\\
+$2$ & $0.950$ & $0.0312$ & $0.0126$\\
 $3$ & $0.979$ & $0.0126$ & $0.0078$\\
 $4$ & $0.987$ & $0.0078$ & $0.0059$\\
 $5$ & $0.990$ & $0.0059$ & $0.0048$\\
@@ -720,18 +718,18 @@ $6$ & $0.992$ & $0.0048$ & $0.0041$\\
 \toprule
 Vehicle & Route & Prior price & $k=1$ & $k=2$ & $k=3$ & $k=4$ & $k=5$ & $k^\star$\\
 \midrule
-Leaf & highway & $0.51$ & $0.25$ & $0.08$ & $-0.15$ & $-0.39$ & $-0.63$ & $1$\\
-Leaf & rural & $0.93$ & $0.64$ & $0.41$ & $0.13$ & $-0.16$ & $-0.46$ & $1$\\
-Leaf & mountain & $3.76$ & $2.60$ & $2.78$ & $2.54$ & $2.21$ & $1.86$ & $2$\\
-Leaf & urban & $3.52$ & $2.62$ & $2.43$ & $1.99$ & $1.48$ & $0.97$ & $1$\\
-Civic & highway & $1.01$ & $0.60$ & $0.55$ & $0.37$ & $0.17$ & $-0.04$ & $1$\\
-Civic & rural & $1.80$ & $1.36$ & $1.26$ & $1.04$ & $0.79$ & $0.53$ & $1$\\
-Civic & mountain & $4.40$ & $3.07$ & $3.40$ & $3.23$ & $2.95$ & $2.64$ & $2$\\
-Civic & urban & $7.06$ & $4.99$ & $5.58$ & $5.37$ & $4.99$ & $4.57$ & $2$\\
-ZR1 & highway & $0.79$ & $0.23$ & $-0.14$ & $-0.62$ & $-1.13$ & $-1.64$ & $1$\\
-ZR1 & rural & $0.78$ & $0.13$ & $-0.34$ & $-0.94$ & $-1.56$ & $-2.19$ & $1$\\
-ZR1 & mountain & $0.57$ & $-0.15$ & $-0.83$ & $-1.61$ & $-2.42$ & $-3.23$ & $0$\\
-ZR1 & urban & $4.63$ & $2.69$ & $2.30$ & $1.35$ & $0.27$ & $-0.84$ & $1$\\
+Leaf & highway & $0.52$ & $0.25$ & $0.08$ & $-0.14$ & $-0.38$ & $-0.62$ & $1$\\
+Leaf & rural & $0.95$ & $0.65$ & $0.42$ & $0.14$ & $-0.15$ & $-0.44$ & $1$\\
+Leaf & mountain & $3.79$ & $2.62$ & $2.80$ & $2.56$ & $2.24$ & $1.88$ & $2$\\
+Leaf & urban & $3.56$ & $2.66$ & $2.47$ & $2.03$ & $1.52$ & $1.01$ & $1$\\
+Civic & highway & $1.01$ & $0.60$ & $0.55$ & $0.38$ & $0.18$ & $-0.04$ & $1$\\
+Civic & rural & $1.82$ & $1.37$ & $1.28$ & $1.05$ & $0.80$ & $0.54$ & $1$\\
+Civic & mountain & $4.43$ & $3.09$ & $3.43$ & $3.25$ & $2.98$ & $2.67$ & $2$\\
+Civic & urban & $7.10$ & $5.03$ & $5.62$ & $5.41$ & $5.04$ & $4.61$ & $2$\\
+ZR1 & highway & $0.80$ & $0.23$ & $-0.13$ & $-0.61$ & $-1.12$ & $-1.64$ & $1$\\
+ZR1 & rural & $0.78$ & $0.14$ & $-0.34$ & $-0.93$ & $-1.56$ & $-2.19$ & $1$\\
+ZR1 & mountain & $0.57$ & $-0.15$ & $-0.82$ & $-1.61$ & $-2.41$ & $-3.23$ & $0$\\
+ZR1 & urban & $4.66$ & $2.72$ & $2.33$ & $1.38$ & $0.31$ & $-0.80$ & $1$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -745,25 +743,25 @@ Table~\ref{tab:app-scaling} gives the scaling of the numerical optimum with the 
 \begin{table}[htbp]
 \centering\small
 \setlength{\tabcolsep}{3.5pt}
-\caption{Inputs and results of Theorem~\mainref{thm:spacing}{12.1}, with field standard deviation $\sigma=0.117$, $z=1.645$, and probe residual standard deviation $s_p=0.0322$. The columns give the probe cost $c$ (s), the slope $\kappa$ and the no-probe rate $h_0$ of the price curve (s/km), the threshold $\ell_{\min}$ (km), and for each correlation length $\ell$ the numerical minimiser of $J(D)$ and the asymptotic $D^\star$ (km). The entry none means that no spacing beats not probing. A dagger marks the cases within a factor of two of $\ell_{\min}$, which the threshold test excludes.}\label{tab:app-spacing}
+\caption{Inputs and results of Theorem~\mainref{thm:spacing}{12.1}, with field standard deviation $\sigma=0.118$, $z=1.645$, and probe residual standard deviation $s_p=0.0323$. The columns give the probe cost $c$ (s), the slope $\kappa$ and the no-probe rate $h_0$ of the price curve (s/km), the threshold $\ell_{\min}$ (km), and for each correlation length $\ell$ the numerical minimiser of $J(D)$ and the asymptotic $D^\star$ (km). The entry none means that no spacing beats not probing. A dagger marks the cases within a factor of two of $\ell_{\min}$, which the threshold test excludes.}\label{tab:app-spacing}
 \begin{tabular}{llcccccccccc}
 \toprule
 & & & & & & \multicolumn{2}{c}{$\ell=1$\,km} & \multicolumn{2}{c}{$\ell=5$\,km} & \multicolumn{2}{c}{$\ell=25$\,km}\\
 \cmidrule(lr){7-8}\cmidrule(lr){9-10}\cmidrule(lr){11-12}
 Vehicle & Route & $c$ & $\kappa$ & $h_0$ & $\ell_{\min}$ & Num. & Law & Num. & Law & Num. & Law\\
 \midrule
-Leaf & highway & $0.17$ & $0.09$ & $0.026$ & $16.8$ & none & $7.9$ & none & $13.5$ & $26.1^\dagger$ & $23.1$\\
-Leaf & rural & $0.21$ & $0.28$ & $0.156$ & $1.0$ & none$^\dagger$ & $4.1$ & $4.2$ & $7.0$ & $8.1$ & $12.0$\\
-Leaf & mountain & $0.27$ & $2.16$ & $0.470$ & $2.7$ & none & $1.2$ & $2.9^\dagger$ & $2.1$ & $4.5$ & $3.6$\\
-Leaf & urban & $0.38$ & $2.04$ & $0.705$ & $1.0$ & none$^\dagger$ & $1.6$ & $2.4$ & $2.8$ & $5.7$ & $4.7$\\
-Civic & highway & $0.16$ & $0.25$ & $0.050$ & $16.5$ & none & $3.6$ & none & $6.2$ & $15.7^\dagger$ & $10.6$\\
-Civic & rural & $0.19$ & $0.81$ & $0.300$ & $1.0$ & none$^\dagger$ & $1.9$ & $2.7$ & $3.2$ & $4.2$ & $5.5$\\
-Civic & mountain & $0.24$ & $2.64$ & $0.550$ & $2.3$ & none & $1.0$ & $2.3$ & $1.7$ & $3.7$ & $3.0$\\
-Civic & urban & $0.34$ & $6.69$ & $1.412$ & $1.2$ & $1.5^\dagger$ & $0.7$ & $1.5$ & $1.2$ & $2.5$ & $2.0$\\
-ZR1 & highway & $0.37$ & $0.19$ & $0.040$ & $47.0$ & none & $7.7$ & none & $13.1$ & none$^\dagger$ & $22.4$\\
-ZR1 & rural & $0.45$ & $0.62$ & $0.129$ & $17.6$ & none & $4.0$ & none & $6.8$ & $17.5^\dagger$ & $11.6$\\
-ZR1 & mountain & $0.57$ & $0.33$ & $0.071$ & $40.2$ & none & $7.1$ & none & $12.1$ & none$^\dagger$ & $20.7$\\
-ZR1 & urban & $0.80$ & $4.40$ & $0.926$ & $4.4$ & none & $1.6$ & $4.5^\dagger$ & $2.7$ & $5.7$ & $4.7$\\
+Leaf & highway & $0.17$ & $0.09$ & $0.026$ & $16.5$ & none & $7.9$ & none & $13.4$ & $25.8^\dagger$ & $23.0$\\
+Leaf & rural & $0.21$ & $0.28$ & $0.158$ & $0.9$ & none$^\dagger$ & $4.1$ & $4.1$ & $7.0$ & $8.0$ & $11.9$\\
+Leaf & mountain & $0.27$ & $2.16$ & $0.473$ & $2.7$ & none & $1.2$ & $2.8^\dagger$ & $2.1$ & $4.5$ & $3.6$\\
+Leaf & urban & $0.38$ & $2.04$ & $0.713$ & $1.0$ & none$^\dagger$ & $1.6$ & $2.3$ & $2.7$ & $5.7$ & $4.7$\\
+Civic & highway & $0.16$ & $0.25$ & $0.051$ & $16.4$ & none & $3.6$ & none & $6.2$ & $15.6^\dagger$ & $10.6$\\
+Civic & rural & $0.19$ & $0.81$ & $0.303$ & $1.0$ & none$^\dagger$ & $1.9$ & $2.7$ & $3.2$ & $4.2$ & $5.5$\\
+Civic & mountain & $0.24$ & $2.64$ & $0.553$ & $2.3$ & none & $1.0$ & $2.3$ & $1.7$ & $3.7$ & $2.9$\\
+Civic & urban & $0.34$ & $6.69$ & $1.421$ & $1.2$ & $1.5^\dagger$ & $0.7$ & $1.5$ & $1.2$ & $2.5$ & $2.0$\\
+ZR1 & highway & $0.37$ & $0.19$ & $0.040$ & $46.6$ & none & $7.6$ & none & $13.1$ & none$^\dagger$ & $22.4$\\
+ZR1 & rural & $0.45$ & $0.62$ & $0.130$ & $17.5$ & none & $4.0$ & none & $6.8$ & $17.4^\dagger$ & $11.6$\\
+ZR1 & mountain & $0.57$ & $0.33$ & $0.071$ & $39.9$ & none & $7.1$ & none & $12.1$ & none$^\dagger$ & $20.7$\\
+ZR1 & urban & $0.80$ & $4.40$ & $0.932$ & $4.3$ & none & $1.6$ & $4.4^\dagger$ & $2.7$ & $5.7$ & $4.6$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -775,8 +773,8 @@ ZR1 & urban & $0.80$ & $4.40$ & $0.926$ & $4.4$ & none & $1.6$ & $4.5^\dagger$ &
 \toprule
 $\ell_0$ (km) & $\ell$ (km) & $D^\star(\ell_0)$ (km) & $D^\star(\ell)$ (km) & Slope\\
 \midrule
-$2$ & $16$ & $0.40$ & $0.76$ & $0.303$\\
-$2$ & $128$ & $0.40$ & $1.52$ & $0.319$\\
+$2$ & $16$ & $0.40$ & $0.76$ & $0.304$\\
+$2$ & $128$ & $0.40$ & $1.52$ & $0.320$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -803,23 +801,23 @@ Canyon & $26.9$ & $6$ & $2$ & $1120$ & $54\%$ & $24$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{One probe on the real routes. The prior price is $T^\star$ at the $5\%$ quantile $0.825$ of the fleet prior less $T^\star(\mu)$. The gain is the reduction in $T^\star$ when one probe at $0.825$ of the friction raises the planning fraction to $0.950$, and the cost is $c(u_p)$ at the median posted limit of the route. All times are in seconds. The last column is the share of the prior price that the probe recovers.}\label{tab:app-routeprobe}
+\caption{One probe on the real routes. The prior price is $T^\star$ at the $5\%$ quantile $0.824$ of the fleet prior less $T^\star(\mu)$. The gain is the reduction in $T^\star$ when one probe at $0.824$ of the friction raises the planning fraction to $0.950$, and the cost is $c(u_p)$ at the median posted limit of the route. All times are in seconds. The last column is the share of the prior price that the probe recovers.}\label{tab:app-routeprobe}
 \begin{tabular}{llccccc}
 \toprule
 Route & Vehicle & Prior price & Gain & Cost & Net & Recovered\\
 \midrule
-Suburban, green & Leaf & $1.03$ & $0.85$ & $0.30$ & $0.55$ & $53\%$\\
-Suburban, green & Civic & $1.68$ & $1.29$ & $0.27$ & $1.02$ & $60\%$\\
-Suburban, green & ZR1 & $0.96$ & $0.73$ & $0.63$ & $0.10$ & $11\%$\\
-Suburban, red & Leaf & $9.27$ & $7.84$ & $0.30$ & $7.54$ & $81\%$\\
-Suburban, red & Civic & $18.73$ & $14.13$ & $0.27$ & $13.86$ & $74\%$\\
-Suburban, red & ZR1 & $12.50$ & $9.40$ & $0.63$ & $8.77$ & $70\%$\\
-Canyon, green & Leaf & $0.75$ & $0.63$ & $0.26$ & $0.37$ & $49\%$\\
-Canyon, green & Civic & $1.46$ & $1.11$ & $0.24$ & $0.87$ & $60\%$\\
-Canyon, green & ZR1 & $0.98$ & $0.73$ & $0.56$ & $0.17$ & $17\%$\\
-Canyon, red & Leaf & $2.29$ & $1.96$ & $0.26$ & $1.69$ & $74\%$\\
-Canyon, red & Civic & $4.62$ & $3.48$ & $0.24$ & $3.24$ & $70\%$\\
-Canyon, red & ZR1 & $3.00$ & $2.26$ & $0.56$ & $1.70$ & $56\%$\\
+Suburban, green & Leaf & $1.04$ & $0.86$ & $0.30$ & $0.56$ & $54\%$\\
+Suburban, green & Civic & $1.69$ & $1.29$ & $0.27$ & $1.03$ & $61\%$\\
+Suburban, green & ZR1 & $0.97$ & $0.74$ & $0.63$ & $0.11$ & $11\%$\\
+Suburban, red & Leaf & $9.37$ & $7.93$ & $0.30$ & $7.63$ & $81\%$\\
+Suburban, red & Civic & $18.85$ & $14.22$ & $0.27$ & $13.95$ & $74\%$\\
+Suburban, red & ZR1 & $12.57$ & $9.46$ & $0.63$ & $8.83$ & $70\%$\\
+Canyon, green & Leaf & $0.76$ & $0.64$ & $0.26$ & $0.38$ & $50\%$\\
+Canyon, green & Civic & $1.47$ & $1.12$ & $0.24$ & $0.88$ & $60\%$\\
+Canyon, green & ZR1 & $0.98$ & $0.73$ & $0.56$ & $0.17$ & $18\%$\\
+Canyon, red & Leaf & $2.32$ & $1.98$ & $0.26$ & $1.72$ & $74\%$\\
+Canyon, red & Civic & $4.65$ & $3.50$ & $0.24$ & $3.27$ & $70\%$\\
+Canyon, red & ZR1 & $3.02$ & $2.27$ & $0.56$ & $1.71$ & $57\%$\\
 \bottomrule
 \end{tabular}
 \end{table}
