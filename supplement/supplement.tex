@@ -312,52 +312,52 @@ Theorem~\mainref{thm:wellposed}{4.1} in Section~\mainref{sec:wellposed}{4}.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\mainref{thm:wellposed}{4.1}. For each vehicle, tyre law, and speed, the effective mass $\meff$ and the load-transfer gain $g$ (both in kg), the margin $\meff-g$, the largest slope of the force margin $\Phi$ on a grid of $4001$ accelerations (in N per m/s$^2$, negative when $\Phi$ is strictly decreasing), and the envelope $\amax$ (m/s$^2$). A negative envelope means that the vehicle cannot sustain that speed.}\label{tab:app-wellposed}
-\begin{tabular}{llrrrrrr}
+\caption{Check of Theorem~\mainref{thm:wellposed}{4.1}. For each vehicle, tyre law, and speed, the effective mass $\meff$, the largest slope $\sup T'$ of the traction capability, and the load-transfer gain $\beta=\max(\sup T',0)$ (all in kg), the margin $\meff-\beta$, the largest slope of the force margin $\Phi$ on a grid of $4001$ accelerations (in N per m/s$^2$, negative when $\Phi$ is strictly decreasing), and the envelope $\amax$ (m/s$^2$). A negative envelope means that the vehicle cannot sustain that speed.}\label{tab:app-wellposed}
+\begin{tabular}{llrrrrrrr}
 \toprule
-Vehicle & Tyre law & mph & $\meff$ & $g$ & $\meff-g$ & $\max\Phi'$ & $\amax$\\
+Vehicle & Tyre law & mph & $\meff$ & $\sup T'$ & $\beta$ & $\meff-\beta$ & $\max\Phi'$ & $\amax$\\
 \midrule
-Leaf & ellipse & $5$ & $1626$ & $-269.0$ & $1895.0$ & $-1626$ & $3.663$\\
-Leaf & ellipse & $30$ & $1626$ & $-269.0$ & $1895.0$ & $-1626$ & $3.154$\\
-Leaf & ellipse & $60$ & $1626$ & $-269.0$ & $1895.0$ & $-1626$ & $1.335$\\
-Leaf & ellipse & $100$ & $1626$ & $-269.0$ & $1895.0$ & $-1626$ & $-0.712$\\
-Leaf & PAC2002 & $5$ & $1626$ & $-157.2$ & $1783.3$ & $-1626$ & $3.663$\\
-Leaf & PAC2002 & $30$ & $1626$ & $-157.2$ & $1783.3$ & $-1626$ & $3.154$\\
-Leaf & PAC2002 & $60$ & $1626$ & $-157.2$ & $1783.3$ & $-1626$ & $1.335$\\
-Leaf & PAC2002 & $100$ & $1626$ & $-157.2$ & $1783.3$ & $-1626$ & $-0.712$\\
-Civic & ellipse & $5$ & $1625$ & $-231.5$ & $1856.5$ & $-1625$ & $3.567$\\
-Civic & ellipse & $30$ & $1625$ & $-231.5$ & $1856.5$ & $-1625$ & $3.519$\\
-Civic & ellipse & $60$ & $1397$ & $-231.5$ & $1628.8$ & $-1397$ & $1.629$\\
-Civic & ellipse & $100$ & $1379$ & $-231.5$ & $1610.1$ & $-1379$ & $0.761$\\
-Civic & PAC2002 & $5$ & $1625$ & $-135.5$ & $1760.5$ & $-1625$ & $3.531$\\
-Civic & PAC2002 & $30$ & $1625$ & $-135.5$ & $1760.5$ & $-1625$ & $3.484$\\
-Civic & PAC2002 & $60$ & $1397$ & $-135.5$ & $1532.8$ & $-1397$ & $1.629$\\
-Civic & PAC2002 & $100$ & $1379$ & $-135.5$ & $1514.1$ & $-1379$ & $0.761$\\
-ZR1 & ellipse & $5$ & $1784$ & $361.3$ & $1423.2$ & $-1423$ & $7.591$\\
-ZR1 & ellipse & $30$ & $1784$ & $361.3$ & $1423.2$ & $-1423$ & $7.503$\\
-ZR1 & ellipse & $60$ & $1784$ & $361.3$ & $1423.2$ & $-1423$ & $7.328$\\
-ZR1 & ellipse & $100$ & $1681$ & $361.3$ & $1320.2$ & $-1320$ & $4.875$\\
-ZR1 & PAC2002 & $5$ & $1784$ & $410.1$ & $1374.3$ & $-1374$ & $7.211$\\
-ZR1 & PAC2002 & $30$ & $1784$ & $410.1$ & $1374.3$ & $-1374$ & $7.123$\\
-ZR1 & PAC2002 & $60$ & $1784$ & $410.1$ & $1374.3$ & $-1374$ & $6.948$\\
-ZR1 & PAC2002 & $100$ & $1681$ & $410.1$ & $1271.4$ & $-1271$ & $4.875$\\
+Leaf & ellipse & $5$ & $1626$ & $-269.0$ & $0.0$ & $1626.0$ & $-1626$ & $3.663$\\
+Leaf & ellipse & $30$ & $1626$ & $-269.0$ & $0.0$ & $1626.0$ & $-1626$ & $3.154$\\
+Leaf & ellipse & $60$ & $1626$ & $-269.0$ & $0.0$ & $1626.0$ & $-1626$ & $1.335$\\
+Leaf & ellipse & $100$ & $1626$ & $-269.0$ & $0.0$ & $1626.0$ & $-1626$ & $-0.712$\\
+Leaf & PAC2002 & $5$ & $1626$ & $-157.2$ & $0.0$ & $1626.0$ & $-1626$ & $3.663$\\
+Leaf & PAC2002 & $30$ & $1626$ & $-157.2$ & $0.0$ & $1626.0$ & $-1626$ & $3.154$\\
+Leaf & PAC2002 & $60$ & $1626$ & $-157.2$ & $0.0$ & $1626.0$ & $-1626$ & $1.335$\\
+Leaf & PAC2002 & $100$ & $1626$ & $-157.2$ & $0.0$ & $1626.0$ & $-1626$ & $-0.712$\\
+Civic & ellipse & $5$ & $1625$ & $-231.5$ & $0.0$ & $1625.1$ & $-1625$ & $3.567$\\
+Civic & ellipse & $30$ & $1625$ & $-231.5$ & $0.0$ & $1625.1$ & $-1625$ & $3.519$\\
+Civic & ellipse & $60$ & $1397$ & $-231.5$ & $0.0$ & $1397.4$ & $-1397$ & $1.629$\\
+Civic & ellipse & $100$ & $1379$ & $-231.5$ & $0.0$ & $1378.6$ & $-1379$ & $0.761$\\
+Civic & PAC2002 & $5$ & $1625$ & $-135.5$ & $0.0$ & $1625.1$ & $-1625$ & $3.531$\\
+Civic & PAC2002 & $30$ & $1625$ & $-135.5$ & $0.0$ & $1625.1$ & $-1625$ & $3.484$\\
+Civic & PAC2002 & $60$ & $1397$ & $-135.5$ & $0.0$ & $1397.4$ & $-1397$ & $1.629$\\
+Civic & PAC2002 & $100$ & $1379$ & $-135.5$ & $0.0$ & $1378.6$ & $-1379$ & $0.761$\\
+ZR1 & ellipse & $5$ & $1784$ & $361.3$ & $361.3$ & $1423.2$ & $-1423$ & $7.591$\\
+ZR1 & ellipse & $30$ & $1784$ & $361.3$ & $361.3$ & $1423.2$ & $-1423$ & $7.503$\\
+ZR1 & ellipse & $60$ & $1784$ & $361.3$ & $361.3$ & $1423.2$ & $-1423$ & $7.328$\\
+ZR1 & ellipse & $100$ & $1681$ & $361.3$ & $361.3$ & $1320.2$ & $-1320$ & $4.875$\\
+ZR1 & PAC2002 & $5$ & $1784$ & $410.1$ & $410.1$ & $1374.3$ & $-1374$ & $7.211$\\
+ZR1 & PAC2002 & $30$ & $1784$ & $410.1$ & $410.1$ & $1374.3$ & $-1374$ & $7.123$\\
+ZR1 & PAC2002 & $60$ & $1784$ & $410.1$ & $410.1$ & $1374.3$ & $-1374$ & $6.948$\\
+ZR1 & PAC2002 & $100$ & $1681$ & $410.1$ & $410.1$ & $1271.4$ & $-1271$ & $4.875$\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of the bound of Theorem~\mainref{thm:wellposed}{4.1}\mainref{wp:lip}{{(iii)}} at $10$\,mph. The measured value is $|\partial\amax/\partial\mu|$ from a relative change of $10^{-4}$ in friction, and the bound is $|\partial_\mu\Phi|/(\meff-g)$, both in m/s$^2$.}\label{tab:app-lipschitz}
-\begin{tabular}{lllrr}
+\caption{Check of the bound of Theorem~\mainref{thm:wellposed}{4.1}\mainref{wp:lip}{{(iii)}} at $10$\,mph. The measured value is $|\partial\amax/\partial\mu|$ from a relative change of $10^{-4}$ in friction, the local value is $|\partial_\mu\Phi|/(\meff-T'(\amax))$ of equation~\maineq{eq:derivative}{2}, and the bound is $|\partial_\mu\Phi|/(\meff-\beta)$, all at $\amax$ and in m/s$^2$. The bound equals the local value when $T'(\amax)=\beta$.}\label{tab:app-lipschitz}
+\begin{tabular}{lllrrr}
 \toprule
-Vehicle & Tyre law & Binding & Measured & Bound\\
+Vehicle & Tyre law & Binding & Measured & Local & Bound\\
 \midrule
-Leaf & ellipse & power & $0.0000$ & $0.0000$\\
-Leaf & PAC2002 & power & $0.0000$ & $0.0000$\\
-Civic & ellipse & traction & $3.7368$ & $3.7369$\\
-Civic & PAC2002 & traction & $3.7818$ & $3.9060$\\
-ZR1 & ellipse & traction & $7.1418$ & $7.1416$\\
-ZR1 & PAC2002 & traction & $6.4143$ & $7.0277$\\
+Leaf & ellipse & power & $0.0000$ & $0.0000$ & $0.0000$\\
+Leaf & PAC2002 & power & $0.0000$ & $0.0000$ & $0.0000$\\
+Civic & ellipse & traction & $3.7368$ & $3.7369$ & $4.2692$\\
+Civic & PAC2002 & traction & $3.7818$ & $3.7778$ & $4.2316$\\
+ZR1 & ellipse & traction & $7.1418$ & $7.1416$ & $7.1416$\\
+ZR1 & PAC2002 & traction & $6.4143$ & $6.4250$ & $7.0277$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -737,38 +737,38 @@ ZR1 & urban & $4.66$ & $2.72$ & $2.33$ & $1.38$ & $0.31$ & $-0.80$ & $1$\\
 \subsection{Changing friction}
 
 Table~\ref{tab:app-spacing} gives the inputs of Theorem~\mainref{thm:spacing}{12.1} for every vehicle and route,
-and compares the numerical minimiser of $J(D)$ with the asymptotic law at three correlation lengths.
+and compares the numerical minimiser of $\mathcal J(D)$ with the asymptotic law at three correlation lengths.
 Table~\ref{tab:app-scaling} gives the scaling of the numerical optimum with the correlation length.
 
 \begin{table}[htbp]
 \centering\small
-\setlength{\tabcolsep}{3.5pt}
-\caption{Inputs and results of Theorem~\mainref{thm:spacing}{12.1}, with field standard deviation $\sigma=0.118$, $z=1.645$, and probe residual standard deviation $s_p=0.0323$. The columns give the probe cost $c$ (s), the slope $\kappa$ and the no-probe rate $h_0$ of the price curve (s/km), the threshold $\ell_{\min}$ (km), and for each correlation length $\ell$ the numerical minimiser of $J(D)$ and the asymptotic $D^\star$ (km). The entry none means that no spacing beats not probing. A dagger marks the cases within a factor of two of $\ell_{\min}$, which the threshold test excludes.}\label{tab:app-spacing}
-\begin{tabular}{llcccccccccc}
+\setlength{\tabcolsep}{3pt}
+\caption{Inputs and results of Theorem~\mainref{thm:spacing}{12.1}, with field standard deviation $\sigma=0.118$, $z=1.645$, and probe residual standard deviation $s_p=0.0323$. The columns give the probe cost $c_p$ (s), the slope $\eta$ and the no-probe rate $h_0$ of the price curve (s/km), the exact threshold $\ell_{\min}=c_p/A$ of part~\mainref{sp:exact}{{(i)}} and its closed form for a linear price curve (km), and for each correlation length $\ell$ the numerical minimiser of $\mathcal J(D)$ and the asymptotic $D^\star$ of part~\mainref{sp:law}{{(ii)}} (km). The entry none means that no spacing beats not probing. The exact threshold decides this correctly in all $36$ cases, and in all $24$ further cases at $0.8\,\ell_{\min}$ and $1.25\,\ell_{\min}$.}\label{tab:app-spacing}
+\begin{tabular}{llccccccccccc}
 \toprule
-& & & & & & \multicolumn{2}{c}{$\ell=1$\,km} & \multicolumn{2}{c}{$\ell=5$\,km} & \multicolumn{2}{c}{$\ell=25$\,km}\\
-\cmidrule(lr){7-8}\cmidrule(lr){9-10}\cmidrule(lr){11-12}
-Vehicle & Route & $c$ & $\kappa$ & $h_0$ & $\ell_{\min}$ & Num. & Law & Num. & Law & Num. & Law\\
+& & & & & \multicolumn{2}{c}{$\ell_{\min}$} & \multicolumn{2}{c}{$\ell=1$\,km} & \multicolumn{2}{c}{$\ell=5$\,km} & \multicolumn{2}{c}{$\ell=25$\,km}\\
+\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-13}
+Vehicle & Route & $c_p$ & $\eta$ & $h_0$ & Exact & Linear & Num. & Law & Num. & Law & Num. & Law\\
 \midrule
-Leaf & highway & $0.17$ & $0.09$ & $0.026$ & $16.5$ & none & $7.9$ & none & $13.4$ & $25.8^\dagger$ & $23.0$\\
-Leaf & rural & $0.21$ & $0.28$ & $0.158$ & $0.9$ & none$^\dagger$ & $4.1$ & $4.1$ & $7.0$ & $8.0$ & $11.9$\\
-Leaf & mountain & $0.27$ & $2.16$ & $0.473$ & $2.7$ & none & $1.2$ & $2.8^\dagger$ & $2.1$ & $4.5$ & $3.6$\\
-Leaf & urban & $0.38$ & $2.04$ & $0.713$ & $1.0$ & none$^\dagger$ & $1.6$ & $2.3$ & $2.7$ & $5.7$ & $4.7$\\
-Civic & highway & $0.16$ & $0.25$ & $0.051$ & $16.4$ & none & $3.6$ & none & $6.2$ & $15.6^\dagger$ & $10.6$\\
-Civic & rural & $0.19$ & $0.81$ & $0.303$ & $1.0$ & none$^\dagger$ & $1.9$ & $2.7$ & $3.2$ & $4.2$ & $5.5$\\
-Civic & mountain & $0.24$ & $2.64$ & $0.553$ & $2.3$ & none & $1.0$ & $2.3$ & $1.7$ & $3.7$ & $2.9$\\
-Civic & urban & $0.34$ & $6.69$ & $1.421$ & $1.2$ & $1.5^\dagger$ & $0.7$ & $1.5$ & $1.2$ & $2.5$ & $2.0$\\
-ZR1 & highway & $0.37$ & $0.19$ & $0.040$ & $46.6$ & none & $7.6$ & none & $13.1$ & none$^\dagger$ & $22.4$\\
-ZR1 & rural & $0.45$ & $0.62$ & $0.130$ & $17.5$ & none & $4.0$ & none & $6.8$ & $17.4^\dagger$ & $11.6$\\
-ZR1 & mountain & $0.57$ & $0.33$ & $0.071$ & $39.9$ & none & $7.1$ & none & $12.1$ & none$^\dagger$ & $20.7$\\
-ZR1 & urban & $0.80$ & $4.40$ & $0.932$ & $4.3$ & none & $1.6$ & $4.4^\dagger$ & $2.7$ & $5.7$ & $4.6$\\
+Leaf & highway & $0.17$ & $0.09$ & $0.026$ & $15.6$ & $33.9$ & none & $7.9$ & none & $13.4$ & $25.8$ & $23.0$\\
+Leaf & rural & $0.21$ & $0.28$ & $0.158$ & $2.5$ & $12.7$ & none & $4.1$ & $4.1$ & $7.0$ & $8.0$ & $11.9$\\
+Leaf & mountain & $0.27$ & $2.16$ & $0.473$ & $1.8$ & $2.1$ & none & $1.2$ & $2.8$ & $2.1$ & $4.5$ & $3.6$\\
+Leaf & urban & $0.38$ & $2.04$ & $0.713$ & $1.1$ & $3.1$ & none & $1.6$ & $2.3$ & $2.7$ & $5.7$ & $4.7$\\
+Civic & highway & $0.16$ & $0.25$ & $0.051$ & $10.4$ & $10.6$ & none & $3.6$ & none & $6.2$ & $15.6$ & $10.6$\\
+Civic & rural & $0.19$ & $0.81$ & $0.303$ & $1.8$ & $3.9$ & none & $1.9$ & $2.7$ & $3.2$ & $4.2$ & $5.5$\\
+Civic & mountain & $0.24$ & $2.64$ & $0.553$ & $1.5$ & $1.6$ & none & $1.0$ & $2.3$ & $1.7$ & $3.7$ & $2.9$\\
+Civic & urban & $0.34$ & $6.69$ & $1.421$ & $0.8$ & $0.9$ & $1.5$ & $0.7$ & $1.5$ & $1.2$ & $2.5$ & $2.0$\\
+ZR1 & highway & $0.37$ & $0.19$ & $0.040$ & $31.0$ & $32.5$ & none & $7.6$ & none & $13.1$ & none & $22.4$\\
+ZR1 & rural & $0.45$ & $0.62$ & $0.130$ & $11.6$ & $12.1$ & none & $4.0$ & none & $6.8$ & $17.4$ & $11.6$\\
+ZR1 & mountain & $0.57$ & $0.33$ & $0.071$ & $26.9$ & $28.9$ & none & $7.1$ & none & $12.1$ & none & $20.7$\\
+ZR1 & urban & $0.80$ & $4.40$ & $0.932$ & $2.9$ & $3.1$ & none & $1.6$ & $4.4$ & $2.7$ & $5.7$ & $4.6$\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}[htbp]
 \centering\small
-\caption{Scaling of the numerical optimum with the correlation length for the Civic on the urban route, with a probe cost of $0.1$\,s and a residual standard deviation of $10^{-4}$, close to the conditions of Theorem~\mainref{thm:spacing}{12.1}. The last column is the slope of $\ln D^\star$ against $\ln\ell$, which the law predicts to be $1/3$.}\label{tab:app-scaling}
+\caption{Scaling of the numerical optimum with the correlation length for the Civic on the urban route, with a probe cost of $0.1$\,s and a residual standard deviation of $10^{-4}$, close to the conditions of Theorem~\mainref{thm:spacing}{12.1}\mainref{sp:law}{{(ii)}}. The last column is the slope of $\ln D^\star$ against $\ln\ell$, which the law predicts to be $1/3$.}\label{tab:app-scaling}
 \begin{tabular}{ccccc}
 \toprule
 $\ell_0$ (km) & $\ell$ (km) & $D^\star(\ell_0)$ (km) & $D^\star(\ell)$ (km) & Slope\\
@@ -873,7 +873,7 @@ Grade & $0.31$ & $0.22$ & $0.02$ & $0.13$ & $0.14$ & $0.02$ & $0.01$ & $0.00$ & 
 \begin{table}[htbp]
 \centering\small
 \setlength{\tabcolsep}{4.2pt}
-\caption{Total Sobol indices $ST_i$ with the friction ellipse, in the layout of Table~\mainref{tab:sobol}{5}. No entry differs from the PAC2002 value by more than $0.06$.}\label{tab:app-sobol-ellipse}
+\caption{Total Sobol indices $ST_i$ with the friction ellipse, in the layout of Table~\mainref{tab:sobol}{5}. No entry differs from the PAC2002 value by more than $0.07$.}\label{tab:app-sobol-ellipse}
 \begin{tabular}{lccccccccc}
 \toprule
 & \multicolumn{3}{c}{Leaf} & \multicolumn{3}{c}{Civic} & \multicolumn{3}{c}{ZR1}\\
@@ -960,7 +960,7 @@ General & $1$ & $40$ & $\tau$ & $2.314$ & $4.033$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{Penalty of a single lag $\tau=0.2$\,s on a doubling staircase envelope, in units of $\tau$, with each level held for about $5\tau$. The prediction is the limit of Proposition~\mainref{prop:transientfail}{15.3}, and the bound is that of Theorem~\mainref{thm:transientvar}{15.2}.}\label{tab:app-staircase}
+\caption{Penalty of a single lag $\tau=0.2$\,s on a doubling staircase envelope, in units of $\tau$, with each level held for about $5\tau$. The prediction is the limit of Proposition~\mainref{prop:transientfail}{15.3}. The bound is the value $\tau(1+\operatorname{Var}^+)$ of Theorem~\mainref{thm:transientvar}{15.2}, which is proved for Lipschitz envelopes and is shown here for comparison.}\label{tab:app-staircase}
 \begin{tabular}{cccc}
 \toprule
 Levels & Penalty & Prediction & Bound\\
@@ -1187,9 +1187,9 @@ $a_i=a_0q^i$, every step contributes $1-1/q$.
 \end{proof}
 
 \begin{proof}[Proof of Remark~\mainref{rem:relax}{15.4}]
-With $\tau=\sigma/v$ the lag runs in distance rather than in time. Writing $x$ for the distance
-travelled and $a>0$ for the envelope near rest, the lag state satisfies $dy/dx=(a-y)/\sigma$, so
-$y\approx ax/\sigma$ for small $x$. Since $v\,dv/dx=y$, this gives $v\approx x\sqrt{a/\sigma}$ near
+With $\tau=\ell_r/v$ the lag runs in distance rather than in time. Writing $x$ for the distance
+travelled and $a>0$ for the envelope near rest, the lag state satisfies $dy/dx=(a-y)/\ell_r$, so
+$y\approx ax/\ell_r$ for small $x$. Since $v\,dv/dx=y$, this gives $v\approx x\sqrt{a/\ell_r}$ near
 rest. The time $\int dx/v$ to cover any distance from rest therefore diverges logarithmically at
 $x=0$. The floor speed $v_0$ removes this divergence, and the penalty grows without bound as
 $v_0\to0$.

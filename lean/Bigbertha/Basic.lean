@@ -3,6 +3,7 @@ import Mathlib.Analysis.Convex.SpecificFunctions.Pow
 import Mathlib.Analysis.Convex.Deriv
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Tactic
+import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 
 namespace BigBertha
 
@@ -405,6 +406,46 @@ theorem envelope_one_point (Φ : Real → Real) (c lo hi a₀ am : Real) (hc : 0
     have hxle : x ≤ am := hub ⟨by linarith [ha₀.1], hx2, hxpos.le⟩
     linarith
 
+theorem spacing_threshold (f : Real → Real) (hf : Monotone f) (L c : Real)
+    (hlim : Filter.Tendsto f Filter.atTop (nhds L)) :
+    (∃ D, c < f D) ↔ c < L := by
+  constructor
+  · rintro ⟨D, hD⟩
+    exact lt_of_lt_of_le hD (hf.ge_of_tendsto hlim D)
+  · intro h
+    exact (hlim.eventually (lt_mem_nhds h)).exists
+
+theorem local_factor_bound (x meff Tp Rp β : Real) (hβ : β < meff) (hle : Tp - Rp ≤ β) :
+    |x| / (meff - Tp + Rp) ≤ |x| / (meff - β) ∧
+      (Tp - Rp = β → |x| / (meff - Tp + Rp) = |x| / (meff - β)) := by
+  refine ⟨?_, fun h => by congr 1; linarith⟩
+  apply div_le_div_of_nonneg_left (abs_nonneg x) (by linarith) (by linarith)
+
+theorem integral_w_div_one_add_w :
+    ∫ w in (0:Real)..1, w / (1 + w) = 1 - Real.log 2 := by
+  have hsplit : ∀ w : Real, w ∈ Set.uIcc (0:Real) 1 → w / (1 + w) = 1 - (1 + w)⁻¹ := by
+    intro w hw
+    have hw0 : 0 ≤ w := by
+      rcases Set.mem_uIcc.mp hw with h | h
+      · exact h.1
+      · linarith [h.1, h.2]
+    have : (1 + w) ≠ 0 := by linarith
+    field_simp
+    ring
+  rw [intervalIntegral.integral_congr hsplit]
+  rw [intervalIntegral.integral_sub intervalIntegrable_const]
+  · rw [intervalIntegral.integral_const, intervalIntegral.integral_comp_add_left (fun x => x⁻¹)]
+    rw [integral_inv (by norm_num [Set.mem_uIcc])]
+    norm_num
+  · apply ContinuousOn.intervalIntegrable
+    apply ContinuousOn.inv₀ (continuousOn_const.add continuousOn_id)
+    intro w hw
+    rcases Set.mem_uIcc.mp hw with h | h
+    · simp only [Pi.add_apply, id]
+      exact ne_of_gt (by linarith [h.1])
+    · simp only [Pi.add_apply, id]
+      exact ne_of_gt (by linarith [h.1, h.2])
+
 end BigBertha
 
 #print axioms BigBertha.traction_limited_blind_to_powertrain
@@ -452,3 +493,6 @@ end BigBertha
 #print axioms BigBertha.power_transfer_eq_iff
 #print axioms BigBertha.box_vertex_bounds_n
 #print axioms BigBertha.envelope_one_point
+#print axioms BigBertha.spacing_threshold
+#print axioms BigBertha.local_factor_bound
+#print axioms BigBertha.integral_w_div_one_add_w
