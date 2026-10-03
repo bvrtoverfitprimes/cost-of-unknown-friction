@@ -1,6 +1,6 @@
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\ref{thm:propagation}\ref{pr:quant} at $10$\,mph. The friction distribution is the $114$ values of Table~\ref{tab:fmvss} divided by their median, with relative standard deviation $0.120$ and linearly interpolated $5$th and $95$th percentiles $0.806$ and $1.236$. The table gives the exact quantiles $\amax(q_\mu(p))$ (m/s$^2$) at $p=0.05$, $0.25$, $0.5$, $0.75$, and $0.95$, and the largest difference from the Monte Carlo quantiles of the $114$ envelope values.}\label{tab:app-quant}
+\caption{Check of the exact quantiles of the envelope at $10$\,mph. The friction distribution is the $114$ values of the FMVSS~135 table divided by their median, with relative standard deviation $0.120$ and linearly interpolated $5$th and $95$th percentiles $0.806$ and $1.236$. The table gives the exact quantiles $\amax(q_\mu(p))$ (m/s$^2$) at $p=0.05$, $0.25$, $0.5$, $0.75$, and $0.95$, and the largest difference from the Monte Carlo quantiles of the $114$ envelope values.}\label{tab:app-quant}
 \begin{tabular}{llp{6.2cm}c}
 \toprule
 Vehicle & Law & Exact quantiles & Largest difference\\
@@ -17,7 +17,7 @@ ZR1 & PAC2002 & 5.2998, 6.3752, 6.8207, 7.3988, 9.0456 & $0$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\ref{thm:propagation}\ref{pr:box}. The box multiplies friction by $[0.85,1.15]$, $C_{rr}$ by $[0.8,1.3]$, $C_DA$ by $[0.9,1.1]$, and $P$ by $[0.9,1.05]$. The columns give the envelope (m/s$^2$) at the worst vertex, the smallest and largest envelope over $n$ random points of the box, and the envelope at the best vertex.}\label{tab:app-box}
+\caption{Check of the bounds of the envelope over a box of parameters. The box multiplies friction by $[0.85,1.15]$, $C_{rr}$ by $[0.8,1.3]$, $C_DA$ by $[0.9,1.1]$, and $P$ by $[0.9,1.05]$. The columns give the envelope (m/s$^2$) at the worst vertex, the smallest and largest envelope over $n$ random points of the box, and the envelope at the best vertex.}\label{tab:app-box}
 \begin{tabular}{llrrcccc}
 \toprule
 Vehicle & Law & mph & $n$ & Worst & Min & Max & Best\\
@@ -40,7 +40,7 @@ ZR1 & PAC2002 & $60$ & $512$ & $5.3431$ & $5.3776$ & $7.9100$ & $7.9574$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\ref{thm:propagation}\ref{pr:first} at $10$\,mph: the first-order standard deviation of $\amax$, the Monte Carlo standard deviation over the $114$ friction values (both m/s$^2$), and the local amplification $\meff/(\meff-T')$ where traction binds.}\label{tab:app-first}
+\caption{Check of the first-order propagation at $10$\,mph: the first-order standard deviation of $\amax$, the Monte Carlo standard deviation over the $114$ friction values (both m/s$^2$), and the local amplification $\meff/(\meff-T')$ where traction binds.}\label{tab:app-first}
 \begin{tabular}{llccc}
 \toprule
 Vehicle & Law & First order & Monte Carlo & Amplification\\

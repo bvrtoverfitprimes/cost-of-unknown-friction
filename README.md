@@ -10,6 +10,8 @@ minimum-time vehicle transit.
 | `data/*.json` | The computed values behind the tables, one record per analysis. |
 | `data/epa_roadload_derived.csv` | Drag area and rolling resistance implied by the EPA road-load coefficients of model year 2013. |
 | `tables/*.tex` | The generated LaTeX tables. |
+| `analysis/*.py` | The analyses that produce the records in `data/`, the solver and vehicle models they use, and the scripts that fetch the public datasets. Run them from the repository root. |
+| `data/routes/`, `data/windsor/`, `data/utqg/` | Route summaries and small reference files used by the analyses. |
 | `code/make_tables.py` | Formats the records in `data/` into the tables. It does not rerun the analyses that produce the records. |
 | `lean/` | Formal versions of structural results on the acceleration envelope, for Lean 4 with Mathlib. |
 

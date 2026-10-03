@@ -1,0 +1,2 @@
+Freestream Velocity (m/s),Air Temperature (K),Ambient Pressure (Pa),Air Density (kg/m^3),Yaw Angle (degrees),Drag Force (N),Lift Force (N),Side Force (N),Pitching Moment (Nm),Yawing Moment (Nm),Rolling Moment (Nm),Frontal Area (m^2),Wheelbase Length (m),Drag Coefficient,Lift Coefficient,Side Force Coefficient,Pitch Coefficient,Yaw Coefficient,Roll Coefficient
+39.56,275.93,100549.00,1.269,0.0,45.55,16.81,-2.03,5.22,-0.80,-0.26,0.118,0.637,0.3889,0.1435,-0.0174,0.0699,-0.0107,-0.0035

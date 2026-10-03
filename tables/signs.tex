@@ -1,7 +1,7 @@
 \begin{table}[htbp]
 \centering\small
 \setlength{\tabcolsep}{5pt}
-\caption{Check of Theorem~\ref{thm:signtable}\ref{sg:mono} and~\ref{sg:grade}. Each parameter was swept over the stated range of multipliers in $11$ steps, and grade in $9$ steps, for the three vehicles, both tyre laws, and speeds of $10$, $40$, and $80$\,mph. The second column gives the predicted direction of $\amax$ as the parameter increases, and a pair is two consecutive points of a sweep. The last column is the smallest change of $\amax$ (m/s$^2$) in the predicted direction over all pairs, which is non-negative when no pair violates the prediction. It is zero, to rounding error below $10^{-12}$, for friction and for power, because the envelope does not respond to friction where power binds or to power where traction binds (Proposition~\ref{prop:regimes}). The largest value of $\mu_r\varphi_r'h/L$ encountered in the grade sweeps was $0.226$.}\label{tab:app-mono}
+\caption{Check of the predicted directions of the envelope in each parameter and in grade. Each parameter was swept over the stated range of multipliers in $11$ steps, and grade in $9$ steps, for the three vehicles, both tyre laws, and speeds of $10$, $40$, and $80$\,mph. The second column gives the predicted direction of $\amax$ as the parameter increases, and a pair is two consecutive points of a sweep. The last column is the smallest change of $\amax$ (m/s$^2$) in the predicted direction over all pairs, which is non-negative when no pair violates the prediction. It is zero, to rounding error below $10^{-12}$, for friction and for power, because the envelope does not respond to friction where power binds or to power where traction binds. The largest value of $\mu_r\varphi_r'h/L$ encountered in the grade sweeps was $0.226$.}\label{tab:app-mono}
 \begin{tabular}{llcrrr}
 \toprule
 Parameter & Predicted & Range & Pairs & Violations & Smallest step\\
@@ -18,7 +18,7 @@ Uphill grade & down & $0^\circ$--$8^\circ$ & $144$ & $0$ & $1.43\times10^{-1}$\\
 \begin{table}[htbp]
 \centering\footnotesize
 \setlength{\tabcolsep}{3.5pt}
-\caption{Check of Theorem~\ref{thm:signtable}\ref{sg:mass} and~\ref{sg:rho}. For each case the table gives the binding constraint, the terms $J\amax$, $F_{\mathrm{aero}}$, and $\Lambda$ (N) of the mass formula, the predicted sign and the finite-difference value of $\partial\amax/\partial\ln m$, and the predicted sign and finite-difference value of $\partial\amax/\partial\ln\rho$, both in m/s$^2$ from relative changes of $10^{-4}$. Where power binds, the mass prediction is negative by part~\ref{sg:mass}.}\label{tab:app-signs}
+\caption{Check of the mass and air-density sensitivity formulas. For each case the table gives the binding constraint, the terms $J\amax$, $F_{\mathrm{aero}}$, and $\Lambda$ (N) of the mass formula, the predicted sign and the finite-difference value of $\partial\amax/\partial\ln m$, and the predicted sign and finite-difference value of $\partial\amax/\partial\ln\rho$, both in m/s$^2$ from relative changes of $10^{-4}$. Where power binds, the mass prediction is negative by the mass formula.}\label{tab:app-signs}
 \begin{tabular}{lllllrrrcrcr}
 \toprule
 Vehicle & Law & mph & Binding & $J\amax$ & $F_{\mathrm{aero}}$ & $\Lambda$ & & $\partial_{\ln m}\amax$ & & $\partial_{\ln\rho}\amax$\\

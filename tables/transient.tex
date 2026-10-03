@@ -1,6 +1,6 @@
 \begin{table}[htbp]
 \centering\small
-\caption{Checks of Theorems~\ref{thm:transientbound} and~\ref{thm:transientvar} on random piecewise-linear envelopes. The non-increasing envelopes have seven levels on random knots, lags drawn uniformly from $[0.02,0.4]$\,s, and target speeds from $[5,40]$\,m/s. The general envelopes have eight random levels and one lag drawn from $[0.05,0.4]$\,s. The last two columns give the median and the largest ratio of the penalty to the stated bound. The last row compares the general envelopes with the bound $\tau$ that holds for non-increasing envelopes.}\label{tab:app-transient}
+\caption{Checks of the transient-penalty bounds on random piecewise-linear envelopes. The non-increasing envelopes have seven levels on random knots, lags drawn uniformly from $[0.02,0.4]$\,s, and target speeds from $[5,40]$\,m/s. The general envelopes have eight random levels and one lag drawn from $[0.05,0.4]$\,s. The last two columns give the median and the largest ratio of the penalty to the stated bound. The last row compares the general envelopes with the bound $\tau$ that holds for non-increasing envelopes.}\label{tab:app-transient}
 \begin{tabular}{lccccc}
 \toprule
 Envelope & Lags & Cases & Bound & Median ratio & Largest ratio\\
@@ -16,7 +16,7 @@ General & $1$ & $40$ & $\tau$ & $2.314$ & $4.033$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{Penalty of a single lag $\tau=0.2$\,s on a doubling staircase envelope, in units of $\tau$, with each level held for about $5\tau$. The prediction is the limit of Proposition~\ref{prop:transientfail}. The bound is the value $\tau(1+\operatorname{Var}^+)$ of Theorem~\ref{thm:transientvar}, which is proved for Lipschitz envelopes and is shown here for comparison.}\label{tab:app-staircase}
+\caption{Penalty of a single lag $\tau=0.2$\,s on a doubling staircase envelope, in units of $\tau$, with each level held for about $5\tau$. The prediction is the limit of the staircase analysis. The bound is the value $\tau(1+\operatorname{Var}^+)$ of the variation bound, which is proved for Lipschitz envelopes and is shown here for comparison.}\label{tab:app-staircase}
 \begin{tabular}{cccc}
 \toprule
 Levels & Penalty & Prediction & Bound\\
@@ -32,7 +32,7 @@ $8$ & $4.49$ & $4.50$ & $5.85$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{The $0$--$60$\,mph penalty of the three vehicles under constant lags (s), with the time $T_{\mathrm{phys}}$ along the envelope and the penalty as a share of $\sum_j\tau_j$. The positive variation of $\ln\amax$ from rest to $60$\,mph, computed on $4001$ speeds, is $0$ for every vehicle. These runs follow the envelope without the interruptions of gear shifts, which is why the time of the Civic is shorter than in Table~\ref{tab:app-060}.}\label{tab:app-transient-veh}
+\caption{The $0$--$60$\,mph penalty of the three vehicles under constant lags (s), with the time $T_{\mathrm{phys}}$ along the envelope and the penalty as a share of $\sum_j\tau_j$. The positive variation of $\ln\amax$ from rest to $60$\,mph, computed on $4001$ speeds, is $0$ for every vehicle. These runs follow the envelope without the interruptions of gear shifts, which is why the time of the Civic is shorter than in the zero-to-sixty table.}\label{tab:app-transient-veh}
 \begin{tabular}{lcccc}
 \toprule
 Vehicle & Lags (s) & $T_{\mathrm{phys}}$ (s) & Penalty (s) & Share\\

@@ -1,6 +1,6 @@
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\ref{thm:wellposed}. For each vehicle, tyre law, and speed, the effective mass $\meff$, the largest slope $\sup T'$ of the traction capability, and the load-transfer gain $\beta=\max(\sup T',0)$ (all in kg), the margin $\meff-\beta$, the largest slope of the force margin $\Phi$ on a grid of $4001$ accelerations (in N per m/s$^2$, negative when $\Phi$ is strictly decreasing), and the envelope $\amax$ (m/s$^2$). A negative envelope means that the vehicle cannot sustain that speed.}\label{tab:app-wellposed}
+\caption{Check of the well-posedness condition. For each vehicle, tyre law, and speed, the effective mass $\meff$, the largest slope $\sup T'$ of the traction capability, and the load-transfer gain $\beta=\max(\sup T',0)$ (all in kg), the margin $\meff-\beta$, the largest slope of the force margin $\Phi$ on a grid of $4001$ accelerations (in N per m/s$^2$, negative when $\Phi$ is strictly decreasing), and the envelope $\amax$ (m/s$^2$). A negative envelope means that the vehicle cannot sustain that speed.}\label{tab:app-wellposed}
 \begin{tabular}{llrrrrrrr}
 \toprule
 Vehicle & Tyre law & mph & $\meff$ & $\sup T'$ & $\beta$ & $\meff-\beta$ & $\max\Phi'$ & $\amax$\\
@@ -35,7 +35,7 @@ ZR1 & PAC2002 & $100$ & $1682$ & $409.9$ & $409.9$ & $1272.6$ & $-1273$ & $4.866
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of the bound of Theorem~\ref{thm:wellposed}\ref{wp:lip} at $10$\,mph. The measured value is $|\partial\amax/\partial\mu|$ from a relative change of $10^{-4}$ in friction, the local value is $|\partial_\mu\Phi|/(\meff-T'(\amax))$ of equation~\eqref{eq:derivative}, and the bound is $|\partial_\mu\Phi|/(\meff-\beta)$, all at $\amax$ and in m/s$^2$. The bound equals the local value when $T'(\amax)=\beta$.}\label{tab:app-lipschitz}
+\caption{Check of the Lipschitz bound on the envelope at $10$\,mph. The measured value is $|\partial\amax/\partial\mu|$ from a relative change of $10^{-4}$ in friction, the local value is $|\partial_\mu\Phi|/(\meff-T'(\amax))$ of the implicit derivative, and the bound is $|\partial_\mu\Phi|/(\meff-\beta)$, all at $\amax$ and in m/s$^2$. The bound equals the local value when $T'(\amax)=\beta$.}\label{tab:app-lipschitz}
 \begin{tabular}{lllrrr}
 \toprule
 Vehicle & Tyre law & Binding & Measured & Local & Bound\\
