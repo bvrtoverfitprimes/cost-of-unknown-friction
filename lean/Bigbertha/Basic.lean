@@ -446,6 +446,75 @@ theorem integral_w_div_one_add_w :
     · simp only [Pi.add_apply, id]
       exact ne_of_gt (by linarith [h.1, h.2])
 
+theorem fisher_entries_integrals (X : Real) :
+    (∫ x in (0:Real)..X, (3 * x ^ 2) * (3 * x ^ 2)) = 9 * X ^ 5 / 5 ∧
+    (∫ x in (0:Real)..X, (3 * x ^ 2) * (3 * x)) = 9 * X ^ 4 / 4 ∧
+    (∫ x in (0:Real)..X, (3 * x) * (3 * x)) = 3 * X ^ 3 := by
+  refine ⟨?_, ?_, ?_⟩
+  · have h : (fun x : Real => (3 * x ^ 2) * (3 * x ^ 2)) = fun x => 9 * x ^ 4 := by
+      funext x; ring
+    rw [h, intervalIntegral.integral_const_mul, integral_pow]
+    ring
+  · have h : (fun x : Real => (3 * x ^ 2) * (3 * x)) = fun x => 9 * x ^ 3 := by
+      funext x; ring
+    rw [h, intervalIntegral.integral_const_mul, integral_pow]
+    ring
+  · have h : (fun x : Real => (3 * x) * (3 * x)) = fun x => 9 * x ^ 2 := by
+      funext x; ring
+    rw [h, intervalIntegral.integral_const_mul, integral_pow]
+    ring
+
+theorem fisher_det (n X : Real) :
+    (n * (9 * X ^ 4 / 5)) * (n * (3 * X ^ 2)) - (n * (9 * X ^ 3 / 4)) ^ 2
+      = 27 / 80 * n ^ 2 * X ^ 6 := by
+  ring
+
+theorem fisher_inverse_entry (n X : Real) (hn : 0 < n) (hX : 0 < X) :
+    (n * (3 * X ^ 2)) / (27 / 80 * n ^ 2 * X ^ 6) = 240 / (27 * n * X ^ 4) := by
+  field_simp
+  ring
+
+theorem fisher_known_stiffness (n X : Real) (hn : 0 < n) (hX : 0 < X) :
+    1 / (n * (9 * X ^ 4 / 5)) = 5 / (9 * n * X ^ 4) ∧
+      (240 / (27 * n * X ^ 4)) / (5 / (9 * n * X ^ 4)) = 16 := by
+  refine ⟨?_, ?_⟩
+  · field_simp
+  · field_simp
+    norm_num
+
+theorem fisher_utilisation_form (n u : Real) (hn : 0 < n) (hu : 0 < u) :
+    240 / (27 * n * (u / 3) ^ 4) = 720 / (n * u ^ 4) := by
+  field_simp
+  ring
+
+theorem calibrated_prior_quantile (q z : Real) (hq : 0 < q) (hz : 0 < z) :
+    Real.exp (-z * (-Real.log q / z)) = q := by
+  have h : -z * (-Real.log q / z) = Real.log q := by
+    field_simp
+  rw [h, Real.exp_log hq]
+
+theorem ratchet_utilisation_increases (z s s' : Real) (hz : 0 < z) (hs : s' < s) :
+    Real.exp (-z * s) < Real.exp (-z * s') := by
+  apply Real.exp_lt_exp.mpr
+  nlinarith
+
+theorem share_times_friction (c μ : Real) (hμ : 0 < μ) :
+    μ * Real.sqrt (1 - (c / μ) ^ 2) = Real.sqrt (μ ^ 2 - c ^ 2) := by
+  have h : μ ^ 2 - c ^ 2 = μ ^ 2 * (1 - (c / μ) ^ 2) := by
+    field_simp
+  rw [h, Real.sqrt_mul (sq_nonneg μ), Real.sqrt_sq hμ.le]
+
+theorem bend_friction_monotone (c μ₁ μ₂ : Real) (h1 : 0 ≤ μ₁) (h : μ₁ ≤ μ₂) :
+    Real.sqrt (μ₁ ^ 2 - c ^ 2) ≤ Real.sqrt (μ₂ ^ 2 - c ^ 2) := by
+  apply Real.sqrt_le_sqrt
+  nlinarith
+
+theorem limit_acceleration_solves (mJ R μ N0 mh a : Real) (hd : 0 < mJ + μ * mh)
+    (ha : a = (μ * N0 - R) / (mJ + μ * mh)) : mJ * a + R = μ * (N0 - mh * a) := by
+  rw [ha]
+  field_simp
+  ring
+
 end BigBertha
 
 #print axioms BigBertha.traction_limited_blind_to_powertrain
@@ -496,3 +565,13 @@ end BigBertha
 #print axioms BigBertha.spacing_threshold
 #print axioms BigBertha.local_factor_bound
 #print axioms BigBertha.integral_w_div_one_add_w
+#print axioms BigBertha.fisher_entries_integrals
+#print axioms BigBertha.fisher_det
+#print axioms BigBertha.fisher_inverse_entry
+#print axioms BigBertha.fisher_known_stiffness
+#print axioms BigBertha.fisher_utilisation_form
+#print axioms BigBertha.calibrated_prior_quantile
+#print axioms BigBertha.ratchet_utilisation_increases
+#print axioms BigBertha.share_times_friction
+#print axioms BigBertha.bend_friction_monotone
+#print axioms BigBertha.limit_acceleration_solves

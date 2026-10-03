@@ -54,8 +54,8 @@ Minimum-Time Vehicle Transit}
 
 This supplement accompanies the paper \emph{The Cost of Unknown Friction in Minimum-Time Vehicle
 Transit}. Section~\ref{supp:evidence} gives the values behind every numerical statement of the
-paper, and Section~\ref{supp:transient} gives the proofs of the results of
-Section~\mainref{sec:transient}{15} of the paper. Theorems, sections, and equations without the prefix S
+paper, and Section~\ref{supp:transient} treats the time that actuator and tyre lags add to a run along the
+envelope, which the paper summarises in Section~\mainref{sec:discussion}{15}. Theorems, sections, and equations without the prefix S
 refer to the paper.
 
 \section{Numerical evidence}\label{supp:evidence}
@@ -375,7 +375,7 @@ the check of Theorem~\mainref{thm:fourwheel}{6.4}.
 \begin{table}[htbp]
 \centering\small
 \setlength{\tabcolsep}{5pt}
-\caption{Check of Theorem~\mainref{thm:signtable}{6.2}\mainref{sg:mono}{{(i)}} and~\mainref{sg:grade}{{(ii)}}. Each parameter was swept over the stated range of multipliers in $11$ steps, and grade in $9$ steps, for the three vehicles, both tyre laws, and speeds of $10$, $40$, and $80$\,mph. The second column gives the predicted direction of $\amax$ as the parameter increases, and a pair is two consecutive points of a sweep. The last column is the smallest change of $\amax$ (m/s$^2$) in the predicted direction over all pairs, which is non-negative when no pair violates the prediction. It is zero, to rounding error below $10^{-12}$, for friction and for power, because the envelope does not respond to friction where power binds or to power where traction binds (Proposition~\mainref{prop:regimes}{5.3}). The largest value of $\mu_r\varphi_r'h/L$ encountered in the grade sweeps was $0.226$.}\label{tab:app-mono}
+\caption{Check of Theorem~\mainref{thm:signtable}{6.2}\mainref{sg:mono}{{(i)}} and~\mainref{sg:grade}{{(ii)}}. Each parameter was swept over the stated range of multipliers in $11$ steps, and grade in $9$ steps, for the three vehicles, both tyre laws, and speeds of $10$, $40$, and $80$\,mph. The second column gives the predicted direction of $\amax$ as the parameter increases, and a pair is two consecutive points of a sweep. The last column is the smallest change of $\amax$ (m/s$^2$) in the predicted direction over all pairs, which is non-negative when no pair violates the prediction. It is zero, to rounding error below $10^{-12}$, for friction and for power, because the envelope does not respond to friction where power binds or to power where traction binds (Proposition~\mainref{prop:regimes}{5.2}). The largest value of $\mu_r\varphi_r'h/L$ encountered in the grade sweeps was $0.226$.}\label{tab:app-mono}
 \begin{tabular}{llcrrr}
 \toprule
 Parameter & Predicted & Range & Pairs & Violations & Smallest step\\
@@ -452,8 +452,8 @@ $70$\,m & $2.199$ & $3.180$ & $3.968$ & $4.720$ & $5.474$ & $6.245$\\
 \subsection{Identifiability}
 
 Table~\ref{tab:app-d3} gives the bounds identified from ordinary driving, Tables~\ref{tab:app-fisher}
-and~\ref{tab:app-crb} the Fisher ranks and standard errors of Theorem~\mainref{thm:jointid}{7.5}, and
-Tables~\ref{tab:app-sens} and~\ref{tab:app-volvo} the values behind Theorem~\mainref{thm:info}{7.6}.
+and~\ref{tab:app-crb} the Fisher ranks and standard errors of Theorem~\mainref{thm:jointid}{7.4}, and
+Tables~\ref{tab:app-sens} and~\ref{tab:app-volvo} the values behind Theorem~\mainref{thm:info}{7.5}.
 
 \begin{table}[htbp]
 \centering\small
@@ -471,14 +471,14 @@ Vehicle & Samples & $F/(mg)$ & Axle & Axle, $1$\,s & Power & Pedal\\
 \end{table}
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\mainref{thm:jointid}{7.5}. Every design contains $60$ balance samples at speeds drawn uniformly from $5$ to $30$\,m/s and accelerations from $-1.5$ to $2.0$\,m/s$^2$. The limit events are five samples at $3.0$\,m/s$^2$ and $8$\,m/s, plus, for the two-acceleration design, five at $1.5$\,m/s$^2$ and $20$\,m/s. The braking events are five at $-7$ and five at $-5$\,m/s$^2$. Each limit event contributes a balance row and a limit row. The singular values are those of the Jacobian with each parameter scaled to its nominal value.}\label{tab:app-fisher}
+\caption{Check of Theorem~\mainref{thm:jointid}{7.4}. Every design contains $60$ balance samples at speeds drawn uniformly from $5$ to $30$\,m/s and accelerations from $-1.5$ to $2.0$\,m/s$^2$. The limit events are five samples at $8$\,m/s, plus, for the two-speed design, five at $20$\,m/s, each at the acceleration at which traction binds at the nominal parameters, $3.89$ and $3.79$\,m/s$^2$. The braking events are five at $-7$ and five at $-5$\,m/s$^2$. Each limit event contributes a balance row and a limit row. The singular values are those of the Jacobian with each parameter scaled to its nominal value.}\label{tab:app-fisher}
 \begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}cc>{\raggedright\arraybackslash}p{5.6cm}}
 \toprule
 Design & Rows & Rank & Singular values\\
 \midrule
 Ordinary driving & $60$ & $4$ & $1.5\times10^{4}$, $2.3\times10^{3}$, $8.1\times10^{2}$, $2.3\times10^{1}$, $5.3\times10^{-7}$, $0$\\
-Limit events at one acceleration & $70$ & $5$ & $2.5\times10^{4}$, $1.0\times10^{4}$, $2.4\times10^{3}$, $8.5\times10^{2}$, $2.3\times10^{1}$, $6.3\times10^{-7}$\\
-Limit events at two accelerations & $80$ & $6$ & $3.3\times10^{4}$, $1.2\times10^{4}$, $2.4\times10^{3}$, $8.5\times10^{2}$, $2.4\times10^{1}$, $1.9\times10^{0}$\\
+Limit events at one speed & $70$ & $5$ & $2.6\times10^{4}$, $1.1\times10^{4}$, $2.4\times10^{3}$, $8.4\times10^{2}$, $2.3\times10^{1}$, $5.3\times10^{-7}$\\
+Limit events at two speeds & $80$ & $6$ & $3.4\times10^{4}$, $1.4\times10^{4}$, $2.4\times10^{3}$, $8.5\times10^{2}$, $2.4\times10^{1}$, $1.4\times10^{-1}$\\
 Braking-limit events & $80$ & $5$ & $5.7\times10^{4}$, $1.9\times10^{4}$, $3.2\times10^{3}$, $8.2\times10^{2}$, $2.3\times10^{1}$, $7.7\times10^{-7}$\\
 \bottomrule
 \end{tabular}
@@ -486,23 +486,23 @@ Braking-limit events & $80$ & $5$ & $5.7\times10^{4}$, $1.9\times10^{4}$, $3.2\t
 
 \begin{table}[htbp]
 \centering\small
-\caption{Cram\'er--Rao standard errors for the design with limit events at two accelerations, with force noise of $50$\,N on each of its $80$ rows. The nominal values are those of a Civic-like car, with grade in radians and wind in m/s.}\label{tab:app-crb}
+\caption{Relative Cram\'er--Rao standard errors for designs with limit events at two speeds, with force noise of $50$\,N on each of the $80$ rows. At a limit event the acceleration is the one at which traction binds, so with grade, wind, and load fixed the two events differ only through drag: $3.89$ and $3.79$\,m/s$^2$ at $8$ and $20$\,m/s (condition number $2.5\times10^{5}$), and $3.91$ and $3.65$\,m/s$^2$ at $5$ and $30$\,m/s (condition number $9.8\times10^{4}$). The nominal values are those of a Civic-like car, with grade in radians and wind in m/s.}\label{tab:app-crb}
 \begin{tabular}{lrrr}
 \toprule
-Parameter & Nominal & Relative error & Absolute error\\
+Parameter & Nominal & $8$ and $20$\,m/s & $5$ and $30$\,m/s\\
 \midrule
-$\mu$ & $0.85$ & $8.9\%$ & $0.0754$\\
-$m$ & $1400$ & $0.4\%$ & $4.9$\\
-$C_{rr}$ & $0.01$ & $2338.7\%$ & $0.234$\\
-$C_DA$ & $0.7$ & $30.3\%$ & $0.212$\\
-$\gamma$ & $0.02$ & $1169.5\%$ & $0.234$\\
-$w$ & $3$ & $203.7\%$ & $6.11$\\
+$\mu$ & $0.85$ & $131.7\%$ & $52.4\%$\\
+$m$ & $1400$ & $0.3\%$ & $0.3\%$\\
+$C_{rr}$ & $0.01$ & $32{,}731\%$ & $13{,}060\%$\\
+$C_DA$ & $0.7$ & $30.5\%$ & $27.4\%$\\
+$\gamma$ & $0.02$ & $16{,}369\%$ & $6{,}531\%$\\
+$w$ & $3$ & $204.7\%$ & $186.0\%$\\
 \bottomrule
 \end{tabular}
 \end{table}
 \begin{table}[htbp]
 \centering\small
-\caption{The exact friction sensitivity $x^2(3-2x)$ of Theorem~\mainref{thm:info}{7.6}\mainref{in:sens}{{(i)}}, in units of $\mu N$, against its small-utilisation form $u^2/3$.}\label{tab:app-sens}
+\caption{The exact friction sensitivity $x^2(3-2x)$ of Theorem~\mainref{thm:info}{7.5}\mainref{in:sens}{{(i)}}, in units of $\mu N$, against its small-utilisation form $u^2/3$.}\label{tab:app-sens}
 \begin{tabular}{ccccc}
 \toprule
 $u$ & $x$ & $x^2(3-2x)$ & $u^2/3$ & Ratio\\
@@ -599,21 +599,21 @@ ZR1 & PAC2002 & $0.9976$ & $0.9913$ & $1.192$\\
 \subsection{Minimum-time transit}
 
 Tables~\ref{tab:app-transit} and~\ref{tab:app-transitq} give the values behind the check of
-Theorem~\mainref{thm:transit}{9.1}.
+Theorem~\mainref{thm:transit}{9.2}.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\mainref{thm:transit}{9.1} on the $6$\,km rural route: the minimum trip time $T^\star$ (s) at selected multipliers on the nominal friction, from a sweep of $11$ multipliers between $0.5$ and $1.5$ that is non-increasing in every case. The share of the route driven at the speed limit, at nominal friction with the ellipse law, is Leaf $95.0\%$, Civic $95.8\%$, ZR1 $98.1\%$.}\label{tab:app-transit}
+\caption{Check of Theorem~\mainref{thm:transit}{9.2} on the $6$\,km rural route: the minimum trip time $T^\star$ (s) at selected multipliers on the nominal friction, from a sweep of $11$ multipliers between $0.5$ and $1.5$ that is non-increasing in every case. The share of the route driven at the speed limit, at nominal friction with the ellipse law, is Leaf $95.0\%$, Civic $95.8\%$, ZR1 $98.1\%$.}\label{tab:app-transit}
 \begin{tabular}{llccccc}
 \toprule
 Vehicle & Law & $\times0.5$ & $\times0.7$ & $\times1.0$ & $\times1.3$ & $\times1.5$\\
 \midrule
-Leaf & ellipse & $281.41$ & $275.00$ & $272.09$ & $271.71$ & $271.54$\\
-Leaf & PAC2002 & $281.46$ & $275.01$ & $272.09$ & $271.71$ & $271.54$\\
-Civic & ellipse & $283.29$ & $275.81$ & $271.79$ & $270.94$ & $270.76$\\
-Civic & PAC2002 & $283.46$ & $275.87$ & $271.82$ & $270.94$ & $270.76$\\
-ZR1 & ellipse & $273.64$ & $270.34$ & $268.70$ & $267.87$ & $267.76$\\
-ZR1 & PAC2002 & $273.70$ & $270.42$ & $268.78$ & $267.92$ & $267.76$\\
+Leaf & ellipse & $281.47$ & $275.02$ & $272.09$ & $271.71$ & $271.54$\\
+Leaf & PAC2002 & $281.53$ & $275.03$ & $272.09$ & $271.71$ & $271.54$\\
+Civic & ellipse & $283.35$ & $275.82$ & $271.79$ & $270.94$ & $270.76$\\
+Civic & PAC2002 & $283.52$ & $275.89$ & $271.82$ & $270.94$ & $270.76$\\
+ZR1 & ellipse & $273.66$ & $270.34$ & $268.70$ & $267.87$ & $267.76$\\
+ZR1 & PAC2002 & $273.73$ & $270.42$ & $268.78$ & $267.92$ & $267.76$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -625,8 +625,8 @@ ZR1 & PAC2002 & $273.70$ & $270.42$ & $268.78$ & $267.92$ & $267.76$\\
 \toprule
 Vehicle & $p=0.05$ & $p=0.5$ & $p=0.95$ & Largest difference\\
 \midrule
-Leaf & $271.763$ & $272.084$ & $273.278$ & $0$\\
-Civic & $270.993$ & $271.764$ & $273.914$ & $0$\\
+Leaf & $271.763$ & $272.084$ & $273.293$ & $0$\\
+Civic & $270.993$ & $271.764$ & $273.928$ & $0$\\
 ZR1 & $267.943$ & $268.678$ & $269.627$ & $0$\\
 \bottomrule
 \end{tabular}
@@ -663,9 +663,9 @@ Median & $0.36$ ($0.38$) & $0.32$ ($0.33$) & $0.65$ ($0.68$)\\
 \toprule
 Vehicle & $\delta$ & $q(\delta)$ & $T^\star$ & Below & Infeasible & Share\\
 \midrule
-Leaf & $0.05$ & $0.805$ & $273.28$ & $5$ & $5$ & $0.044$\\
+Leaf & $0.05$ & $0.805$ & $273.29$ & $5$ & $5$ & $0.044$\\
 Leaf & $0.25$ & $0.940$ & $272.20$ & $28$ & $28$ & $0.246$\\
-Civic & $0.05$ & $0.805$ & $273.91$ & $5$ & $5$ & $0.044$\\
+Civic & $0.05$ & $0.805$ & $273.93$ & $5$ & $5$ & $0.044$\\
 Civic & $0.25$ & $0.940$ & $272.09$ & $28$ & $28$ & $0.246$\\
 ZR1 & $0.05$ & $0.805$ & $269.63$ & $5$ & $5$ & $0.044$\\
 ZR1 & $0.25$ & $0.940$ & $268.94$ & $28$ & $28$ & $0.246$\\
@@ -698,17 +698,17 @@ Table~\ref{tab:app-kstar} the net gain of every number of probes behind Table~\m
 
 \begin{table}[htbp]
 \centering\small
-\caption{The sequence of slip-risk-limited probes of Proposition~\mainref{prop:ratchet}{11.1}, with prior standard deviation $s_0=0.118$ of $\ln\mu$. For each probe the table gives its utilisation as a fraction of the friction and the standard deviation of $\ln\mu$ before and after it.}\label{tab:app-ratchet}
+\caption{The sequence of slip-risk-limited probes of Proposition~\mainref{prop:ratchet}{11.1}, with prior standard deviation $s_0=0.132$ of $\ln\mu$. For each probe the table gives its utilisation as a fraction of the friction and the standard deviation of $\ln\mu$ before and after it.}\label{tab:app-ratchet}
 \begin{tabular}{cccc}
 \toprule
 Probe & Utilisation & Before & After\\
 \midrule
-$1$ & $0.824$ & $0.1179$ & $0.0312$\\
-$2$ & $0.950$ & $0.0312$ & $0.0126$\\
-$3$ & $0.979$ & $0.0126$ & $0.0078$\\
-$4$ & $0.987$ & $0.0078$ & $0.0059$\\
-$5$ & $0.990$ & $0.0059$ & $0.0048$\\
-$6$ & $0.992$ & $0.0048$ & $0.0041$\\
+$1$ & $0.805$ & $0.1322$ & $0.0347$\\
+$2$ & $0.945$ & $0.0347$ & $0.0134$\\
+$3$ & $0.978$ & $0.0134$ & $0.0081$\\
+$4$ & $0.987$ & $0.0081$ & $0.0060$\\
+$5$ & $0.990$ & $0.0060$ & $0.0049$\\
+$6$ & $0.992$ & $0.0049$ & $0.0042$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -721,18 +721,18 @@ $6$ & $0.992$ & $0.0048$ & $0.0041$\\
 \toprule
 Vehicle & Route & Prior price & $k=1$ & $k=2$ & $k=3$ & $k=4$ & $k=5$ & $k^\star$\\
 \midrule
-Leaf & highway & $0.48$ & $0.22$ & $0.05$ & $-0.18$ & $-0.42$ & $-0.66$ & $1$\\
-Leaf & rural & $0.92$ & $0.62$ & $0.40$ & $0.12$ & $-0.17$ & $-0.47$ & $1$\\
-Leaf & mountain & $3.87$ & $2.68$ & $2.87$ & $2.64$ & $2.31$ & $1.96$ & $2$\\
-Leaf & urban & $3.25$ & $2.34$ & $2.15$ & $1.71$ & $1.21$ & $0.69$ & $1$\\
-Civic & highway & $1.01$ & $0.61$ & $0.55$ & $0.38$ & $0.18$ & $-0.04$ & $1$\\
-Civic & rural & $1.83$ & $1.38$ & $1.29$ & $1.06$ & $0.81$ & $0.55$ & $1$\\
-Civic & mountain & $4.55$ & $3.18$ & $3.54$ & $3.37$ & $3.10$ & $2.79$ & $2$\\
-Civic & urban & $7.11$ & $5.03$ & $5.63$ & $5.41$ & $5.04$ & $4.61$ & $2$\\
-ZR1 & highway & $0.83$ & $0.26$ & $-0.10$ & $-0.58$ & $-1.09$ & $-1.60$ & $1$\\
-ZR1 & rural & $0.82$ & $0.16$ & $-0.30$ & $-0.90$ & $-1.52$ & $-2.15$ & $1$\\
-ZR1 & mountain & $0.60$ & $-0.12$ & $-0.80$ & $-1.58$ & $-2.38$ & $-3.20$ & $0$\\
-ZR1 & urban & $4.88$ & $2.88$ & $2.54$ & $1.59$ & $0.52$ & $-0.59$ & $1$\\
+Leaf & highway & $0.60$ & $0.33$ & $0.17$ & $-0.06$ & $-0.29$ & $-0.53$ & $1$\\
+Leaf & rural & $1.20$ & $0.90$ & $0.69$ & $0.41$ & $0.12$ & $-0.18$ & $1$\\
+Leaf & mountain & $4.53$ & $3.22$ & $3.52$ & $3.30$ & $2.98$ & $2.63$ & $2$\\
+Leaf & urban & $4.10$ & $3.15$ & $3.02$ & $2.58$ & $2.09$ & $1.57$ & $1$\\
+Civic & highway & $1.15$ & $0.72$ & $0.70$ & $0.52$ & $0.32$ & $0.11$ & $1$\\
+Civic & rural & $2.14$ & $1.68$ & $1.60$ & $1.38$ & $1.13$ & $0.87$ & $1$\\
+Civic & mountain & $5.25$ & $3.74$ & $4.21$ & $4.07$ & $3.80$ & $3.50$ & $2$\\
+Civic & urban & $8.07$ & $5.81$ & $6.57$ & $6.39$ & $6.02$ & $5.60$ & $2$\\
+ZR1 & highway & $0.95$ & $0.37$ & $0.03$ & $-0.45$ & $-0.95$ & $-1.47$ & $1$\\
+ZR1 & rural & $0.93$ & $0.27$ & $-0.17$ & $-0.76$ & $-1.38$ & $-2.02$ & $1$\\
+ZR1 & mountain & $0.95$ & $0.23$ & $-0.42$ & $-1.19$ & $-2.00$ & $-2.81$ & $1$\\
+ZR1 & urban & $5.54$ & $3.43$ & $3.22$ & $2.29$ & $1.22$ & $0.11$ & $1$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -746,25 +746,25 @@ Table~\ref{tab:app-scaling} gives the scaling of the numerical optimum with the 
 \begin{table}[htbp]
 \centering\small
 \setlength{\tabcolsep}{3pt}
-\caption{Inputs and results of Theorem~\mainref{thm:spacing}{12.1}, with field standard deviation $\sigma=0.118$, $z=1.645$, and probe residual standard deviation $s_p=0.0323$. The columns give the probe cost $c_p$ (s), the slope $\eta$ and the no-probe rate $\psi_0$ of the price curve (s/km), the exact threshold $\ell_{\min}=c_p/\Gamma$ of part~\mainref{sp:exact}{{(i)}} and its closed form for a linear price curve (km), and for each correlation length $\ell$ the numerical minimiser of $\mathcal J(D)$ and the asymptotic $D^\star$ of part~\mainref{sp:law}{{(ii)}} (km). The entry none means that no spacing beats not probing. The exact threshold decides this correctly in all $36$ cases, and in all $24$ further cases at $0.8\,\ell_{\min}$ and $1.25\,\ell_{\min}$.}\label{tab:app-spacing}
+\caption{Inputs and results of Theorem~\mainref{thm:spacing}{12.1}, with field standard deviation $\sigma=0.132$, $z=1.645$, and probe residual standard deviation $s_p=0.0360$. The columns give the probe cost $c_p$ (s), the slope $\eta$ and the no-probe rate $\psi_0$ of the price curve (s/km), the exact threshold $\ell_{\min}=c_p/\Gamma$ of part~\mainref{sp:exact}{{(i)}} and its closed form for a linear price curve (km), and for each correlation length $\ell$ the numerical minimiser of $\mathcal J(D)$ and the asymptotic $D^\star$ of part~\mainref{sp:law}{{(ii)}} (km). The entry none means that no spacing beats not probing. The exact threshold decides this correctly in all $36$ cases, and in all $24$ further cases at $0.8\,\ell_{\min}$ and $1.25\,\ell_{\min}$.}\label{tab:app-spacing}
 \begin{tabular}{llccccccccccc}
 \toprule
 & & & & & \multicolumn{2}{c}{$\ell_{\min}$} & \multicolumn{2}{c}{$\ell=1$\,km} & \multicolumn{2}{c}{$\ell=5$\,km} & \multicolumn{2}{c}{$\ell=25$\,km}\\
 \cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-13}
 Vehicle & Route & $c_p$ & $\eta$ & $\psi_0$ & Exact & Linear & Num. & Law & Num. & Law & Num. & Law\\
 \midrule
-Leaf & highway & $0.17$ & $0.09$ & $0.024$ & $16.2$ & $33.9$ & none & $7.9$ & none & $13.4$ & $28.1$ & $23.0$\\
-Leaf & rural & $0.21$ & $0.28$ & $0.153$ & $2.5$ & $12.7$ & none & $4.1$ & $4.2$ & $7.0$ & $8.4$ & $11.9$\\
-Leaf & mountain & $0.27$ & $2.23$ & $0.484$ & $1.8$ & $2.0$ & none & $1.2$ & $2.8$ & $2.1$ & $4.4$ & $3.5$\\
-Leaf & urban & $0.38$ & $2.04$ & $0.649$ & $1.2$ & $3.1$ & none & $1.6$ & $2.7$ & $2.7$ & $5.9$ & $4.7$\\
-Civic & highway & $0.16$ & $0.25$ & $0.051$ & $10.4$ & $10.6$ & none & $3.6$ & none & $6.2$ & $15.6$ & $10.6$\\
-Civic & rural & $0.19$ & $0.81$ & $0.304$ & $1.8$ & $3.9$ & none & $1.9$ & $2.7$ & $3.2$ & $4.1$ & $5.5$\\
-Civic & mountain & $0.24$ & $2.72$ & $0.569$ & $1.5$ & $1.5$ & none & $1.0$ & $2.3$ & $1.7$ & $3.6$ & $2.9$\\
-Civic & urban & $0.34$ & $6.69$ & $1.421$ & $0.8$ & $0.9$ & $1.5$ & $0.7$ & $1.5$ & $1.2$ & $2.5$ & $2.0$\\
-ZR1 & highway & $0.37$ & $0.20$ & $0.042$ & $29.7$ & $31.1$ & none & $7.4$ & none & $12.7$ & none & $21.7$\\
-ZR1 & rural & $0.45$ & $0.65$ & $0.136$ & $11.1$ & $11.6$ & none & $3.9$ & none & $6.6$ & $16.7$ & $11.3$\\
-ZR1 & mountain & $0.57$ & $0.35$ & $0.075$ & $25.5$ & $27.5$ & none & $6.8$ & none & $11.7$ & none & $20.0$\\
-ZR1 & urban & $0.80$ & $4.59$ & $0.976$ & $2.8$ & $2.9$ & none & $1.5$ & $4.2$ & $2.6$ & $5.6$ & $4.5$\\
+Leaf & highway & $0.17$ & $0.09$ & $0.030$ & $12.8$ & $29.2$ & none & $7.1$ & none & $12.2$ & $21.1$ & $20.8$\\
+Leaf & rural & $0.20$ & $0.28$ & $0.200$ & $2.0$ & $10.9$ & none & $3.7$ & $3.3$ & $6.3$ & $6.6$ & $10.8$\\
+Leaf & mountain & $0.26$ & $2.28$ & $0.567$ & $1.5$ & $1.7$ & none & $1.1$ & $2.4$ & $1.8$ & $3.9$ & $3.2$\\
+Leaf & urban & $0.37$ & $2.04$ & $0.821$ & $0.9$ & $2.7$ & $2.3$ & $1.5$ & $2.1$ & $2.5$ & $5.2$ & $4.3$\\
+Civic & highway & $0.15$ & $0.25$ & $0.058$ & $8.7$ & $9.1$ & none & $3.3$ & none & $5.6$ & $13.4$ & $9.6$\\
+Civic & rural & $0.18$ & $0.81$ & $0.356$ & $1.5$ & $3.4$ & none & $1.7$ & $2.3$ & $2.9$ & $3.7$ & $4.9$\\
+Civic & mountain & $0.24$ & $2.77$ & $0.656$ & $1.2$ & $1.3$ & none & $0.9$ & $2.0$ & $1.5$ & $3.2$ & $2.6$\\
+Civic & urban & $0.33$ & $6.69$ & $1.615$ & $0.7$ & $0.7$ & $1.1$ & $0.6$ & $1.3$ & $1.1$ & $2.3$ & $1.8$\\
+ZR1 & highway & $0.35$ & $0.20$ & $0.047$ & $24.9$ & $26.8$ & none & $6.7$ & none & $11.5$ & $96.7$ & $19.7$\\
+ZR1 & rural & $0.43$ & $0.65$ & $0.155$ & $9.3$ & $10.0$ & none & $3.5$ & none & $6.0$ & $14.2$ & $10.2$\\
+ZR1 & mountain & $0.55$ & $0.35$ & $0.119$ & $8.2$ & $23.6$ & none & $6.2$ & none & $10.6$ & $22.7$ & $18.1$\\
+ZR1 & urban & $0.78$ & $4.59$ & $1.107$ & $2.3$ & $2.5$ & none & $1.4$ & $3.5$ & $2.4$ & $5.0$ & $4.1$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -776,18 +776,27 @@ ZR1 & urban & $0.80$ & $4.59$ & $0.976$ & $2.8$ & $2.9$ & none & $1.5$ & $4.2$ &
 \toprule
 $\ell_0$ (km) & $\ell$ (km) & $D^\star(\ell_0)$ (km) & $D^\star(\ell)$ (km) & Slope\\
 \midrule
-$2$ & $16$ & $0.40$ & $0.76$ & $0.304$\\
-$2$ & $128$ & $0.40$ & $1.52$ & $0.320$\\
+$2$ & $16$ & $0.37$ & $0.70$ & $0.308$\\
+$2$ & $128$ & $0.37$ & $1.40$ & $0.323$\\
 \bottomrule
 \end{tabular}
 \end{table}
 \FloatBarrier
 
-\subsection{Real routes}
+\subsection{Real routes}\label{supp:routes}
+
+We converted each route of Section~\mainref{sec:realroutes}{13} to a profile of speed limit,
+curvature, and grade by fixed rules. A segment without a maximum-speed tag takes the nearest tagged
+limit along the route. Tags cover $89\%$ of the vertices of the suburban route and $54\%$ of those of
+the canyon route. The curvature is the derivative of the heading of the path after smoothing with a
+Gaussian kernel of $15$\,m, and it is set to zero below $1/2000$\,m$^{-1}$. The grade is the
+derivative of the elevation profile after smoothing with a kernel of $100$\,m. We clipped it to
+$\pm12\%$, because the $90$\,m cells of the elevation model mix the canyon walls into the profile of
+the road.
 
 Table~\ref{tab:app-routes} describes the two real routes of Section~\mainref{sec:realroutes}{13},
 Table~\ref{tab:app-routeprobe} decomposes the net gain of one probe on them, and
-Table~\ref{tab:app-routemono} gives the check of Theorem~\mainref{thm:transit}{9.1}.
+Table~\ref{tab:app-routemono} gives the check of Theorem~\mainref{thm:transit}{9.2}.
 
 \begin{table}[htbp]
 \centering\small
@@ -804,23 +813,23 @@ Canyon & $26.9$ & $6$ & $2$ & $1120$ & $54\%$ & $24$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{One probe on the real routes. The prior price is $T^\star$ at the $5\%$ quantile $0.824$ of the fleet prior less $T^\star(\mu)$. The gain is the reduction in $T^\star$ when one probe at $0.824$ of the friction raises the planning fraction to $0.950$, and the cost is $c(u_p)$ at the median posted limit of the route. All times are in seconds. The last column is the share of the prior price that the probe recovers.}\label{tab:app-routeprobe}
+\caption{One probe on the real routes. The prior price is $T^\star$ at the $5\%$ quantile, $0.805$ times the true friction, of the fleet prior less $T^\star(\mu)$. The gain is the reduction in $T^\star$ when one probe at $0.805$ of the friction raises the planning fraction to $0.945$, and the cost is $c(u_p)$ at the median posted limit of the route. All times are in seconds. The last column is the share of the prior price that the probe recovers.}\label{tab:app-routeprobe}
 \begin{tabular}{llccccc}
 \toprule
 Route & Vehicle & Prior price & Gain & Cost & Net & Recovered\\
 \midrule
-Suburban, green & Leaf & $1.20$ & $0.97$ & $0.30$ & $0.67$ & $56\%$\\
-Suburban, green & Civic & $1.93$ & $1.47$ & $0.27$ & $1.21$ & $63\%$\\
-Suburban, green & ZR1 & $1.07$ & $0.82$ & $0.63$ & $0.19$ & $18\%$\\
-Suburban, red & Leaf & $8.72$ & $7.24$ & $0.30$ & $6.95$ & $80\%$\\
-Suburban, red & Civic & $19.00$ & $14.34$ & $0.27$ & $14.07$ & $74\%$\\
-Suburban, red & ZR1 & $13.15$ & $9.92$ & $0.63$ & $9.29$ & $71\%$\\
-Canyon, green & Leaf & $0.71$ & $0.60$ & $0.26$ & $0.33$ & $46\%$\\
-Canyon, green & Civic & $1.52$ & $1.17$ & $0.24$ & $0.93$ & $61\%$\\
-Canyon, green & ZR1 & $1.02$ & $0.76$ & $0.56$ & $0.20$ & $20\%$\\
-Canyon, red & Leaf & $2.17$ & $1.81$ & $0.26$ & $1.55$ & $72\%$\\
-Canyon, red & Civic & $4.77$ & $3.60$ & $0.24$ & $3.37$ & $71\%$\\
-Canyon, red & ZR1 & $3.17$ & $2.39$ & $0.56$ & $1.83$ & $58\%$\\
+Suburban, green & Leaf & $1.44$ & $1.19$ & $0.28$ & $0.91$ & $63\%$\\
+Suburban, green & Civic & $2.21$ & $1.70$ & $0.26$ & $1.45$ & $66\%$\\
+Suburban, green & ZR1 & $1.22$ & $0.94$ & $0.60$ & $0.34$ & $28\%$\\
+Suburban, red & Leaf & $11.07$ & $9.43$ & $0.28$ & $9.15$ & $83\%$\\
+Suburban, red & Civic & $21.59$ & $16.39$ & $0.26$ & $16.13$ & $75\%$\\
+Suburban, red & ZR1 & $14.96$ & $11.35$ & $0.60$ & $10.75$ & $72\%$\\
+Canyon, green & Leaf & $0.92$ & $0.79$ & $0.25$ & $0.54$ & $58\%$\\
+Canyon, green & Civic & $1.76$ & $1.37$ & $0.23$ & $1.14$ & $65\%$\\
+Canyon, green & ZR1 & $1.16$ & $0.88$ & $0.54$ & $0.35$ & $30\%$\\
+Canyon, red & Leaf & $2.80$ & $2.40$ & $0.25$ & $2.15$ & $77\%$\\
+Canyon, red & Civic & $5.42$ & $4.12$ & $0.23$ & $3.89$ & $72\%$\\
+Canyon, red & ZR1 & $3.62$ & $2.76$ & $0.54$ & $2.22$ & $61\%$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -828,15 +837,15 @@ Canyon, red & ZR1 & $3.17$ & $2.39$ & $0.56$ & $1.83$ & $58\%$\\
 \begin{table}[htbp]
 \centering\small
 \setlength{\tabcolsep}{4pt}
-\caption{Check of Theorem~\mainref{thm:transit}{9.1} on the real routes: the minimum trip time $T^\star$ (s) of the Civic at selected multipliers on the nominal friction, from a sweep of $11$ multipliers between $0.4$ and $1.4$ that is non-increasing in every case.}\label{tab:app-routemono}
+\caption{Check of Theorem~\mainref{thm:transit}{9.2} on the real routes: the minimum trip time $T^\star$ (s) of the Civic at selected multipliers on the nominal friction, from a sweep of $11$ multipliers between $0.4$ and $1.4$ that is non-increasing in every case.}\label{tab:app-routemono}
 \begin{tabular}{lcccccc}
 \toprule
 Route & $\times0.4$ & $\times0.6$ & $\times0.8$ & $\times1.0$ & $\times1.2$ & $\times1.4$\\
 \midrule
-Suburban, green & $1249.5$ & $1237.4$ & $1232.9$ & $1230.6$ & $1229.3$ & $1228.8$\\
-Suburban, red & $1459.3$ & $1380.8$ & $1343.3$ & $1321.1$ & $1306.6$ & $1303.1$\\
-Canyon, green & $1515.8$ & $1499.1$ & $1495.4$ & $1493.6$ & $1492.5$ & $1492.2$\\
-Canyon, red & $1553.0$ & $1524.9$ & $1515.5$ & $1509.9$ & $1506.2$ & $1505.4$\\
+Suburban, green & $1249.6$ & $1237.4$ & $1232.8$ & $1230.6$ & $1229.3$ & $1228.8$\\
+Suburban, red & $1459.3$ & $1380.8$ & $1343.2$ & $1321.0$ & $1306.6$ & $1303.0$\\
+Canyon, green & $1522.1$ & $1499.1$ & $1495.4$ & $1493.6$ & $1492.5$ & $1492.2$\\
+Canyon, red & $1559.3$ & $1524.9$ & $1515.4$ & $1509.9$ & $1506.2$ & $1505.4$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -941,13 +950,13 @@ ZR1 & PAC2002 & $0.81$ & $0.68$\\
 \subsection{Transient deficit}
 
 Tables~\ref{tab:app-transient-veh} and~\ref{tab:app-relax} give the penalties of the three vehicles
-in Section~\mainref{sec:transient}{15}, and Tables~\ref{tab:app-transient} and~\ref{tab:app-staircase} the
-checks of Theorems~\mainref{thm:transientbound}{15.1} and~\mainref{thm:transientvar}{15.2} and of
-Proposition~\mainref{prop:transientfail}{15.3}.
+in Section~\ref{supp:transient}, and Tables~\ref{tab:app-transient} and~\ref{tab:app-staircase} the
+checks of Theorems~\ref{thm:transientbound} and~\ref{thm:transientvar} and of
+Proposition~\ref{prop:transientfail}.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Checks of Theorems~\mainref{thm:transientbound}{15.1} and~\mainref{thm:transientvar}{15.2} on random piecewise-linear envelopes. The non-increasing envelopes have seven levels on random knots, lags drawn uniformly from $[0.02,0.4]$\,s, and target speeds from $[5,40]$\,m/s. The general envelopes have eight random levels and one lag drawn from $[0.05,0.4]$\,s. The last two columns give the median and the largest ratio of the penalty to the stated bound. The last row compares the general envelopes with the bound $\tau$ that holds for non-increasing envelopes.}\label{tab:app-transient}
+\caption{Checks of Theorems~\ref{thm:transientbound} and~\ref{thm:transientvar} on random piecewise-linear envelopes. The non-increasing envelopes have seven levels on random knots, lags drawn uniformly from $[0.02,0.4]$\,s, and target speeds from $[5,40]$\,m/s. The general envelopes have eight random levels and one lag drawn from $[0.05,0.4]$\,s. The last two columns give the median and the largest ratio of the penalty to the stated bound. The last row compares the general envelopes with the bound $\tau$ that holds for non-increasing envelopes.}\label{tab:app-transient}
 \begin{tabular}{lccccc}
 \toprule
 Envelope & Lags & Cases & Bound & Median ratio & Largest ratio\\
@@ -963,7 +972,7 @@ General & $1$ & $40$ & $\tau$ & $2.314$ & $4.033$\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{Penalty of a single lag $\tau=0.2$\,s on a doubling staircase envelope, in units of $\tau$, with each level held for about $5\tau$. The prediction is the limit of Proposition~\mainref{prop:transientfail}{15.3}. The bound is the value $\tau(1+\operatorname{Var}^+)$ of Theorem~\mainref{thm:transientvar}{15.2}, which is proved for Lipschitz envelopes and is shown here for comparison.}\label{tab:app-staircase}
+\caption{Penalty of a single lag $\tau=0.2$\,s on a doubling staircase envelope, in units of $\tau$, with each level held for about $5\tau$. The prediction is the limit of Proposition~\ref{prop:transientfail}. The bound is the value $\tau(1+\operatorname{Var}^+)$ of Theorem~\ref{thm:transientvar}, which is proved for Lipschitz envelopes and is shown here for comparison.}\label{tab:app-staircase}
 \begin{tabular}{cccc}
 \toprule
 Levels & Penalty & Prediction & Bound\\
@@ -1045,10 +1054,91 @@ $r_{Ey1}$ & $0.3126$ & $r_{Ey2}$ & $0.03789$ & $r_{Hy1}$ & $0$ & $r_{Hy2}$ & $0$
 
 
 \clearpage
-\section{Proofs for the transient deficit}\label{supp:transient}
+\section{The transient deficit}\label{supp:transient}
 
-In this section we prove Theorems~\mainref{thm:transientbound}{15.1} and~\mainref{thm:transientvar}{15.2} and
-Proposition~\mainref{prop:transientfail}{15.3} of the main text. We first write the penalty as an integral,
+In this section we bound the time that actuator and tyre lags add to a run along the envelope of the
+paper, and we prove the bounds. The
+bound is the sum of the lag time constants for every envelope that does not increase with speed, and
+it can fail for envelopes that increase.
+
+The envelope $\amax$ is instantaneous, but a real vehicle reaches it through lags. The powertrain
+responds with a time constant $\tau_p$, and the tyre force builds up over the relaxation length
+$\ell_r$ described by Pacejka~\cite{Pacejka2012}, with time constant $\ell_r/v$. We model the
+delivered acceleration as the envelope passed through a cascade of first-order lags
+$\tau_1,\dots,\tau_k$ with unit gain, capped by the envelope itself, so that
+$a_{\mathrm{real}}\le\amax$ at all times. The cap is physical. A power-limited envelope falls with
+speed, so a force commanded at a lower speed and delivered late exceeds the power limit at the
+higher speed unless it is capped. Let $T_{\mathrm{phys}}$ and $T_{\mathrm{real}}$ be the times to reach a
+target speed $V$ along the envelope and along the lagged response. We call their difference the
+\emph{penalty}.
+
+\begin{theorem}[Transient bound for non-increasing envelopes]\label{thm:transientbound}
+If $\amax$ is positive, locally Lipschitz, and non-increasing in $v$, then for every target speed
+\[
+0\le T_{\mathrm{real}}-T_{\mathrm{phys}}\le\sum_{j=1}^k\tau_j .
+\]
+For a constant envelope, the penalty tends to $\sum_j\tau_j$ as the target speed grows.
+\end{theorem}
+
+The proof, given below, writes the penalty as
+the integral of the relative shortfall $1-a_{\mathrm{real}}/\amax$. Along a non-increasing envelope,
+the cascade normalised by the envelope stays above its own unit-step response, whose shortfall
+integrates to exactly $\sum_j\tau_j$. For an envelope that rises with speed this comparison fails,
+and the next theorem measures how much the rise can add. We write
+\[
+\operatorname{Var}^+=\int_0^V\max\Big(\frac{d}{dw}\ln\amax(w),\,0\Big)\,dw
+\]
+for the total increase of $\ln\amax$ over the speeds of the run. It is zero for a non-increasing
+envelope.
+
+\begin{theorem}[Single lag, general envelope]\label{thm:transientvar}
+For a single lag $\tau$ and any positive, locally Lipschitz envelope, for every target speed $V$,
+\[
+T_{\mathrm{real}}-T_{\mathrm{phys}}\le\tau\big(1+\operatorname{Var}^+\big).
+\]
+\end{theorem}
+
+The term $\tau\operatorname{Var}^+$ cannot be removed, because an envelope that rises in steps makes
+the penalty as large as we like.
+
+\begin{proposition}[The general bound fails]\label{prop:transientfail}
+Consider a single lag $\tau$ and a staircase envelope with levels $a_0<a_1<\dots<a_n$, in which the
+level $a_i$ holds on an interval of speeds. As the time spent on every level tends to infinity, the
+penalty tends to
+\[
+\tau\Big(1+\sum_{i=1}^n\Big(1-\frac{a_{i-1}}{a_i}\Big)\Big).
+\]
+For the levels $a_i=a_0q^i$ with $q>1$, this limit is $\tau\big(1+n(1-1/q)\big)$, which grows without
+bound in $n$.
+\end{proposition}
+
+Each step up of the envelope restarts the lag with a relative debt of $1-a_{i-1}/a_i$, which then
+decays at the rate $1/\tau$ and costs $\tau(1-a_{i-1}/a_i)$.
+
+\begin{remark}\label{rem:relax}
+The tyre lag $\tau=\ell_r/v$ is unbounded at rest, so the model needs a floor speed $v_0$, and the
+penalty from rest grows without bound as $v_0\to0$, as we show below. A launch value
+of the penalty therefore depends on the low-speed tyre model.
+\end{remark}
+
+The three vehicles have envelopes that are non-increasing from rest to $60$\,mph, so
+Theorem~\ref{thm:transientbound} applies, and their penalties under constant lags are $99.1$ to
+$99.6\%$ of $\sum_j\tau_j$ (Table~\ref{tab:app-transient-veh}).
+With a relaxation length of $0.5$\,m and $\tau_p=0.1$\,s, the penalty is $0.34$ to $0.35$\,s at the
+floor speed $v_0=2$\,m/s and $0.84$ to $1.03$\,s at $v_0=0.25$\,m/s (Table~\ref{tab:app-relax}). On random envelopes the penalty never exceeds $0.987$ of the bound of
+Theorem~\ref{thm:transientbound} or $0.903$ of that of Theorem~\ref{thm:transientvar}, and a staircase
+reproduces the limit of Proposition~\ref{prop:transientfail}
+(Tables~\ref{tab:app-transient} and~\ref{tab:app-staircase}). A powertrain whose force
+rises with speed, such as a turbocharged engine below its torque peak, has $\operatorname{Var}^+>0$,
+and its penalty can exceed $\sum_j\tau_j$. Otherwise the penalty is a fixed time of the order of the
+summed lag constants, a few tenths of a second, rather than a fraction of the run. For the ZR1, which reaches $60$\,mph along its envelope in
+$3.80$\,s, lags totalling $0.45$\,s add $0.446$\,s, or $11.7\%$. A single penalty of $0.45$\,s is only
+$0.17\%$ of the rural trip of Section~\mainref{sec:transit}{9}, which takes about $270$\,s.
+
+\subsection{Proofs}
+
+We now prove Theorems~\ref{thm:transientbound} and~\ref{thm:transientvar} and
+Proposition~\ref{prop:transientfail}. We first write the penalty as an integral,
 and then prove two elementary facts on which all three proofs rest.
 
 Along the lagged run we write $v(t)$ for the speed and $A(t)=\amax(v(t))$ for the envelope at that
@@ -1124,7 +1214,7 @@ The differences telescope, $1-\zeta_k=\sum_{j=1}^k(\zeta_{j-1}-\zeta_j)$, and su
 the result.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\mainref{thm:transientbound}{15.1}]
+\begin{proof}[Proof of Theorem~\ref{thm:transientbound}]
 We compare the cascade along the run with the step response of Lemma~\ref{lem:step}. Let
 $z_j=y_j/A$ for $j=0,\dots,k$, so that $z_0\equiv1$. The function $A$ is absolutely continuous,
 because $\amax$ is locally Lipschitz and $v$ is absolutely continuous. Differentiating $z_j$ gives
@@ -1159,7 +1249,7 @@ penalty is then exactly $\int_0^{T_{\mathrm{real}}}(1-\zeta_k)\,dt$, which tends
 $T_{\mathrm{real}}$ grows with the target speed.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\mainref{thm:transientvar}{15.2}]
+\begin{proof}[Proof of Theorem~\ref{thm:transientvar}]
 With one lag we write $y=y_1$, and we define the \emph{relative debt} $r=1-y/A$. It starts at
 $r(0)=1$, and $r\le1$ because $y\ge0$. Since $d/A=\min(y/A,1)$, the integrand of~\eqref{eq:penalty}
 is
@@ -1173,39 +1263,39 @@ r'&=-\frac{y'}{A}+\frac{y\,A'}{A^2}\\
 &=-\frac{A-y}{\tau A}+(1-r)\frac{A'}{A}\\
 &=-\frac r\tau+(1-r)\frac{A'}{A}.
 \end{align*}
-Let $\gamma=\max(A'/A,0)$. Wherever $0\le r\le1$, the factor $1-r$ lies in $[0,1]$, so
-$(1-r)A'/A\le\gamma$, and
+Let $\omega=\max(A'/A,0)$. Wherever $0\le r\le1$, the factor $1-r$ lies in $[0,1]$, so
+$(1-r)A'/A\le\omega$, and
 \begin{equation}\label{eq:debt}
-r'\le\gamma-\frac r\tau .
+r'\le\omega-\frac r\tau .
 \end{equation}
 
-\emph{Step 2: comparison with a majorant.} Let $\rho$ solve $\rho'=\gamma-\rho/\tau$ with
-$\rho(0)=1$, that is,
+\emph{Step 2: comparison with a majorant.} Let $\bar r$ solve $\bar r'=\omega-\bar r/\tau$ with
+$\bar r(0)=1$, that is,
 \[
-\rho(t)=e^{-t/\tau}+\int_0^te^{-(t-s)/\tau}\,\gamma(s)\,ds .
+\bar r(t)=e^{-t/\tau}+\int_0^te^{-(t-s)/\tau}\,\omega(s)\,ds .
 \]
-Both terms are non-negative, so $\rho\ge0$. We claim that $\max(r,0)\le\rho$. Since $\rho\ge0$, it
-suffices to show that $r\le\rho$ wherever $r>0$. Suppose instead that $r(t_1)>\rho(t_1)$ for some
-$t_1$, and let $t_0$ be the last time before $t_1$ at which $r\le\rho$. Such a time exists because
-$r(0)=\rho(0)$, and $r(t_0)=\rho(t_0)$ by continuity. On $(t_0,t_1]$ we have $r>\rho\ge0$, so
-\eqref{eq:debt} holds there, and $e=\rho-r$ satisfies $e'\ge-e/\tau$ with $e(t_0)=0$.
-Lemma~\ref{lem:gronwall} gives $e(t_1)\ge0$, which contradicts $r(t_1)>\rho(t_1)$.
+Both terms are non-negative, so $\bar r\ge0$. We claim that $\max(r,0)\le\bar r$. Since $\bar r\ge0$, it
+suffices to show that $r\le\bar r$ wherever $r>0$. Suppose instead that $r(t_1)>\bar r(t_1)$ for some
+$t_1$, and let $t_0$ be the last time before $t_1$ at which $r\le\bar r$. Such a time exists because
+$r(0)=\bar r(0)$, and $r(t_0)=\bar r(t_0)$ by continuity. On $(t_0,t_1]$ we have $r>\bar r\ge0$, so
+\eqref{eq:debt} holds there, and $e=\bar r-r$ satisfies $e'\ge-e/\tau$ with $e(t_0)=0$.
+Lemma~\ref{lem:gronwall} gives $e(t_1)\ge0$, which contradicts $r(t_1)>\bar r(t_1)$.
 
-\emph{Step 3: integration.} Extend $\gamma$ by zero after $T_{\mathrm{real}}$. By
+\emph{Step 3: integration.} Extend $\omega$ by zero after $T_{\mathrm{real}}$. By
 Lemma~\ref{lem:penalty} and Step~2,
 \[
-T_{\mathrm{real}}-T_{\mathrm{phys}}\le\int_0^{T_{\mathrm{real}}}\rho\,dt\le\int_0^\infty\rho\,dt
-=\tau+\tau\int_0^{T_{\mathrm{real}}}\gamma\,dt,
+T_{\mathrm{real}}-T_{\mathrm{phys}}\le\int_0^{T_{\mathrm{real}}}\bar r\,dt\le\int_0^\infty\bar r\,dt
+=\tau+\tau\int_0^{T_{\mathrm{real}}}\omega\,dt,
 \]
 where the last step exchanges the order of integration and uses $\int_0^\infty e^{-t/\tau}dt=\tau$.
 
 \emph{Step 4: the variation.} By the chain rule, $(\ln A)'=(\ln\amax)'(v)\,v'$, and $v'\ge0$, so
-$\gamma=\max\big((\ln\amax)'(v),0\big)\,v'$. The substitution $w=v(t)$ then gives
-$\int_0^{T_{\mathrm{real}}}\gamma\,dt=\operatorname{Var}^+$, which completes the proof.
+$\omega=\max\big((\ln\amax)'(v),0\big)\,v'$. The substitution $w=v(t)$ then gives
+$\int_0^{T_{\mathrm{real}}}\omega\,dt=\operatorname{Var}^+$, which completes the proof.
 \end{proof}
 
-\begin{proof}[Proof of Proposition~\mainref{prop:transientfail}{15.3}]
-The relative debt $r=1-y/A$ of the proof of Theorem~\mainref{thm:transientvar}{15.2} is again the integrand
+\begin{proof}[Proof of Proposition~\ref{prop:transientfail}]
+The relative debt $r=1-y/A$ of the proof of Theorem~\ref{thm:transientvar} is again the integrand
 of~\eqref{eq:penalty} wherever $r\ge0$. On each level $A$ is constant, so $r'=-r/\tau$, and $r$ decays
 as $e^{-t/\tau}$. A level on which $r$ starts at $r_i\ge0$ and which lasts the time $h_i$ therefore
 contributes $\tau r_i(1-e^{-h_i/\tau})$ to the penalty, and this tends to $\tau r_i$ as $h_i$ grows.
@@ -1221,7 +1311,7 @@ run. As the time on level $i-1$ grows, $r(t_i^-)\to0$, and so $r_i\to1-a_{i-1}/a
 $a_i=a_0q^i$, every step contributes $1-1/q$.
 \end{proof}
 
-\begin{proof}[Proof of Remark~\mainref{rem:relax}{15.4}]
+\begin{proof}[Proof of Remark~\ref{rem:relax}]
 With $\tau=\ell_r/v$ the lag runs in distance rather than in time. Writing $x$ for the distance
 travelled and $a>0$ for the envelope near rest, the lag state satisfies $dy/dx=(a-y)/\ell_r$, so
 $y\approx ax/\ell_r$ for small $x$. Since $v\,dv/dx=y$, this gives $v\approx x\sqrt{a/\ell_r}$ near

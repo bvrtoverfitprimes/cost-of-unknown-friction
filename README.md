@@ -1,15 +1,15 @@
 # The Cost of Unknown Friction in Minimum-Time Vehicle Transit: supplementary material
 
-This repository holds the supplementary material for the The Cost of Unknown Friction in
+This repository holds the supplementary material for The Cost of Unknown Friction in
 Minimum-Time Vehicle Transit. It contains the tables behind every
 numerical statement of the paper, the computed values from which those tables are generated, the code
-that formats those values into the tables, and the proofs of the results on the transient deficit.
+that formats those values into the tables, and the analysis of the transient deficit with its proofs.
 
 ## Contents
 
 | Path | Contents |
 | --- | --- |
-| `supplement/supplement.pdf` | The supplementary material. Section S1 gives the numerical evidence (Tables S1 to S43), and Section S2 gives the proofs for the transient deficit. |
+| `supplement/supplement.pdf` | The supplementary material. Section S1 gives the numerical evidence (Tables S1 to S43), and Section S2 treats the transient deficit, with its theorems and proofs. |
 | `supplement/supplement.tex` | LaTeX source of the supplementary material. It compiles on its own with `pdflatex`. |
 | `data/*.json` | The computed values behind the tables, one record per analysis. |
 | `data/epa_roadload_derived.csv` | Drag area and rolling resistance implied by the EPA road-load coefficients of model year 2013. |

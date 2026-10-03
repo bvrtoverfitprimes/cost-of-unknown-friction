@@ -1,13 +1,13 @@
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\ref{thm:jointid}. Every design contains $60$ balance samples at speeds drawn uniformly from $5$ to $30$\,m/s and accelerations from $-1.5$ to $2.0$\,m/s$^2$. The limit events are five samples at $3.0$\,m/s$^2$ and $8$\,m/s, plus, for the two-acceleration design, five at $1.5$\,m/s$^2$ and $20$\,m/s. The braking events are five at $-7$ and five at $-5$\,m/s$^2$. Each limit event contributes a balance row and a limit row. The singular values are those of the Jacobian with each parameter scaled to its nominal value.}\label{tab:app-fisher}
+\caption{Check of Theorem~\ref{thm:jointid}. Every design contains $60$ balance samples at speeds drawn uniformly from $5$ to $30$\,m/s and accelerations from $-1.5$ to $2.0$\,m/s$^2$. The limit events are five samples at $8$\,m/s, plus, for the two-speed design, five at $20$\,m/s, each at the acceleration at which traction binds at the nominal parameters, $3.89$ and $3.79$\,m/s$^2$. The braking events are five at $-7$ and five at $-5$\,m/s$^2$. Each limit event contributes a balance row and a limit row. The singular values are those of the Jacobian with each parameter scaled to its nominal value.}\label{tab:app-fisher}
 \begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}cc>{\raggedright\arraybackslash}p{5.6cm}}
 \toprule
 Design & Rows & Rank & Singular values\\
 \midrule
 Ordinary driving & $60$ & $4$ & $1.5\times10^{4}$, $2.3\times10^{3}$, $8.1\times10^{2}$, $2.3\times10^{1}$, $5.3\times10^{-7}$, $0$\\
-Limit events at one acceleration & $70$ & $5$ & $2.5\times10^{4}$, $1.0\times10^{4}$, $2.4\times10^{3}$, $8.5\times10^{2}$, $2.3\times10^{1}$, $6.3\times10^{-7}$\\
-Limit events at two accelerations & $80$ & $6$ & $3.3\times10^{4}$, $1.2\times10^{4}$, $2.4\times10^{3}$, $8.5\times10^{2}$, $2.4\times10^{1}$, $1.9\times10^{0}$\\
+Limit events at one speed & $70$ & $5$ & $2.6\times10^{4}$, $1.1\times10^{4}$, $2.4\times10^{3}$, $8.4\times10^{2}$, $2.3\times10^{1}$, $5.3\times10^{-7}$\\
+Limit events at two speeds & $80$ & $6$ & $3.4\times10^{4}$, $1.4\times10^{4}$, $2.4\times10^{3}$, $8.5\times10^{2}$, $2.4\times10^{1}$, $1.4\times10^{-1}$\\
 Braking-limit events & $80$ & $5$ & $5.7\times10^{4}$, $1.9\times10^{4}$, $3.2\times10^{3}$, $8.2\times10^{2}$, $2.3\times10^{1}$, $7.7\times10^{-7}$\\
 \bottomrule
 \end{tabular}
@@ -15,17 +15,17 @@ Braking-limit events & $80$ & $5$ & $5.7\times10^{4}$, $1.9\times10^{4}$, $3.2\t
 
 \begin{table}[htbp]
 \centering\small
-\caption{Cram\'er--Rao standard errors for the design with limit events at two accelerations, with force noise of $50$\,N on each of its $80$ rows. The nominal values are those of a Civic-like car, with grade in radians and wind in m/s.}\label{tab:app-crb}
+\caption{Relative Cram\'er--Rao standard errors for designs with limit events at two speeds, with force noise of $50$\,N on each of the $80$ rows. At a limit event the acceleration is the one at which traction binds, so with grade, wind, and load fixed the two events differ only through drag: $3.89$ and $3.79$\,m/s$^2$ at $8$ and $20$\,m/s (condition number $2.5\times10^{5}$), and $3.91$ and $3.65$\,m/s$^2$ at $5$ and $30$\,m/s (condition number $9.8\times10^{4}$). The nominal values are those of a Civic-like car, with grade in radians and wind in m/s.}\label{tab:app-crb}
 \begin{tabular}{lrrr}
 \toprule
-Parameter & Nominal & Relative error & Absolute error\\
+Parameter & Nominal & $8$ and $20$\,m/s & $5$ and $30$\,m/s\\
 \midrule
-$\mu$ & $0.85$ & $8.9\%$ & $0.0754$\\
-$m$ & $1400$ & $0.4\%$ & $4.9$\\
-$C_{rr}$ & $0.01$ & $2338.7\%$ & $0.234$\\
-$C_DA$ & $0.7$ & $30.3\%$ & $0.212$\\
-$\gamma$ & $0.02$ & $1169.5\%$ & $0.234$\\
-$w$ & $3$ & $203.7\%$ & $6.11$\\
+$\mu$ & $0.85$ & $131.7\%$ & $52.4\%$\\
+$m$ & $1400$ & $0.3\%$ & $0.3\%$\\
+$C_{rr}$ & $0.01$ & $32{,}731\%$ & $13{,}060\%$\\
+$C_DA$ & $0.7$ & $30.5\%$ & $27.4\%$\\
+$\gamma$ & $0.02$ & $16{,}369\%$ & $6{,}531\%$\\
+$w$ & $3$ & $204.7\%$ & $186.0\%$\\
 \bottomrule
 \end{tabular}
 \end{table}
