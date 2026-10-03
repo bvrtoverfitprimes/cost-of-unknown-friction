@@ -6,4 +6,6 @@ authors:
     given-names: "Himaghna"
 date-released: 2026-10-01
 repository-code: "https://github.com/bvrtoverfitprimes/cost-of-unknown-friction"
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0

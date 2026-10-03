@@ -3,18 +3,18 @@
 This repository holds the supplementary material for the The Cost of Unknown Friction in
 Minimum-Time Vehicle Transit. It contains the tables behind every
 numerical statement of the paper, the computed values from which those tables are generated, the code
-that generates them, and the proofs of the results on the transient deficit.
+that formats those values into the tables, and the proofs of the results on the transient deficit.
 
 ## Contents
 
 | Path | Contents |
 | --- | --- |
-| `supplement/supplement.pdf` | The supplementary material. Section S1 gives the numerical evidence (Tables S1 to S42), and Section S2 gives the proofs for the transient deficit. |
+| `supplement/supplement.pdf` | The supplementary material. Section S1 gives the numerical evidence (Tables S1 to S43), and Section S2 gives the proofs for the transient deficit. |
 | `supplement/supplement.tex` | LaTeX source of the supplementary material. It compiles on its own with `pdflatex`. |
 | `data/*.json` | The computed values behind the tables, one record per analysis. |
 | `data/epa_roadload_derived.csv` | Drag area and rolling resistance implied by the EPA road-load coefficients of model year 2013. |
 | `tables/*.tex` | The generated LaTeX tables, as they appear in the supplement and the paper. |
-| `code/make_tables.py` | Regenerates the tables from `data/`. |
+| `code/make_tables.py` | Formats the records in `data/` into the tables. It does not rerun the analyses that produce the records. |
 | `lean/` | Formal versions of the structural results, for Lean 4 with Mathlib. |
 
 ## Regenerating the tables
@@ -26,7 +26,9 @@ python code/make_tables.py
 
 This rewrites the files in `tables/` from the records in `data/`. The tables in `fmvss.tex`,
 `d3data.tex`, `d3bounds.tex`, `info.tex`, and `zero60.tex` are computed from the raw public datasets
-listed below by the full analysis, and are included in `tables/` as computed.
+listed below by the full analysis, and are included in `tables/` as computed. The table in
+`mfcoeffs.tex` lists the tyre model coefficients used by the full analysis and is also included as
+computed.
 
 ## Checking the formal proofs
 

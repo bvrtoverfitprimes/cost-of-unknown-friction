@@ -1,13 +1,16 @@
 \begin{table}[htbp]
 \centering\small
-\caption{Predicted and published $0$--$60$\,mph times (s). Published times in the United States are measured after a one-foot rollout, so the prediction is compared under the same convention. The error is that of the rollout prediction, and the last column is the share of the predicted run during which traction binds. The published times are those of EV Specifications for the Leaf~\cite{Leaf2013}, the MotorWeek road test for the Civic~\cite{Civic2013}, and the Corvette Action Center for the ZR1~\cite{ZR12013}.}\label{tab:app-060}
-\begin{tabular}{lccccc}
+\setlength{\tabcolsep}{4pt}
+\caption{Predicted and published $0$--$60$\,mph times (s). The ZR1 time is the instrumented test of Motor Trend~\cite{MotorTrendZR1}, which is measured after a one-foot rollout. The Leaf time of EV Specifications~\cite{Leaf2013} and the Civic time of MotorWeek~\cite{Civic2013} do not state their convention, and MotorWeek tested a Civic EX with the five-speed automatic, not the manual that we model. The table therefore gives the error of both predictions. The last column is the share of the predicted run during which traction binds.}\label{tab:app-060}
+\begin{tabular}{lcccccc}
 \toprule
-Vehicle & Standing start & Rollout & Published & Error & Traction-limited\\
+& \multicolumn{2}{c}{Predicted} & & \multicolumn{2}{c}{Error} & \\
+\cmidrule(lr){2-3}\cmidrule(lr){5-6}
+Vehicle & Standing & Rollout & Published & Standing & Rollout & Traction-limited\\
 \midrule
-Leaf & $10.57$ & $10.16$ & $9.90$ & $+2.7\%$ & $0\%$\\
-Civic & $9.96$ & $9.55$ & $9.50$ & $+0.5\%$ & $48\%$\\
-ZR1 & $3.58$ & $3.30$ & $3.30$ & $-0.2\%$ & $100\%$\\
+Leaf & $10.67$ & $10.25$ & $9.90$ & $+7.8\%$ & $+3.5\%$ & $0\%$\\
+Civic & $9.95$ & $9.54$ & $9.50$ & $+4.7\%$ & $+0.4\%$ & $48\%$\\
+ZR1 & $3.80$ & $3.51$ & $3.30$ & $+15.2\%$ & $+6.4\%$ & $100\%$\\
 \bottomrule
 \end{tabular}
 \end{table}
