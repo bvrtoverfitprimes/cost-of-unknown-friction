@@ -420,7 +420,7 @@ ZR1 & PAC2002 & $80$ & power & $764$ & $475$ & n/a & $-$ & $-6.265$ & $+$ & $6.7
 \end{table}
 \begin{table}[htbp]
 \centering\small
-\caption{Nestedness of the PAC2002 combined-slip force set under the friction scale $\lambda_\mu\in\{0.3,0.5,0.7,0.9,1.0,1.2,1.5,1.8\}$, for three normal loads. This range contains every scale, from about $0.36$ to $1.73$, at which our PAC2002 computations rely on monotonicity in friction. The largest outward violation is the largest relative amount by which the boundary at a smaller scale lies outside the boundary at the next larger scale, over $72$ directions. The radius ratio is the range over directions of the ratio of the boundary radius at scale $1.8$ to that at scale $0.3$. The last column gives the same violation for the scale $0.25$ against $0.3$, outside the range that we use, where a positive value means that nestedness fails.}\label{tab:app-nest}
+\caption{Nestedness of the PAC2002 combined-slip force set under the friction scale $\lambda_\mu\in\{0.3,0.5,0.7,0.9,1.0,1.2,1.5,1.8\}$, for three normal loads. This range contains the scales $0.69$ to $1.42$ used by the four-wheel equilibrium solver of Table~\ref{tab:app-fourwheel}, the only computation that relies on nestedness. The largest outward violation is the largest relative amount by which the boundary at a smaller scale lies outside the boundary at the next larger scale, over $72$ directions. The radius ratio is the range over directions of the ratio of the boundary radius at scale $1.8$ to that at scale $0.3$. The last column gives the same violation for the scale $0.25$ against $0.3$, outside the range that we use, where a positive value means that nestedness fails.}\label{tab:app-nest}
 \begin{tabular}{cccc}
 \toprule
 Load ($F_{z0}$) & Largest outward violation & Radius ratio & Scale $0.25$\\
@@ -540,7 +540,7 @@ Theorem~\mainref{thm:propagation}{8.1}.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\mainref{thm:propagation}{8.1}\mainref{pr:quant}{{(ii)}} at $10$\,mph. The friction distribution is the $114$ values of Table~\ref{tab:fmvss} divided by their median, with relative standard deviation $0.120$ and $5$th and $95$th percentiles $0.806$ and $1.236$. The table gives the exact quantiles $\amax(q_\mu(p))$ (m/s$^2$) at $p=0.05$, $0.25$, $0.5$, $0.75$, and $0.95$, and the largest difference from the Monte Carlo quantiles of the $114$ envelope values.}\label{tab:app-quant}
+\caption{Check of Theorem~\mainref{thm:propagation}{8.1}\mainref{pr:quant}{{(ii)}} at $10$\,mph. The friction distribution is the $114$ values of Table~\ref{tab:fmvss} divided by their median, with relative standard deviation $0.120$ and linearly interpolated $5$th and $95$th percentiles $0.806$ and $1.236$. The table gives the exact quantiles $\amax(q_\mu(p))$ (m/s$^2$) at $p=0.05$, $0.25$, $0.5$, $0.75$, and $0.95$, and the largest difference from the Monte Carlo quantiles of the $114$ envelope values.}\label{tab:app-quant}
 \begin{tabular}{llp{6.2cm}c}
 \toprule
 Vehicle & Law & Exact quantiles & Largest difference\\
@@ -599,21 +599,21 @@ ZR1 & PAC2002 & $0.9976$ & $0.9913$ & $1.192$\\
 \subsection{Minimum-time transit}
 
 Tables~\ref{tab:app-transit} and~\ref{tab:app-transitq} give the values behind the check of
-Theorem~\mainref{thm:transit}{9.2}.
+Theorem~\mainref{thm:transit}{9.5}.
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\mainref{thm:transit}{9.2} on the $6$\,km rural route: the minimum trip time $T^\star$ (s) at selected multipliers on the nominal friction, from a sweep of $11$ multipliers between $0.5$ and $1.5$ that is non-increasing in every case. The share of the route driven at the speed limit, at nominal friction with the ellipse law, is Leaf $95.0\%$, Civic $95.8\%$, ZR1 $98.1\%$.}\label{tab:app-transit}
+\caption{Check of Theorem~\mainref{thm:transit}{9.5} on the $6$\,km rural route: the minimum trip time $T^\star$ (s) at selected multipliers on the nominal friction, from a sweep of $11$ multipliers between $0.5$ and $1.5$ that is non-increasing in every case. The share of the route driven at the speed limit, at nominal friction with the ellipse law, is Leaf $94.9\%$, Civic $95.7\%$, ZR1 $98.0\%$.}\label{tab:app-transit}
 \begin{tabular}{llccccc}
 \toprule
 Vehicle & Law & $\times0.5$ & $\times0.7$ & $\times1.0$ & $\times1.3$ & $\times1.5$\\
 \midrule
-Leaf & ellipse & $281.47$ & $275.02$ & $272.09$ & $271.71$ & $271.54$\\
-Leaf & PAC2002 & $281.53$ & $275.03$ & $272.09$ & $271.71$ & $271.54$\\
-Civic & ellipse & $283.35$ & $275.82$ & $271.79$ & $270.94$ & $270.76$\\
-Civic & PAC2002 & $283.52$ & $275.89$ & $271.82$ & $270.94$ & $270.76$\\
-ZR1 & ellipse & $273.66$ & $270.34$ & $268.70$ & $267.87$ & $267.76$\\
-ZR1 & PAC2002 & $273.73$ & $270.42$ & $268.78$ & $267.92$ & $267.76$\\
+Leaf & ellipse & $281.63$ & $275.13$ & $272.17$ & $271.77$ & $271.59$\\
+Leaf & PAC2002 & $281.69$ & $275.14$ & $272.17$ & $271.77$ & $271.59$\\
+Civic & ellipse & $284.07$ & $276.33$ & $272.14$ & $271.21$ & $271.00$\\
+Civic & PAC2002 & $284.24$ & $276.40$ & $272.17$ & $271.21$ & $271.00$\\
+ZR1 & ellipse & $273.93$ & $270.53$ & $268.83$ & $267.98$ & $267.85$\\
+ZR1 & PAC2002 & $273.99$ & $270.60$ & $268.92$ & $268.02$ & $267.85$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -625,9 +625,9 @@ ZR1 & PAC2002 & $273.73$ & $270.42$ & $268.78$ & $267.92$ & $267.76$\\
 \toprule
 Vehicle & $p=0.05$ & $p=0.5$ & $p=0.95$ & Largest difference\\
 \midrule
-Leaf & $271.763$ & $272.084$ & $273.293$ & $0$\\
-Civic & $270.993$ & $271.764$ & $273.928$ & $0$\\
-ZR1 & $267.943$ & $268.678$ & $269.627$ & $0$\\
+Leaf & $271.825$ & $272.161$ & $273.389$ & $0$\\
+Civic & $271.282$ & $272.116$ & $274.368$ & $0$\\
+ZR1 & $268.049$ & $268.810$ & $269.792$ & $0$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -636,8 +636,8 @@ ZR1 & $267.943$ & $268.678$ & $269.627$ & $0$\\
 \subsection{Safe transit}
 
 Table~\ref{tab:d3cycles} gives the friction identified by each D3 drive cycle,
-Table~\ref{tab:app-chance} the values behind the check of Theorem~\mainref{thm:chance}{10.3}, and
-Table~\ref{tab:app-excess} those behind the check of Proposition~\mainref{prop:excess}{10.5}.
+Table~\ref{tab:app-chance} the values behind the check of Theorem~\mainref{thm:chance}{10.1}, and
+Table~\ref{tab:app-excess} those behind the check of Proposition~\mainref{prop:excess}{10.3}.
 
 \begin{table}[htbp]
 \centering\small
@@ -658,34 +658,34 @@ Median & $0.36$ ($0.38$) & $0.32$ ($0.33$) & $0.65$ ($0.68$)\\
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Theorem~\mainref{thm:chance}{10.3} on the rural route with the friction ellipse. For each vehicle and safety level $\delta$, the plan is the minimum-time profile at the friction multiplier $q(\delta)$ of the $114$ measured values, with trip time $T^\star$ (s). The plan was executed against all $114$ values. The table gives the number of values below $q(\delta)$, the number at which the plan was not executable, and the infeasible share, which is at most $\delta$ in every case.}\label{tab:app-chance}
+\caption{Check of Theorem~\mainref{thm:chance}{10.1} on the rural route with the friction ellipse. For each vehicle and safety level $\delta$, the plan is the minimum-time profile at the friction multiplier $q(\delta)$ of the $114$ measured values, with trip time $T^\star$ (s). The plan was executed against all $114$ values. The table gives the number of values below $q(\delta)$, the number at which the plan was not executable, and the infeasible share, which is at most $\delta$ in every case.}\label{tab:app-chance}
 \begin{tabular}{lcccccc}
 \toprule
 Vehicle & $\delta$ & $q(\delta)$ & $T^\star$ & Below & Infeasible & Share\\
 \midrule
-Leaf & $0.05$ & $0.805$ & $273.29$ & $5$ & $5$ & $0.044$\\
-Leaf & $0.25$ & $0.940$ & $272.20$ & $28$ & $28$ & $0.246$\\
-Civic & $0.05$ & $0.805$ & $273.93$ & $5$ & $5$ & $0.044$\\
-Civic & $0.25$ & $0.940$ & $272.09$ & $28$ & $28$ & $0.246$\\
-ZR1 & $0.05$ & $0.805$ & $269.63$ & $5$ & $5$ & $0.044$\\
-ZR1 & $0.25$ & $0.940$ & $268.94$ & $28$ & $28$ & $0.246$\\
+Leaf & $0.05$ & $0.805$ & $273.39$ & $5$ & $5$ & $0.044$\\
+Leaf & $0.25$ & $0.940$ & $272.28$ & $28$ & $28$ & $0.246$\\
+Civic & $0.05$ & $0.805$ & $274.37$ & $5$ & $5$ & $0.044$\\
+Civic & $0.25$ & $0.940$ & $272.47$ & $28$ & $28$ & $0.246$\\
+ZR1 & $0.05$ & $0.805$ & $269.79$ & $5$ & $5$ & $0.044$\\
+ZR1 & $0.25$ & $0.940$ & $269.08$ & $28$ & $28$ & $0.246$\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}[htbp]
 \centering\small
-\caption{Check of Proposition~\mainref{prop:excess}{10.5} on the urban route. For each vehicle and planning fraction $r$, the price (s) predicted by the transition-excess law, summed over the stop--go cycles, against the price computed by the three-pass solver, with their relative difference and the share of the predicted price due to braking.}\label{tab:app-excess}
+\caption{Check of Proposition~\mainref{prop:excess}{10.3} on the urban route. For each vehicle and planning fraction $r$, the price (s) predicted by the transition-excess law, summed over the stop--go cycles, against the price computed by the three-pass solver, with their relative difference and the share of the predicted price due to braking.}\label{tab:app-excess}
 \begin{tabular}{lcccccc}
 \toprule
 Vehicle & $r$ & Cycles & Law & Solver & Difference & Braking\\
 \midrule
-Leaf & $0.40$ & $13$ & $41.95$ & $41.94$ & $+0.0\%$ & $35\%$\\
-Leaf & $0.72$ & $13$ & $8.31$ & $8.32$ & $-0.0\%$ & $46\%$\\
-Civic & $0.42$ & $13$ & $45.76$ & $45.74$ & $+0.1\%$ & $31\%$\\
-Civic & $0.76$ & $13$ & $10.25$ & $10.25$ & $+0.1\%$ & $32\%$\\
-ZR1 & $0.27$ & $13$ & $64.66$ & $64.59$ & $+0.1\%$ & $28\%$\\
-ZR1 & $0.48$ & $13$ & $24.84$ & $24.80$ & $+0.1\%$ & $29\%$\\
+Leaf & $0.40$ & $13$ & $42.63$ & $42.62$ & $+0.0\%$ & $36\%$\\
+Leaf & $0.72$ & $13$ & $8.49$ & $8.49$ & $+0.0\%$ & $47\%$\\
+Civic & $0.42$ & $13$ & $49.04$ & $49.03$ & $+0.0\%$ & $36\%$\\
+Civic & $0.76$ & $13$ & $11.00$ & $11.00$ & $-0.0\%$ & $36\%$\\
+ZR1 & $0.27$ & $13$ & $66.79$ & $66.75$ & $+0.1\%$ & $30\%$\\
+ZR1 & $0.48$ & $13$ & $25.69$ & $25.68$ & $+0.0\%$ & $31\%$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -721,18 +721,18 @@ $6$ & $0.992$ & $0.0049$ & $0.0042$\\
 \toprule
 Vehicle & Route & Prior price & $k=1$ & $k=2$ & $k=3$ & $k=4$ & $k=5$ & $k^\star$\\
 \midrule
-Leaf & highway & $0.60$ & $0.33$ & $0.17$ & $-0.06$ & $-0.29$ & $-0.53$ & $1$\\
-Leaf & rural & $1.20$ & $0.90$ & $0.69$ & $0.41$ & $0.12$ & $-0.18$ & $1$\\
-Leaf & mountain & $4.53$ & $3.22$ & $3.52$ & $3.30$ & $2.98$ & $2.63$ & $2$\\
-Leaf & urban & $4.10$ & $3.15$ & $3.02$ & $2.58$ & $2.09$ & $1.57$ & $1$\\
-Civic & highway & $1.15$ & $0.72$ & $0.70$ & $0.52$ & $0.32$ & $0.11$ & $1$\\
-Civic & rural & $2.14$ & $1.68$ & $1.60$ & $1.38$ & $1.13$ & $0.87$ & $1$\\
-Civic & mountain & $5.25$ & $3.74$ & $4.21$ & $4.07$ & $3.80$ & $3.50$ & $2$\\
-Civic & urban & $8.07$ & $5.81$ & $6.57$ & $6.39$ & $6.02$ & $5.60$ & $2$\\
-ZR1 & highway & $0.95$ & $0.37$ & $0.03$ & $-0.45$ & $-0.95$ & $-1.47$ & $1$\\
-ZR1 & rural & $0.93$ & $0.27$ & $-0.17$ & $-0.76$ & $-1.38$ & $-2.02$ & $1$\\
-ZR1 & mountain & $0.95$ & $0.23$ & $-0.42$ & $-1.19$ & $-2.00$ & $-2.81$ & $1$\\
-ZR1 & urban & $5.54$ & $3.43$ & $3.22$ & $2.29$ & $1.22$ & $0.11$ & $1$\\
+Leaf & highway & $0.61$ & $0.35$ & $0.19$ & $-0.04$ & $-0.27$ & $-0.51$ & $1$\\
+Leaf & rural & $1.22$ & $0.91$ & $0.70$ & $0.43$ & $0.14$ & $-0.16$ & $1$\\
+Leaf & mountain & $4.55$ & $3.24$ & $3.54$ & $3.32$ & $3.00$ & $2.65$ & $2$\\
+Leaf & urban & $4.20$ & $3.24$ & $3.11$ & $2.68$ & $2.18$ & $1.66$ & $1$\\
+Civic & highway & $1.24$ & $0.78$ & $0.77$ & $0.61$ & $0.40$ & $0.19$ & $1$\\
+Civic & rural & $2.22$ & $1.74$ & $1.68$ & $1.47$ & $1.22$ & $0.96$ & $1$\\
+Civic & mountain & $5.34$ & $3.81$ & $4.30$ & $4.15$ & $3.89$ & $3.58$ & $2$\\
+Civic & urban & $8.69$ & $6.25$ & $7.12$ & $6.96$ & $6.61$ & $6.19$ & $2$\\
+ZR1 & highway & $0.98$ & $0.39$ & $0.06$ & $-0.42$ & $-0.92$ & $-1.44$ & $1$\\
+ZR1 & rural & $0.96$ & $0.30$ & $-0.14$ & $-0.73$ & $-1.35$ & $-1.98$ & $1$\\
+ZR1 & mountain & $0.97$ & $0.25$ & $-0.39$ & $-1.17$ & $-1.98$ & $-2.79$ & $1$\\
+ZR1 & urban & $5.73$ & $3.55$ & $3.38$ & $2.46$ & $1.40$ & $0.30$ & $1$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -753,18 +753,18 @@ Table~\ref{tab:app-scaling} gives the scaling of the numerical optimum with the 
 \cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-13}
 Vehicle & Route & $c_p$ & $\eta$ & $\psi_0$ & Exact & Linear & Num. & Law & Num. & Law & Num. & Law\\
 \midrule
-Leaf & highway & $0.17$ & $0.09$ & $0.030$ & $12.8$ & $29.2$ & none & $7.1$ & none & $12.2$ & $21.1$ & $20.8$\\
-Leaf & rural & $0.20$ & $0.28$ & $0.200$ & $2.0$ & $10.9$ & none & $3.7$ & $3.3$ & $6.3$ & $6.6$ & $10.8$\\
-Leaf & mountain & $0.26$ & $2.28$ & $0.567$ & $1.5$ & $1.7$ & none & $1.1$ & $2.4$ & $1.8$ & $3.9$ & $3.2$\\
-Leaf & urban & $0.37$ & $2.04$ & $0.821$ & $0.9$ & $2.7$ & $2.3$ & $1.5$ & $2.1$ & $2.5$ & $5.2$ & $4.3$\\
-Civic & highway & $0.15$ & $0.25$ & $0.058$ & $8.7$ & $9.1$ & none & $3.3$ & none & $5.6$ & $13.4$ & $9.6$\\
-Civic & rural & $0.18$ & $0.81$ & $0.356$ & $1.5$ & $3.4$ & none & $1.7$ & $2.3$ & $2.9$ & $3.7$ & $4.9$\\
-Civic & mountain & $0.24$ & $2.77$ & $0.656$ & $1.2$ & $1.3$ & none & $0.9$ & $2.0$ & $1.5$ & $3.2$ & $2.6$\\
-Civic & urban & $0.33$ & $6.69$ & $1.615$ & $0.7$ & $0.7$ & $1.1$ & $0.6$ & $1.3$ & $1.1$ & $2.3$ & $1.8$\\
-ZR1 & highway & $0.35$ & $0.20$ & $0.047$ & $24.9$ & $26.8$ & none & $6.7$ & none & $11.5$ & $96.7$ & $19.7$\\
-ZR1 & rural & $0.43$ & $0.65$ & $0.155$ & $9.3$ & $10.0$ & none & $3.5$ & none & $6.0$ & $14.2$ & $10.2$\\
-ZR1 & mountain & $0.55$ & $0.35$ & $0.119$ & $8.2$ & $23.6$ & none & $6.2$ & none & $10.6$ & $22.7$ & $18.1$\\
-ZR1 & urban & $0.78$ & $4.59$ & $1.107$ & $2.3$ & $2.5$ & none & $1.4$ & $3.5$ & $2.4$ & $5.0$ & $4.1$\\
+Leaf & highway & $0.17$ & $0.09$ & $0.031$ & $12.5$ & $27.9$ & none & $6.9$ & none & $11.8$ & $20.6$ & $20.2$\\
+Leaf & rural & $0.20$ & $0.29$ & $0.203$ & $2.0$ & $10.5$ & none & $3.6$ & $3.3$ & $6.1$ & $6.5$ & $10.5$\\
+Leaf & mountain & $0.26$ & $2.28$ & $0.569$ & $1.5$ & $1.7$ & none & $1.1$ & $2.4$ & $1.8$ & $3.9$ & $3.1$\\
+Leaf & urban & $0.37$ & $2.08$ & $0.841$ & $0.9$ & $2.6$ & $2.2$ & $1.4$ & $2.1$ & $2.5$ & $5.0$ & $4.2$\\
+Civic & highway & $0.15$ & $0.27$ & $0.062$ & $8.2$ & $8.3$ & none & $3.1$ & none & $5.3$ & $12.6$ & $9.0$\\
+Civic & rural & $0.18$ & $0.89$ & $0.371$ & $1.4$ & $3.1$ & none & $1.6$ & $2.3$ & $2.7$ & $3.6$ & $4.7$\\
+Civic & mountain & $0.24$ & $2.81$ & $0.667$ & $1.2$ & $1.3$ & none & $0.9$ & $1.9$ & $1.5$ & $3.2$ & $2.6$\\
+Civic & urban & $0.33$ & $7.31$ & $1.737$ & $0.6$ & $0.7$ & $1.0$ & $0.6$ & $1.2$ & $1.0$ & $2.2$ & $1.7$\\
+ZR1 & highway & $0.35$ & $0.20$ & $0.049$ & $24.1$ & $25.9$ & none & $6.6$ & none & $11.2$ & $62.4$ & $19.2$\\
+ZR1 & rural & $0.43$ & $0.67$ & $0.160$ & $9.0$ & $9.6$ & none & $3.4$ & none & $5.8$ & $13.8$ & $9.9$\\
+ZR1 & mountain & $0.55$ & $0.36$ & $0.122$ & $8.1$ & $22.8$ & none & $6.0$ & none & $10.3$ & $22.5$ & $17.7$\\
+ZR1 & urban & $0.78$ & $4.86$ & $1.147$ & $2.3$ & $2.4$ & none & $1.3$ & $3.4$ & $2.3$ & $4.9$ & $3.9$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -776,8 +776,8 @@ ZR1 & urban & $0.78$ & $4.59$ & $1.107$ & $2.3$ & $2.5$ & none & $1.4$ & $3.5$ &
 \toprule
 $\ell_0$ (km) & $\ell$ (km) & $D^\star(\ell_0)$ (km) & $D^\star(\ell)$ (km) & Slope\\
 \midrule
-$2$ & $16$ & $0.37$ & $0.70$ & $0.308$\\
-$2$ & $128$ & $0.37$ & $1.40$ & $0.323$\\
+$2$ & $16$ & $0.35$ & $0.66$ & $0.305$\\
+$2$ & $128$ & $0.35$ & $1.32$ & $0.319$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -796,7 +796,7 @@ the road.
 
 Table~\ref{tab:app-routes} describes the two real routes of Section~\mainref{sec:realroutes}{13},
 Table~\ref{tab:app-routeprobe} decomposes the net gain of one probe on them, and
-Table~\ref{tab:app-routemono} gives the check of Theorem~\mainref{thm:transit}{9.2}.
+Table~\ref{tab:app-routemono} gives the check of Theorem~\mainref{thm:transit}{9.5}.
 
 \begin{table}[htbp]
 \centering\small
@@ -818,18 +818,18 @@ Canyon & $26.9$ & $6$ & $2$ & $1120$ & $54\%$ & $24$\\
 \toprule
 Route & Vehicle & Prior price & Gain & Cost & Net & Recovered\\
 \midrule
-Suburban, green & Leaf & $1.44$ & $1.19$ & $0.28$ & $0.91$ & $63\%$\\
-Suburban, green & Civic & $2.21$ & $1.70$ & $0.26$ & $1.45$ & $66\%$\\
-Suburban, green & ZR1 & $1.22$ & $0.94$ & $0.60$ & $0.34$ & $28\%$\\
-Suburban, red & Leaf & $11.07$ & $9.43$ & $0.28$ & $9.15$ & $83\%$\\
-Suburban, red & Civic & $21.59$ & $16.39$ & $0.26$ & $16.13$ & $75\%$\\
-Suburban, red & ZR1 & $14.96$ & $11.35$ & $0.60$ & $10.75$ & $72\%$\\
-Canyon, green & Leaf & $0.92$ & $0.79$ & $0.25$ & $0.54$ & $58\%$\\
-Canyon, green & Civic & $1.76$ & $1.37$ & $0.23$ & $1.14$ & $65\%$\\
-Canyon, green & ZR1 & $1.16$ & $0.88$ & $0.54$ & $0.35$ & $30\%$\\
-Canyon, red & Leaf & $2.80$ & $2.40$ & $0.25$ & $2.15$ & $77\%$\\
-Canyon, red & Civic & $5.42$ & $4.12$ & $0.23$ & $3.89$ & $72\%$\\
-Canyon, red & ZR1 & $3.62$ & $2.76$ & $0.54$ & $2.22$ & $61\%$\\
+Suburban, green & Leaf & $1.47$ & $1.21$ & $0.28$ & $0.93$ & $63\%$\\
+Suburban, green & Civic & $2.34$ & $1.80$ & $0.26$ & $1.54$ & $66\%$\\
+Suburban, green & ZR1 & $1.26$ & $0.98$ & $0.60$ & $0.38$ & $30\%$\\
+Suburban, red & Leaf & $11.37$ & $9.67$ & $0.28$ & $9.38$ & $83\%$\\
+Suburban, red & Civic & $23.12$ & $17.53$ & $0.26$ & $17.27$ & $75\%$\\
+Suburban, red & ZR1 & $15.47$ & $11.76$ & $0.60$ & $11.16$ & $72\%$\\
+Canyon, green & Leaf & $0.95$ & $0.81$ & $0.25$ & $0.56$ & $59\%$\\
+Canyon, green & Civic & $1.87$ & $1.45$ & $0.23$ & $1.22$ & $65\%$\\
+Canyon, green & ZR1 & $1.21$ & $0.93$ & $0.54$ & $0.39$ & $32\%$\\
+Canyon, red & Leaf & $2.87$ & $2.46$ & $0.25$ & $2.21$ & $77\%$\\
+Canyon, red & Civic & $5.76$ & $4.38$ & $0.23$ & $4.15$ & $72\%$\\
+Canyon, red & ZR1 & $3.79$ & $2.90$ & $0.54$ & $2.37$ & $62\%$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -837,15 +837,15 @@ Canyon, red & ZR1 & $3.62$ & $2.76$ & $0.54$ & $2.22$ & $61\%$\\
 \begin{table}[htbp]
 \centering\small
 \setlength{\tabcolsep}{4pt}
-\caption{Check of Theorem~\mainref{thm:transit}{9.2} on the real routes: the minimum trip time $T^\star$ (s) of the Civic at selected multipliers on the nominal friction, from a sweep of $11$ multipliers between $0.4$ and $1.4$ that is non-increasing in every case.}\label{tab:app-routemono}
+\caption{Check of Theorem~\mainref{thm:transit}{9.5} on the real routes: the minimum trip time $T^\star$ (s) of the Civic at selected multipliers on the nominal friction, from a sweep of $11$ multipliers between $0.4$ and $1.4$ that is non-increasing in every case.}\label{tab:app-routemono}
 \begin{tabular}{lcccccc}
 \toprule
 Route & $\times0.4$ & $\times0.6$ & $\times0.8$ & $\times1.0$ & $\times1.2$ & $\times1.4$\\
 \midrule
-Suburban, green & $1249.6$ & $1237.4$ & $1232.8$ & $1230.6$ & $1229.3$ & $1228.8$\\
-Suburban, red & $1459.3$ & $1380.8$ & $1343.2$ & $1321.0$ & $1306.6$ & $1303.0$\\
-Canyon, green & $1522.1$ & $1499.1$ & $1495.4$ & $1493.6$ & $1492.5$ & $1492.2$\\
-Canyon, red & $1559.3$ & $1524.9$ & $1515.4$ & $1509.9$ & $1506.2$ & $1505.4$\\
+Suburban, green & $1250.9$ & $1238.2$ & $1233.4$ & $1231.0$ & $1229.6$ & $1229.1$\\
+Suburban, red & $1474.9$ & $1391.4$ & $1351.2$ & $1327.5$ & $1312.0$ & $1307.6$\\
+Canyon, green & $1523.4$ & $1499.9$ & $1496.1$ & $1494.2$ & $1493.0$ & $1492.6$\\
+Canyon, red & $1563.0$ & $1527.4$ & $1517.4$ & $1511.5$ & $1507.6$ & $1506.5$\\
 \bottomrule
 \end{tabular}
 \end{table}

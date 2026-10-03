@@ -515,6 +515,11 @@ theorem limit_acceleration_solves (mJ R μ N0 mh a : Real) (hd : 0 < mJ + μ * m
   field_simp
   ring
 
+theorem trip_time_antitone_of_inclusion (S : Real → Set Real) (hbdd : ∀ μ, BddBelow (S μ))
+    (hne : ∀ μ, (S μ).Nonempty) (hmono : ∀ μ μ', μ ≤ μ' → S μ ⊆ S μ') :
+    Antitone (fun μ => sInf (S μ)) :=
+  fun μ μ' h => csInf_le_csInf (hbdd μ') (hne μ) (hmono μ μ' h)
+
 end BigBertha
 
 #print axioms BigBertha.traction_limited_blind_to_powertrain
@@ -575,3 +580,4 @@ end BigBertha
 #print axioms BigBertha.share_times_friction
 #print axioms BigBertha.bend_friction_monotone
 #print axioms BigBertha.limit_acceleration_solves
+#print axioms BigBertha.trip_time_antitone_of_inclusion
