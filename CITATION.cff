@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this material, please cite it as below."
-title: "Supplementary material for The Cost of Unknown Friction in Minimum-Time Vehicle Transit"
+message: "If you use this material, please cite this repository as below."
+title: "Unknown friction in minimum-time vehicle transit: data, tables, code, and proofs"
 authors:
   - family-names: "Roy Choudhury"
     given-names: "Himaghna"

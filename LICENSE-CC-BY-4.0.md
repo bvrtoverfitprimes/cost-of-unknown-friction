@@ -2,7 +2,7 @@
 
 Copyright (c) 2026 Himaghna Roy Choudhury
 
-The supplementary material (`supplement/`), the generated tables (`tables/`), and the data records
+The generated tables (`tables/`), and the data records
 (`data/`) in this repository are licensed under the Creative Commons Attribution 4.0 International
 License. You may share and adapt this material for any purpose, including commercially, provided that
 you give appropriate credit, provide a link to the license, and indicate if changes were made.
