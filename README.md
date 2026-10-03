@@ -1,6 +1,6 @@
 # The Cost of Unknown Friction in Minimum-Time Vehicle Transit: supplementary material
 
-This repository holds the supplementary material for The Cost of Unknown Friction in
+This repository holds material for The Cost of Unknown Friction in
 Minimum-Time Vehicle Transit. It contains the tables behind every
 numerical statement of the paper, the computed values from which those tables are generated, the code
 that formats those values into the tables, and the analysis of the transient deficit with its proofs.
