@@ -112,5 +112,14 @@ def save_record(name, record):
     out = Path(__file__).resolve().parent.parent / 'data'
     out.mkdir(parents=True, exist_ok=True)
     (out / f'{name}.json').write_text(json.dumps(record, indent=1, default=float))
+
+def save_instances(name, rows):
+    import csv
+    out = Path(__file__).resolve().parent.parent / 'data' / 'instances'
+    out.mkdir(parents=True, exist_ok=True)
+    with open(out / f'{name}.csv', 'w', newline='', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0]))
+        w.writeheader()
+        w.writerows(rows)
 if __name__ == '__main__':
     sys.exit(main())

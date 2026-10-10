@@ -85,6 +85,7 @@ def make(veh, v, law, **kw):
         if pac is None:
             pac = _PAC_CACHE[key] = PACVehicle(veh)
     return Env(veh, v, law, pac=pac, **kw)
+INSTANCES = []
 
 def monotone_checks():
     tests = [('mu', +1, np.linspace(0.5, 1.5, 11)), ('crr', -1, np.linspace(0.5, 2.0, 11)), ('cda', -1, np.linspace(0.5, 2.0, 11)), ('P', +1, np.linspace(0.5, 1.5, 11))]
@@ -103,7 +104,8 @@ def monotone_checks():
                             min_step = min(min_step, sign * (a - prev))
                             if sign * (a - prev) < -1e-09:
                                 bad += 1
-                        prev = a
+                            INSTANCES.append(dict(parameter=name, predicted='non-decreasing' if sign > 0 else 'non-increasing', vehicle=veh.name, law=law, mph=vm, value_from=float(prev_x), value_to=float(x), a_from=float(prev), a_to=float(a), step_in_predicted_direction=float(sign * (a - prev)), violation=bool(sign * (a - prev) < -1e-09)))
+                        prev, prev_x = (a, x)
         rows.append((name, 'non-decreasing' if sign > 0 else 'non-increasing', n, bad, float(vals[0]), float(vals[-1]), float(min_step)))
         total_bad += bad
     return (rows, total_bad)
@@ -125,7 +127,8 @@ def grade_check():
                         min_step = min(min_step, prev - a)
                         if a - prev > 1e-09:
                             bad += 1
-                    prev = a
+                        INSTANCES.append(dict(parameter='grade_deg', predicted='non-increasing', vehicle=veh.name, law=law, mph=vm, value_from=float(prev_g), value_to=float(gdeg), a_from=float(prev), a_to=float(a), step_in_predicted_direction=float(prev - a), violation=bool(a - prev > 1e-09)))
+                    prev, prev_g = (a, gdeg)
     grade_check.min_step = float(min_step)
     return (n, bad, worst_gain)
 
@@ -186,8 +189,9 @@ def main() -> int:
     print('=' * 100)
     print(f"T2 NUMERICAL CHECK: {('all predictions hold' if ok else 'A PREDICTION FAILED')}")
     print('=' * 100)
-    from well_posedness import save_record
+    from well_posedness import save_instances, save_record
     save_record('t2_monotonicity', record)
+    save_instances('t2_monotonicity_pairs', INSTANCES)
     return 0 if ok else 1
 if __name__ == '__main__':
     sys.exit(main())

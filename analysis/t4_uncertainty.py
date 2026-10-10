@@ -11,6 +11,7 @@ def fleet_mu_ratios():
     sol, *_ = build(load_rows())
     mu = np.array([s['mu_eff'] for s in sol])
     return mu / np.median(mu)
+BOX_POINTS = []
 
 def main() -> int:
     print('=' * 96)
@@ -46,7 +47,11 @@ def main() -> int:
                 v = vm * MPH_TO_MS
                 lo = make(veh, v, law, **worst).a_max()
                 hi = make(veh, v, law, **best).a_max()
-                pts = [make(veh, v, law, **{k: rng.uniform(*box[k]) for k in box}).a_max() for _ in range(4096 if law == 'ellipse' else 512)]
+                pts = []
+                for _ in range(4096 if law == 'ellipse' else 512):
+                    draw = {k: rng.uniform(*box[k]) for k in box}
+                    pts.append(make(veh, v, law, **draw).a_max())
+                    BOX_POINTS.append(dict(vehicle=veh.name, law=law, mph=vm, **{f'{k}_multiplier': float(x) for k, x in draw.items()}, a_max=float(pts[-1]), vertex_lo=float(lo), vertex_hi=float(hi), inside=bool(lo <= pts[-1] + 1e-09 and pts[-1] <= hi + 1e-09)))
                 slo, shi = (min(pts), max(pts))
                 ok &= lo <= slo + 1e-09 and shi <= hi + 1e-09
                 record['box'].append(dict(vehicle=veh.name, law=law, mph=vm, n=len(pts), vertex_lo=lo, sweep_lo=slo, sweep_hi=shi, vertex_hi=hi))
@@ -69,8 +74,9 @@ def main() -> int:
     print('=' * 96)
     print(f"T4 NUMERICAL CHECK: {('all hold' if ok else 'A CHECK FAILED')}")
     print('=' * 96)
-    from well_posedness import save_record
+    from well_posedness import save_instances, save_record
     save_record('t4_uncertainty', record)
+    save_instances('t4_box_points', BOX_POINTS)
     return 0 if ok else 1
 if __name__ == '__main__':
     sys.exit(main())

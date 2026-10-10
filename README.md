@@ -8,6 +8,7 @@ minimum-time vehicle transit.
 | Path | Contents |
 | --- | --- |
 | `data/*.json` | The computed values behind the tables, one record per analysis. |
+| `data/instances/*.csv` | Every instance of the larger checks: the monotonicity sweep pairs, the random points of the parameter box, and the boundary radii of the nestedness check. |
 | `data/epa_roadload_derived.csv` | Drag area and rolling resistance implied by the EPA road-load coefficients of model year 2013. |
 | `tables/*.tex` | The generated LaTeX tables. |
 | `analysis/*.py` | The analyses that produce the records in `data/`, the solver and vehicle models they use, and the scripts that fetch the public datasets. Run them from the repository root. |

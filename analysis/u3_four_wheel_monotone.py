@@ -24,6 +24,7 @@ def radial_boundary(tire, Fz):
     rb = np.zeros(NB)
     np.maximum.at(rb, b, r[sel])
     return rb
+RADII = []
 
 def main() -> int:
     print('=' * 96)
@@ -43,6 +44,9 @@ def main() -> int:
         t = MFTire()
         t.lambda_mux = t.lambda_muy = 0.25
         low = radial_boundary(t, fz_rel * t.Fz0)
+        for lam, rb in zip((0.25,) + lams, [low] + rbs):
+            for j, r in enumerate(rb):
+                RADII.append(dict(load_factor=fz_rel, friction_scale=lam, direction_bin=j, direction_deg_from=90.0 * j / NB, direction_deg_to=90.0 * (j + 1) / NB, boundary_radius_N=float(r)))
         m = (low > 0) & (rbs[0] > 0)
         below = float(np.max((low[m] - rbs[0][m]) / rbs[0][m]))
         viol = 0.0
@@ -82,8 +86,9 @@ def main() -> int:
     print('=' * 96)
     print(f"U3 CHECK: {('all hold' if ok else 'A CHECK FAILED')}")
     print('=' * 96)
-    from well_posedness import save_record
+    from well_posedness import save_instances, save_record
     save_record('u3_four_wheel', record)
+    save_instances('u3_nestedness_radii', RADII)
     return 0 if ok else 1
 if __name__ == '__main__':
     sys.exit(main())
